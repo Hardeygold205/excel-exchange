@@ -71,7 +71,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black  fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                 <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
@@ -81,11 +81,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item"><a id="home" href="index.html">Home<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a href="#hero2">Services<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a href="https://wa.me/+2348138553465" target="_blank">Contact<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a id="about" href="about.html">About<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a href="#hero3">Portfolio<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                    <li class="nav-item"><a id="home" href="index.html">Home<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
+                    <li class="nav-item "><a href="#hero2">Services<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
+                    <li class="nav-item "><a href="https://wa.me/+2348138553465" target="_blank">Contact<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
+                    <li class="nav-item "><a id="about" href="about.html">About<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
+                    <li class="nav-item "><a href="#hero3">Portfolio<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
                     <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="tooltip" title="Open an account with Excelexchange" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
@@ -95,18 +95,23 @@
             </div> 
         </div>      
     </nav>
-    <div class="modal" id="myModal">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-fullscreen modal-fullscreen-md-down  modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
+              <h4 class="modal-title"></h4>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-              Modal body..
+              <div class="container ">
+                <img class="d-block  mx-auto" src="site-under-construct.png" alt="tickicon" width="400">
+                <h1 class="text-center ">Thank You! We are launching our website soon</h1>
+                <p class="text-center ">Site under contruction, Please check back later.<br> Trade with Excelexchange</p>
+                <a href="index.html" type="button" class="btn btn-warning d-block ">OK</a>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              <a target="_blank" href="https://wa.me/+2348138553465" type="button" class="btn btn-success">Contact</a>
             </div>
           </div>
         </div>
