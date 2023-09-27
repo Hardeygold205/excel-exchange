@@ -385,7 +385,74 @@
                       <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
                     </div>
                     <div class="toast-body">
-                      Below are the prices and History of our day to day transaction:
+                      <p>Below are the prices and History of our day to day transaction:</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myWallet">
+                            Copy wallet to send
+                        </button>
+                        <div id="myWallet" class="modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Wallets USDT(TRC20) ETH(ERC20)</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group mb-3">Bitcoin
+                                            <a type="text" class="form-control" id="btcToCopy">1CRhyscps26GkPLQyNoirUudiLMJJWFS6o</a>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#btcToCopy">
+                                                    <i class="far fa-copy"></i> Copy
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3"> USDT
+                                            <a type="text" class="form-control" id="usdtToCopy">TRujNVeJYeK9qMzBB7UfDg8HAc9gtZfP1s</a>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#usdtToCopy">
+                                                    <i class="far fa-copy"></i> Copy
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3"> ETH
+                                            <a type="text" class="form-control" id="ethToCopy">0x92d6b13a8df3ed4acc015ba3ba9794acd29e5c63</a>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#ethToCopy">
+                                                    <i class="far fa-copy"></i> Copy
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <!--
+                        <div class="input-group mb-3">
+                            <a type="text" class="form-control" id="textToCopy" ></a>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#textToCopy">
+                                    <i class="far fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <a type="text" class="form-control" id="textToCopy" ></a>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#textToCopy">
+                                    <i class="far fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <a type="text" class="form-control" id="textToCopy" ></a>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#textToCopy">
+                                    <i class="far fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                        -->
                     </div>
                 </div>
                 <div class="container-fluid img-container d-block ">
@@ -530,7 +597,6 @@
                 </p>
             </div>
         </div>
-        
         <hr>
         <footer>
            <img src="pci.png" alt="PCI" height="100">
@@ -546,6 +612,8 @@
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
 
     <script>
         // Initialize tooltips
@@ -553,6 +621,15 @@
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
           return new bootstrap.Tooltip(tooltipTriggerEl)
         })
+    </script>
+
+    <script>
+        var clipboard = new ClipboardJS('.copy-button');
+        
+        clipboard.on('success', function(e) {
+            e.clearSelection();
+            alert('Text copied to clipboard');
+        });
     </script>
 
 </body>

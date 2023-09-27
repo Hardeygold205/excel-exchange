@@ -32,6 +32,8 @@ $(document).on('click', function (e) {
 });
 
 
+
+
 /*
 document.addEventListener('click', (event) => {
   const target = event.target;
