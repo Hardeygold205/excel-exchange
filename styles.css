@@ -1,0 +1,1792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    transform: transition 0.3s ease;
+}
+
+
+
+/* img {
+    max-width: 5%;
+} */
+
+.herosection {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('male-investor-using-stock-trading-app-smartphone-trader-analyzing-dynamic-forex-chart-price-flow-screen-while-standing-outdoors-selective-focus-hand-holding-mobile-phone_95891-4065.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: #555;
+    border-radius: 50%; 
+    transform: rotate(45deg);
+}
+
+.hero4 {
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('pngtree-online-stock-market-trading-arrow-pointing-to-3d-mobile-phone-illustrated-image_3670288.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 65vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/* 
+.hero-section2 {
+    background: #0f171c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 85vh;
+}
+.hero-section3 {
+    background: #424242;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 50%;
+    min-height: 40vh;
+    float: left;
+}
+.hero-section4 {
+    background: #616161;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 50%;
+    min-height: 40vh;
+    float: right;
+}
+
+.hero1 {
+    background: #f4f5f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 80vh;
+    margin-top: 302px;
+}
+.hero2 {
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 90vh;
+}
+.hero5 {
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 150vh;
+}
+.hero3 {
+    background: #f4f5f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 100%;
+    min-height: 90vh;
+}
+.header {
+    min-width: 100%;
+    color: #f7f78c;
+    padding: auto;
+}
+/* nav {
+    background: #11141a;
+    min-width: 100%;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    z-index: 100;
+}
+nav ul {
+    width: 50%;
+    text-align: right;
+}
+nav ul li {
+    list-style: none;
+    margin: 10px 15px;
+    display: inline-block;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a i {
+    font-size: 15px;
+    margin-left: 4px;
+    display: flex;
+    transform: transition .3s ease;
+}
+
+nav ul li a i:hover {
+    color: #ffcf01;
+}
+nav ul li a:hover {
+    background-color: #363d42;
+    color: #ffcf01;
+    padding: 22px 15px 22px 15px;
+}
+nav .button2 {
+    color: #ffcf01;
+    text-decoration: none;
+    background: #11141a;
+    cursor: pointer;
+    outline: 1px solid #ffcf01;
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+nav .button2::before {
+    content: "Log in as an existing users";
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    padding: 5px;
+    color: #8d9194;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+nav .button1::before {
+    content: "Open an Account with Excelexchange";
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    padding: 5px;
+    color: #8d9194;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+nav .button1:hover::before {
+    opacity: 1;
+}
+nav .button2:hover::before {
+    opacity: 1;
+}
+
+nav .button2:hover {
+    background-color: #ffcf01;
+    color: #363d42;
+}
+nav .button1:hover {
+    background-color: #363d42;
+    color: #ffcf01;
+}
+nav .button1 {
+    color: #11141a;
+    text-decoration: none;
+    background: #ffcf01;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+} 
+.button3 {
+    color: #11141a;
+    text-decoration: none;
+    background: #ffcf01;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.button3:hover {
+    background-color: #363d42;
+    color: #ffcf01;
+}
+nav div .logo {
+    width: 40px;
+    margin-top: 10px;
+}
+
+nav a i {
+    font-size: 20px;
+    margin-left: 7px;
+    color: #fff;
+}
+nav div h3 {
+    font-size: 28px;
+}
+nav div img {
+    width: 35px;
+    margin-left: 5px;
+}
+header nav div .logo h3 {
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 55px;
+    color: #fff;
+    padding-top: 12%;
+    padding-left: 5%;
+    line-height: 80px;
+}
+.hero-section p {
+    font-size: 17px;
+    color:#fff;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    line-height: 22px;
+}
+.hero-section h1 span {
+    color: #ffcf01;
+}
+.hero-section .button3 {
+    margin-left: 5%;
+}
+*/
+.hero-section2 {
+    text-align: center;
+    color:#fff;
+    padding-top: 7%;
+}
+.hero-section2 h1 {
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+.hero-section2 p {
+    font-size: 17px;
+    margin-bottom: 5%;
+}
+.hero-section2 a {
+    font-size: 17px;
+    text-decoration: none;
+}
+.hero-section2 a span {
+    color: #ffcf01;
+}
+.hero-section2 a span:hover {
+    text-decoration: underline;
+}
+.hero-section2 .funds {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    float: right;
+    margin-right: 20%;
+
+}
+.hero-section2 .funds img {
+    width: 100px;
+    margin: 30px;
+}
+.notes p {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 14%;
+    color: #616161;
+}
+.notes p span {
+    color: #ffcf01;
+    font-size: 12px;
+}
+.notes p span:hover {
+    text-decoration: underline;
+
+}
+.hero-section3 .rates {
+    text-align: left;
+    color: #fff;
+}
+.hero-section4 .rates {
+    text-align: left;
+    color: #fff;
+}
+.rates {
+    margin-left: 12%;
+    margin-top: 8%;
+}
+.hero-section3 .rates h1 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero-section4 .rates h1 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero3 .numbers h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero-section3 .rates p {
+    font-size: 17.5px;
+    margin-bottom: 70px;
+}
+.hero-section4 .rates p {
+    font-size: 17.5px;
+    margin-bottom: 70px;
+}
+.hero-section3 .rates a {
+    font-size: 17.5px;
+    color: #fff;
+}
+.hero-section4 .rates a {
+    font-size: 17.5px;
+    color: #fff;
+}
+.hero3 .numbers p {
+    font-size: 17.5px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 0.27px;
+}
+.hero3 .numbers a {
+    font-size: 17.5px;
+    color: #0f171c;
+}
+
+.hero1 h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    color: #0f171c;
+    padding-top: 90px;
+    font-weight: 600;
+}
+.hero2 h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    color: #0f171c;
+    padding-top: 90px;
+    font-weight: 600;
+}
+.hero1 .trades {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+
+}
+.hero1 .trades .currency  {
+    width: 30%;
+    background-color: #ffffff;
+    min-height: 42vh;
+    margin-right: 60px;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+
+}
+.hero1 .trades .digitalfunds  {
+    width: 30%;
+    background-color: #ffffff;
+    min-height: 42vh;
+    margin-right: 60px;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+
+}
+.hero1 .trades .cryptocurrency  {
+    width: 30%;
+    background-color: #ffffff;
+    min-height: 42vh;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+}
+.hero2 .strategy {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+}
+.hero2 .strategy .strategy1 {
+    width: 50%;
+    background-color: #0f171c;
+    color: #ffffff;
+    min-height: 50vh;
+    align-items: center;
+    border-radius: 8px 0px 0px 8px;
+}
+.hero2 .strategy .strategy2 {
+    width: 50%;
+    background-color: #f4f5f6;
+    color: #0f171c;
+    min-height: 50vh;
+    align-items: center;
+    border-radius: 0px 8px 8px 0px;
+}
+.hero3 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+}
+.hero3 .numbers {
+  width: 50%; 
+}
+.hero3 .data{
+    width: 50%;
+    margin-bottom: 40px;
+}
+.hero3 .data div {
+    padding: 30px;
+    text-align: center;
+}
+.hero3 .data div h2{
+    padding: 10px;
+    font-size: 36px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.hero3 .data div p {
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+.hero4 .start {
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    padding: 96px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+.hero4 .start h1 {
+    font-size: 33px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.hero4 .start p {
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 70px;
+}
+.button1 {
+    color: #11141a;
+    text-decoration: none;
+    background: #ffcf01;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.button1:hover {
+    background-color: #616161;
+    color: #ffcf01;
+}
+.hero1 .trades:hover {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    transition: 0.5s;
+}
+.hero2 .strategy:hover {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    transition: 0.5s;
+}
+.hero5 .web-info {
+    padding: 100px;
+    color: #0f171c;
+    display: flex;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero5 .web-info div {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding-right: 35px;
+    margin-right: 10px;
+    margin-bottom: -40px;
+}
+.hero5 .web-info div h4 {
+    font-size: 12px;
+    margin-bottom: 7px;
+    font-weight: 550;
+}
+.hero5 .web-info div a {
+    text-decoration: none;
+    color: #0f171c;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-bottom: 7px;
+    text-decoration-line: none;
+    cursor: pointer;    
+}
+.hero5 .web-info div a:hover {
+    text-decoration: underline;
+}
+.hero5 .divider {
+    border-bottom: 1px solid #0f171c1f;
+    margin: 0px 100px;
+}
+.hero5 .container2 {
+    width: 30%;
+    float: left;
+    margin-top: 60px;
+    padding-left: 100px;
+}
+.hero5 .notes2 {
+    width: 70%;
+    float: right;
+    margin-top: 60px;
+    font-size: 13px;
+    color: #8d9194;
+    line-height: 18.5px;
+    font-weight: 400;
+    padding-right: 100px;
+}
+.hero5 .notes2 p {
+    padding-bottom: 15px;
+
+}
+.hero5 .container2 .logo {
+    display: flex;
+    align-items: center;   
+}
+.hero5 .container2 .logo h1 {
+    font-size: 28px;
+}
+.hero5 .container2 .media-logo {
+    font-size: 32px;
+    align-items: center;
+    padding-left: 40px;
+}
+.hero5 .container2 .logo img {
+    width: 35px;
+    align-items: center;
+}
+.hero5 .divider2 {
+    border-bottom: 1px solid #0f171c1f;
+    margin-top: 550px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.hero5 footer img {
+    width: 110px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hero5 footer {
+    padding-left: 100px;
+}
+.hero5 footer div a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #0f171c;
+    font-weight: 400;
+    line-height: 26px;
+    margin-right: 20px;
+}
+.hero5 footer div a span {
+    color: #8d9194;
+    float: right;
+    margin-right: 100px;
+}
+.hero5 footer div a:hover {
+    text-decoration: underline;
+}
+.hero1 .trades img {
+    width: 110px;
+    padding-top: 30px;
+}
+.hero1 .trades .cryptocurrency img {
+    width: 130px;
+}
+.hero1 .trades h3 {
+    margin-top: 20px;
+    font-size: 28px;
+    margin-bottom: 13px;
+    font-weight: 600;
+}
+
+.hero1 .trades p {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.hero1 .trades a {
+    color: #0f171c;
+}
+.hero2 .strategy h2 {
+    padding: 40px;
+    font-size: 24px;
+}
+.hero2 .strategy h3 {
+    font-size: 20px;
+    padding-left: 40px;
+    padding-top: 30px;
+    text-decoration: dashed underline;
+    display: inline-block; 
+    font-weight: 600; 
+}
+.hero2 .strategy p {
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 2;
+}
+.hero2 .strategy a {
+    border: 1px solid;
+    padding: 10px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    float: right;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+.hero2 .strategy .strategy1 a {
+    border-color: #ffcf01;
+    color: #ffcf01;
+}
+.hero2 .strategy .strategy2 a {
+    border-color:#0f171c;
+    color: #0f171c;
+}
+.hero2 .strategy .strategy1 a:hover {
+    background-color: #ffcf01;
+    color: #0f171c;
+}
+.hero2 .strategy .strategy2 a:hover {
+    background-color: #616161;
+    color: #ffcf01;
+}
+.hero5 .container2 .logo .down-logo {
+    width: 40px;
+    margin-top: 10px;
+}
+.soon-background {
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    padding-top: 1px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('male-investor-using-stock-trading-app-smartphone-trader-analyzing-dynamic-forex-chart-price-flow-screen-while-standing-outdoors-selective-focus-hand-holding-mobile-phone_95891-4065.jpg');
+    
+}
+.soon-background2 .soon-text {
+    height: 100%;
+    background-color: #ffffff;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.soon-background .about-text {
+    min-height: 80vh;
+    background-color: #ffffff;
+    width: 35%;
+    border-radius: 8px;
+    float: right;
+    margin-right: 32%;
+    padding-bottom: 40px;
+    margin-top: -120px;
+}
+.soon-background2 .soon-text img {
+    width: 550px; 
+}
+.soon-background2 .soon-text h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.soon-background .about-text h1 {
+    padding-top: 20px;
+}
+.soon-background2 .soon-text p {
+    font-size: 15px;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+}
+.soon-background .about-text p {
+    font-size: 14px;
+    padding: 20px 20px;
+    line-height: 30px;
+}
+.soon-background2 .soon-text a {
+    text-decoration: none;
+    border: 1px solid;
+    padding: 10px 220px;
+    border-radius: 4px;
+    background-color: #ffcf01;
+    color: #ffffff;
+}
+.soon-background2 .soon-text a:hover {
+    filter: brightness(1.2);
+}
+.soon-background .about-text .back {
+    text-decoration: none;
+    border: 1px solid;
+    padding: 10px 40px;
+    border-radius: 4px;
+    background-color: #ffcf01;
+    color: #ffffff;
+    float: right;
+    margin-right: 20px;
+    margin-top: 1px;
+}
+.soon-background .about-text .back:hover {
+    filter: brightness(1.2);
+}
+.soon-background .soon-text a:hover {
+    background-color: #8d9194;
+    color: #ffcf01;
+}
+.contact-us a i {
+    font-size: 30px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-right: -20px;
+}
+.contact-us a i:hover {
+    margin-top: -10px;
+    transition: 1s;
+}
+.hero-section .markets {
+    display: flex;
+    float: right;
+    margin-right: 100px;
+    align-items: center;
+    
+
+}
+.hero-section .markets div img {
+    width: 25px;  
+}
+.hero-section .message-me {
+    font-size: 38px;
+    position: fixed;
+    z-index: 100;
+    color: #fff;
+    background-color: #11141a;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    right: 2%;
+    bottom: 2%;
+    cursor: pointer;
+}
+.hero-section .message-me:hover {
+    background-color: #616161;
+}
+.hero-section .message-me a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.hero-section .message-me a::before {
+    content: "Chat us on WhatsApp for more info on Excelexchange";
+    opacity: 0;
+    bottom: 100%;
+    position: absolute;
+    font-size: 12px;
+    transform: translateX(-50%);
+    color: #8d9194;
+    background-color: #363d42;
+    border-radius: 5px;
+    padding: 5px;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+.hero-section .message-me a:hover::before {
+    opacity: 1;
+}
+.hero-section .coin-list {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    right: 10%;
+}
+.hero-section .coin-list .coin {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 15px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.coin img {
+    width: 40px;
+    margin-right: 10px;
+}
+.coin h3 {
+    color: #fff;
+    margin-top: 5px;
+}
+.mobile-menu {
+    display: none;
+}
+.open-menu {
+    display: none;
+}
+.mobile-soon-background {
+    display: none;
+}
+.mobile-about {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    nav ul {
+        margin-left: -50px;
+        font-size: 15px;
+    }
+    nav ul li a {
+        margin-right: -15px;
+    }
+    nav .button1 {
+        font-size: 14px;
+        padding: 7px 15px;
+    } 
+    nav .button2 {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+    .hero2 {
+        min-height: 50vh;
+    }
+    .hero2 .strategy .strategy1 {
+        min-height: 20vh;
+    }
+    .hero2 .strategy .strategy2 {
+        min-height: 30vh;
+    }
+    .hero3 {
+        min-height: 50vh;
+    }
+    .hero4 {
+        min-height: 35vh;
+    }
+    .hero5 {
+        min-height: 80vh;
+    }
+    .hero5 .web-info {
+        padding: 0;
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-bottom: 60px;
+    }
+    .hero5 .web-info div {
+        margin: 0;
+        padding: 3px;
+    }
+    .hero5 .container2 {
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+    .hero5 .notes2 {
+        padding-right: 20px;
+        margin: 0;
+    }
+    .hero-section {
+        min-height: 50vh;
+    }
+    .hero-section2 {
+        min-height: 40vh;
+    }
+    .hero-section2 .funds {
+        margin-right: 50px;
+    }
+    .hero1 {
+        min-height: 50vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .hero1 .trades .currency {
+        min-height: 22vh;
+        width: 33%;
+    }
+    .hero1 .trades .cryptocurrency {
+        min-height: 22vh;
+        width: 33%;
+    }
+    .hero1 .trades .digitalfunds {
+        min-height: 24vh;
+        width: 33%;
+    }
+    .hero-section4  {
+        min-height: 22vh;
+    }
+    .hero-section3 {
+        min-height: 22vh;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 250px) 
+  and (max-device-width: 667px) {
+    nav {
+        display: none;
+    }
+    .soon-background {
+        display: none;
+    }
+    .soon-background2 {
+        display: none;
+    }
+    .mobile-menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 100;
+        background-color: black;
+        padding: 10px;
+    }
+    .mobile-menu .hamburger {
+        font-size: 25px;
+        color: #fff;
+        margin-right: 10px;
+    }
+    .mobile-menu .hamburger .container {
+        justify-content: center;
+    }
+    .mobile-menu .container img {
+        width: 25px;
+    }
+    .mobile-menu .container h3 {
+        font-size: 25px;
+        color: #fff;
+    }
+    .hero5 .web-info {
+        float: none;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 16px;   
+    }
+
+    .hero-section {
+        background-image: url(mobile.avif);
+        min-height: 100vh;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .hero-section h1 {
+        padding-top: 50%;
+        font-size: 30px;
+        line-height: 50px; 
+    }
+    .hero-section p {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30%;
+    }
+    .hero-section p br {
+        display: none;
+    }
+    .button3 {
+        padding: 12px 70px;
+    }
+    .hero-section .coin-list {
+        right: 0;
+        position: relative;
+        justify-content: center;
+        bottom: -40px;
+    }
+    .hero-section .coin-list .coin {
+        padding: 4px 10px;
+        margin: 0 5px;
+    }
+    .coin img {
+        width: 20px;
+        margin-right: 5px;
+    }
+    .coin h3 {
+        font-size: 10px;
+        margin: 0;
+    }
+    .coin p {
+        font-size: 10px;
+        margin: 0;
+    }
+    .hero-section2 {
+        min-height: 80vh;
+    }
+    .hero-section2 h1 {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .hero-section2 p {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .hero-section2 p br {
+        display: none;
+    }
+    .hero-section2 a {
+        font-size: 14px;
+    }
+    .hero-section2 .funds {
+        float: none;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 16px;
+    }
+    .hero-section2 .funds img {
+        width: 40%; 
+        margin-left: 50px; 
+    }
+
+    .notes p {
+        font-size: 12px;
+        text-align: left;
+        margin-left: 10px;
+        margin-top: -50px;
+    }
+    .notes p br {
+        display: none;
+    }
+    .hero4 {
+        min-height: 30vh;
+        margin-top: 0px;
+    }
+    .hero4 .start {
+        padding: 10px;
+    }
+    .hero4 .start h1 {
+       font-size: 26px;
+       font-weight: 600;
+       margin-bottom: 20px;
+    }
+    .hero4 .start p {
+        margin: 0;
+        line-height: 1.5rem;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+    .button1 {
+      padding: 15px 70px;  
+    }
+    .open-menu {
+        z-index: 200;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: #0f171c;
+        height: 100%;
+        transition: all 400ms ease;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .open-menu ul li {
+        text-decoration: none;
+        color: #fff;
+        list-style: none;
+        margin-top: 40px;
+        font-weight: 600;
+    }
+    .open-menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+    }
+    .open-menu ul li a i {
+        float: right;
+        padding-right: 15px;
+    }
+
+    .open-menu .close-icon {
+        float: left;
+        font-size: 30px;
+        color: #fff;
+    }
+    .open-menu .mobile-menu-nav {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    
+    .open-menu .mobile-menu-nav .button1:nth-child(2) {
+        padding: 15px 70px;
+        color: #ffcf01;
+        background-color: #0f171c;
+        border: 1px solid #ffcf01;
+    }
+    .open-menu .container {
+        justify-content: center;
+    }
+
+    .open-menu .container img {
+        width: 25px;
+    }
+    .open-menu .container h3 {
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .open-menu hr {
+        width: 96%;
+        margin-bottom: 20px;
+        height: 2px;
+        border: none;
+        background-color: #363d42;
+    }
+    .hero2 {
+        min-height: 150vh;
+        
+    }
+    .hero2 h1 {
+        font-size: 26px;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .hero2 .strategy {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        
+    }
+    .hero2 .strategy h2 {
+        font-size: 16px;
+    }
+    .hero2 .strategy h3 {
+        font-size: 16px;
+    }
+    .hero2 .strategy p {
+        font-size: 14px;
+    }
+    .hero2 .strategy .strategy1 {
+        width: 100%;
+        min-height: 60vh;
+    }
+    .hero2 .strategy .strategy2 {
+        width: 100%;
+        min-height: 60vh;
+    }
+    .hero2 .strategy:hover {
+        display: none;
+    }
+    .hero3 {
+        display: none;
+    }
+
+    .hero-section3 {
+        min-height: 45vh;
+    }
+    .hero-section4 {
+        min-height: 45vh;
+    }
+    .hero-section3 .rates h1 {
+        font-size: 16px;
+    }
+    .hero-section3 .rates p {
+        font-size: 13px;
+    }
+    .hero-section4 .rates h1 {
+        font-size: 16px;
+    }
+    .hero-section4 .rates p {
+        font-size: 13px;
+    }
+    .hero5 .container2 {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .hero5 .container2 .media-logo {
+        padding: 0;
+    }
+    .hero5 .container2 .logo img {
+        width: 30px;
+    }
+    .hero5 .container2 .logo h1 {
+        font-size: 25px;
+    }
+    .hero5 .container2 div i {
+        font-size: 25px;
+    }
+    .hero5 .notes2 {
+        float: none;
+        padding-left: 20px;
+        width: 100%;
+    }
+    .hero5 .divider2 {
+        margin: 0;
+    }
+    .hero5 .divider {
+       margin: 0; 
+    }
+    
+    
+    .hero5 footer {
+        padding-left: 30px;
+        
+    }
+    .hero1 {
+        min-height: 160vh;
+        margin-top: 300px;
+    }
+    .hero1 h1 {
+        font-size: 27px;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .hero1 .trades {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero1 .trades:hover {
+        display: none;
+    }
+    .hero1 .trades .currency {
+        width: 80%;
+        min-height: 43vh;
+        margin: 0;
+    }
+    .hero1 .trades .digitalfunds {
+        width: 80%;
+        min-height: 43vh;
+        margin: 0;
+    }
+    .hero1 .trades .cryptocurrency {
+        width: 80%;
+        min-height: 43vh;
+    }
+    .mobile-soon-background {
+        background-color: #fff;
+        display: contents;
+    }
+    .mobile-soon-background .soon-text a {
+        padding: 10px 70px;
+    }
+    .mobile-soon-background .soon-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;  
+    }
+    
+    .mobile-soon-background .soon-text img {
+        width: 100%;
+        margin-top: 40px;
+        
+    }
+    .mobile-soon-background .soon-text h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .mobile-soon-background .soon-text p {
+        margin-bottom: 40px;
+    }
+
+    .hero5 footer div a {
+        display: flex;
+    }
+
+    #open-menu.show-menu {
+        display: block;
+    }
+
+
+
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 926px) {
+    nav {
+        display: none;
+    }
+    .soon-background {
+        display: none;
+    }
+    .soon-background2 {
+        display: none;
+    }
+    .mobile-menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 100;
+        background-color: black;
+        padding: 10px;
+    }
+    .mobile-menu .hamburger {
+        font-size: 30px;
+        color: #fff;
+        margin-right: 40px;
+    }
+    .mobile-menu .hamburger .container {
+        justify-content: center;
+    }
+    .mobile-menu .container img {
+        width: 30px;
+    }
+    .mobile-menu .container h3 {
+        font-size: 30px;
+        color: #fff;
+    }
+    .hero5 .web-info {
+        float: none;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 16px;   
+    }
+
+    .hero-section {
+        background-image: url(mobile.avif);
+        min-height: 100vh;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .hero-section h1 {
+        padding-top: 50%;
+        font-size: 30px;
+        line-height: 50px; 
+    }
+    .hero-section p {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30%;
+    }
+    .hero-section p br {
+        display: none;
+    }
+    .button3 {
+        padding: 12px 80px;
+    }
+    .hero-section .coin-list {
+        right: 0;
+        position: relative;
+        justify-content: center;
+        bottom: -40px;
+    }
+    .hero-section .coin-list .coin {
+        padding: 4px 10px;
+        margin: 0 5px;
+    }
+    .coin img {
+        width: 30px;
+        margin-right: 5px;
+    }
+    .coin h3 {
+        font-size: 12px;
+        margin: 0;
+    }
+    .coin p {
+        font-size: 12px;
+        margin: 0;
+    }
+    .hero-section2 {
+        min-height: 80vh;
+    }
+    .hero-section2 h1 {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .hero-section2 p {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .hero-section2 p br {
+        display: none;
+    }
+    .hero-section2 a {
+        font-size: 14px;
+    }
+    .hero-section2 .funds {
+        float: none;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 16px;
+    }
+    .hero-section2 .funds img {
+        width: 40%; 
+        margin-left: 50px; 
+    }
+
+    .notes p {
+        font-size: 12px;
+        text-align: left;
+        margin-left: 10px;
+        margin-top: -50px;
+    }
+    .notes p br {
+        display: none;
+    }
+    .hero4 {
+        min-height: 30vh;
+        margin-top: 0px;
+    }
+    .hero4 .start {
+        padding: 10px;
+    }
+    .hero4 .start h1 {
+       font-size: 26px;
+       font-weight: 600;
+       margin-bottom: 20px;
+    }
+    .hero4 .start p {
+        margin: 0;
+        line-height: 1.5rem;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+    .button1 {
+      padding: 15px 100px;  
+    }
+    .open-menu {
+        z-index: 200;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: #0f171c;
+        height: 100%;
+        transition: all 400ms ease;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .open-menu ul li {
+        text-decoration: none;
+        color: #fff;
+        list-style: none;
+        margin-top: 40px;
+        font-weight: 600;
+    }
+    .open-menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+    }
+    .open-menu ul li a i {
+        float: right;
+        padding-right: 15px;
+    }
+
+    .open-menu .close-icon {
+        float: left;
+        font-size: 30px;
+        color: #fff;
+    }
+    .open-menu .mobile-menu-nav {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    
+    .open-menu .mobile-menu-nav .button1:nth-child(2) {
+        padding: 15px 120px;
+        color: #ffcf01;
+        background-color: #0f171c;
+        border: 1px solid #ffcf01;
+    }
+    .open-menu .container {
+        justify-content: center;
+    }
+
+    .open-menu .container img {
+        width: 30px;
+    }
+    .open-menu .container h3 {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .open-menu hr {
+        width: 96%;
+        margin-bottom: 20px;
+        height: 2px;
+        border: none;
+        background-color: #363d42;
+    }
+    .hero2 {
+        min-height: 150vh;
+        
+    }
+    .hero2 h1 {
+        font-size: 26px;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .hero2 .strategy {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        
+    }
+    .hero2 .strategy h2 {
+        font-size: 16px;
+    }
+    .hero2 .strategy h3 {
+        font-size: 16px;
+    }
+    .hero2 .strategy p {
+        font-size: 14px;
+    }
+    .hero2 .strategy .strategy1 {
+        width: 100%;
+        min-height: 60vh;
+    }
+    .hero2 .strategy .strategy2 {
+        width: 100%;
+        min-height: 60vh;
+    }
+    .hero2 .strategy:hover {
+        display: none;
+    }
+    .hero3 {
+        display: none;
+    }
+    .hero-section3 {
+        min-height: 45vh;
+    }
+    .hero-section4 {
+        min-height: 45vh;
+    }
+    .hero-section3 .rates h1 {
+        font-size: 16px;
+    }
+    .hero-section3 .rates p {
+        font-size: 13px;
+    }
+    .hero-section4 .rates h1 {
+        font-size: 16px;
+    }
+    .hero-section4 .rates p {
+        font-size: 13px;
+    }
+    .hero5 .container2 {
+        float: none;
+        width: 100%;
+    }
+    .hero5 .container2 {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .hero5 .container2 .media-logo {
+        padding: 0;
+    }
+    .hero5 .container2 .logo img {
+        width: 30px;
+    }
+    .hero5 .container2 .logo h1 {
+        font-size: 25px;
+    }
+    .hero5 .container2 div i {
+        font-size: 25px;
+    }
+    .hero5 .divider2 {
+        margin: 0;
+    }
+    .hero5 .divider {
+       margin: 0; 
+    }
+    
+    
+    .hero5 footer {
+        padding-left: 30px;
+        
+    }
+    .hero1 {
+        min-height: 160vh;
+        margin-top: 300px;
+    }
+    .hero1 h1 {
+        font-size: 27px;
+        padding: 20px;
+    }
+    .hero1 .trades {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero1 .trades:hover {
+        display: none;
+    }
+    .hero1 .trades .currency {
+        width: 80%;
+        min-height: 43vh;
+        margin: 0;
+    }
+    .hero1 .trades .digitalfunds {
+        width: 80%;
+        min-height: 43vh;
+        margin: 0;
+    }
+    .hero1 .trades .cryptocurrency {
+        width: 80%;
+        min-height: 43vh;
+    }
+    .mobile-soon-background {
+        background-color: #fff;
+        display: contents;
+    }
+    .mobile-soon-background .soon-text a {
+        padding: 10px 100px;
+    }
+    .mobile-soon-background .soon-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;  
+    }
+    
+    .mobile-soon-background .soon-text img {
+        width: 100%;
+        margin-top: 40px;
+        
+    }
+    .mobile-soon-background .soon-text h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .mobile-soon-background .soon-text p {
+        margin-bottom: 40px;
+    }
+
+    .hero5 footer div a {
+        display: flex;
+    }
+    .mobile-soon-background .about-text{
+        padding-top: 60px;
+        text-align: center;
+    }
+    .mobile-soon-background .about-text h1 {
+        margin-bottom: 20px;
+    }
+    .mobile-soon-background .about-text p {
+        margin-bottom: 20px;
+        font-size: 17px;
+        padding: 15px;
+    }
+    .mobile-soon-background .about-text .back {
+        text-decoration: none;
+        border: 1px solid #ffcf01;
+        padding: 10px 30px;
+        border-radius: 4px;
+        background-color: #ffcf01;
+        color: #0f171c;
+        float: right;
+        margin-right: 20px;
+        margin-top: 1px;
+    }
+
+
+
+
+
+
+
+    #open-menu.show-menu {
+        display: block;
+    }
+
+
+
+}
+

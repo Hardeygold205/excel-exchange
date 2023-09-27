@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Excel Exchanges</title>
+    <link rel="icon" type="x-icon" href="Excelicons.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c309dedf53.js" crossorigin="anonymous"></script>
+
+    <style>
+        .nav-item {
+            margin-right: 30px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .nav-item a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+        .nav-item a:hover {
+            color: #ffc107;
+            background: #555;
+        }
+
+        .coin {
+            border:  1px solid #fff;
+            border-radius: 0.5rem;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
+                <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
+            </a>
+            <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-light">
+                    <li class="nav-item"><a id="home" href="index.html">Home<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                    <li class="nav-item "><a href="#hero2">Services<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                    <li class="nav-item "><a href="https://wa.me/+2348138553465" target="_blank">Contact<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                    <li class="nav-item "><a id="about" href="about.html">About<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                    <li class="nav-item "><a href="#hero3">Portfolio<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                </ul>
+                <div class="d-grid d-lg-flex gap-3 text-center">
+                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="tooltip" title="Open an account with Excelexchange" href="soon.html">Open account</a>
+                    <a class="btn btn-warning btn-block align-top" type="button" data-bs-toggle="tooltip" title="Sign in to your account" href="soon.html">Sign in</a>
+                    <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
+                </div>
+            </div> 
+        </div>      
+    </nav>
+    
+    <!--<div class="mobile-menu">
+        <div id="hamburger-icon" class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="container">
+            <img class="logo" src="Excel-icon.png" alt="excel-logo">
+            <h3>excelexchange</h3>
+            <img src="peace.png">
+        </div>
+    </div> --> 
+
+    <!-- <div id="open-menu" class="open-menu">
+        <div id="close-icon" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="container">
+            <img class="logo" src="Excel-icon.png" alt="excel-logo">
+            <h3>excelexchange</h3>
+            <img src="peace.png">
+        </div><hr>
+        <ul>
+            <li><a href="index.html">Home<i class="fa-solid fa-angle-down"></i></a></li><hr>
+            <li><a href="soon.html">Services<i class="fa-solid fa-angle-down"></i></a></li><hr>
+            <li><a href="https://wa.me/+2348138553465" target="_blank">Contact<i class="fa-solid fa-angle-down"></i></a></li><hr>
+            <li><a href="about.html">About<i class="fa-solid fa-angle-down"></i></a></li><hr>
+            <li><a href="soon.html">Portfolio<i class="fa-solid fa-angle-down"></i></a></li><hr>
+        </ul>
+        <div class="mobile-menu-nav">
+            <a href="soon.html" class="button1">Open account</a>
+            <a href="soon.html" class="button1">Sign in</a>  
+        </div>
+    </div> -->
+
+    <section class="herosection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="container-fluid p-5 ">
+                        <h1 class="text-light fs-1 mt-5 mb-4 fw-bolder">
+                            Buy & Sell<br>
+                            <span class="text-warning display-5">Cryptocurrency</span><br>
+                            and <span class="text-warning display-5 ">Digital Funds</span>
+                        </h1>
+                        <p class="text-light mb-5 mt-5 ">Trade with the World's Leading Foreign Exchanges Merchant<br class="d-none md-block">
+                            the most stable and reliable.
+                        </p>
+                        <a href="#hero4" class="btn btn-warning mb-5 py-2 d-sm-block d-block ">EXPLORE MORE</a>
+                        <a href="soon.html" class="btn btn-outline-warning mb-5 px-5 py-2 d-sm-block d-block ">Register</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 mt-auto">
+                    <div class="container-fluid text-light p-5">
+                        <div class="card-group d-flex justify-content-center gap-2">
+                            <div class="card-body d-flex coin">
+                                <img class="mt-1" src="bitcoin-btc-logo.png" alt="" width="34" height="34">
+                                <div>
+                                    <h6 class="mb-0 ">$<span id="bitcoin"></span></h6>
+                                    <p class="mb-0 ">Bitcoin</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex coin">
+                                <img class="mt-1" src="Ethereum-Logo-PNG-Pic.png" alt="" width="34" height="34">
+                                <div>
+                                    <h6 class="mb-0 ">$<span id="ethereum"></span></h6>
+                                    <p class="mb-0 ">Ethereum</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex coin">
+                                <img class="mt-1" src="tether.png" alt="" width="34" height="34">
+                                <div>
+                                    <h6 class="mb-0">$1.00</h6>
+                                    <p class="mb-0">USDT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>   
+        <a href="https://wa.me/+2348138553465" target="_blank"><i class="fa-regular fa-comment-dots fs-1 p-3 fixed-bottom text-end text-light"></i></a>
+    </section>
+    
+    <section class="container-fluid bg-black p-5 ">
+        <div class="container text-center mb-5 ">
+            <h2 class="mb-4 text-light">Instant Transaction, 24/7</h2>
+
+            <p class="mb-5 text-light">Our payout is carried out in seconds with fast funds confirmation, safe and secure<br class="d-none d-md-block">
+            with standard rates
+            </p>
+            <a class="text-decoration-none text-warning" href="#hero1">More about deposits & withdrawals at excelexchange</a>
+        </div>
+        <div class="container">
+            <div class="row gap-5 gap-md-3">    
+                <div class="col">
+                    <img src="bitcoin-btc-logo.png" alt="bitcoin" width="70" height="70">
+                </div>
+                <div class="col">
+                    <img src="Ethereum-Logo-PNG-Pic.png" alt="etherium" width="70" height="70">
+                </div>
+                <div class="col">
+                    <img src="tether.png" alt="usdt" width="70" height="70">
+                </div>
+                <div class="col">
+                    <img src="Skrill_logo.svg.png" alt="skrill" width="80">
+                </div>
+                <div class="col">
+                    <img src="Neteller_logo_logotype.png" alt="neteller" width="80">
+                </div>
+                <div class="col">
+                    <img src="Perfect_Money.png" alt="perfectmoney" width="80">
+                </div>
+            </div>
+            <div class="container-fluid mt-5">
+                <p class="text-center mt5 text-secondary">We comply with the Payment Card Industry Data Security Standard (PCI DSS) to ensure<br class="d-none d-md-block">
+                   your security and privacy. We guarantee a protected payment experience for you. <a class="text-warning" href="#notes2"><span>Learn more</span></a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col p-5 text-bg-dark">
+                <h3 class="mb-5">
+                    Standard Rates & Fast Payout 
+                </h3>
+                <p class="mb-4">
+                    Say goodbye to long queues and waiting times
+                </p>
+                <a class="text-warning" href="#">
+                    See Rates here
+                </a>
+            </div>
+            <div class="col p-5 text-bg-secondary">
+                <h3 class="mb-5">
+                    Tranparent Price History & Record
+                </h3>
+                <p class="mb-4">
+                    Transparency is at the core of our trading and service
+                </p>
+                <a class="text-warning" href="#">
+                    See price history
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <div id="hero-section3" class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col p-5 text-bg-dark ">
+                    <h3 class="mb-5">
+                        Standard Rates & Fast Payout 
+                    </h3>
+                    <p class="mb-4">
+                        Say goodbye to long queues and waiting times
+                    </p>
+                    <a class="text-warning" href="#">
+                        See Rates here
+                    </a>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="col p-5 text-bg-secondary">
+                    <h3 class="mb-5">
+                        Tranparent Price History
+                    </h3>
+                    <p class="mb-4">
+                        Transparency is at the core of our service
+                    </p>
+                    <a class="text-warning" href="#">
+                        See price history
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <section id="hero1" class="container-fluid mt-3">
+        <h1 class="text-center">
+            Access and trade global markets
+        </h1>
+        <div class="container-fluid mt-4">
+            <div class="card-group">
+                <div class="card-body rounded-3 text-bg-light m-2 text-center p-5">
+                    <img src="Eurusd.webp" alt="EurUsd" width="100" height="54">
+                    <h3>Currencies</h3>
+                    <p>Trade and Swap the world's largest Foreign Currencies</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="card-body rounded-3 text-bg-light m-2 text-center p-5 ">
+                    <img src="commodities.webp" alt="Commodities" width="100" height="54">
+                    <h3>Commodities</h3>
+                    <p>Trade and Swap all Commodities, Digital funds and E-wallet</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="card-body rounded-3  text-bg-light m-2 text-center p-5 ">
+                    <img src="eth-btc.png" alt="Cryptocurrency" width="120" height="64">
+                    <h3>Cryptocurrency</h3>
+                    <p>Buy and Sell BTC, ETH & USDT and all other cryptocurrency</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero2" class="container-fluid mt-3 w-100 ">
+        <h1 class="text-center">
+            Account to suit your buying strategy
+        </h1>
+        <div class="container-fluid mt-3 p-4">
+            <div class="row">
+                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start">
+                    <h2 class="fw-bolder ">Standard accounts</h2>
+                    <div class="d-flex gap-3 mb-3 mt-5 fw-bold">
+                        <h4>Standard</h4>
+                        <h4>Standard Cent</h4>
+                    </div>
+                    <p>Feature-rich, commission-free accounts that suit the needs of today's traders. Sign up and experience the advantages of our most popular account</p>
+                    <a href="#" type="button" class="btn btn-outline-warning px-5 float-end mt-5 ">See details</a>
+                </div>
+                <div class="col-lg-6 p-4 mb-3  text-bg-secondary  rounded-end">
+                    <h2 class="fw-bolder">Professional accounts</h2>
+                    <div class="d-flex gap-4 mb-3 mt-5 fw-bold">
+                        <h4>Raw Spread</h4>
+                        <h4>Zero</h4>
+                        <h4>Pro</h4>
+                    </div>
+                    
+                    <p>Flexible choice between raw spread model, zero spread and zero commission. For experience traders, scalpers and algortraders</p>
+                    <a href="#" type="button" class="btn btn-outline-dark px-5 float-end mt-5 ">See details</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="hero3" class="container-fluid p-5">
+        <div class="row w-100 d-flex align-items-center">
+            <div class="col-md-8  p-1 ">
+                <h2 class="fw-bolder">The numbers that make up Excelexchange</h2>
+                <p>From trading volume to number of active clients, we are happy to share with you<br>
+                    the figures that make us one of the world leading merchant
+                </p>
+                <a class="text-warning" href="#">Learn more</a>
+            </div>
+            <div class="col-md-4 p-5">
+                <div class="mb-5">
+                    <h2>$3.91 trillion</h2>
+                    <p>Trading volume in july 2023</p>
+                </div>
+                <div class="mb-5">
+                    <h2>571,348</h2>
+                    <p>Active clients in July 2023</p>
+                </div>
+                <div class="mb-5">
+                    <h2>$1.31 billion</h2>
+                    <p>clients withdrawal in Q2 2023</p>
+                </div>
+                <div class="mb-5">
+                    <h2>$105.8 million</h2>
+                    <p>Partner rewards in Q2 2023</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="hero4" class="hero4">
+        <div class="container">
+            <div class="row"  >
+                <div class="d-block  text-center p-3 mx-md-auto">
+                    <h1 class="text-light p-2 ">Ready to get started?</h1>
+                    <p class="text-light p-2 mt-5">
+                        It only takes 3 minutes to get your account set up
+                        and ready for trading
+                    </p>
+                    <a href="soon.html" class="btn btn-warning d-block mx-5 mt-5 ">Open account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="row p-4 gap-4">
+            <div class="col">
+                <h6 class="fw-bolder">Corporate</h6>
+                <a class="nav-link text" href="">Excel Exchange blog</a>
+                <a class="nav-link" href="">Social responsibility</a>
+                <a class="nav-link" href="">Contact us</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Media center</h6>
+                <a class="nav-link" href="">Excelexchange in the meida</a>
+                <a class="nav-link" href="">Team Pro</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Legal & reporting</h6>
+                <a class="nav-link" href="">Regulation</a>
+                <a class="nav-link" href="">Financial reports</a>
+                <a class="nav-link" href="">Legal documents</a>
+                <a class="nav-link" href="">Compesation fund</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Accounts</h6>
+                <a class="nav-link" href="">Standard accounts</a>
+                <a class="nav-link" href="">Professional accounts</a>
+                <a class="nav-link" href="">Portfolio<br> Management<br> accounts</a>
+                <a class="nav-link" href="">Deposits &<br> withdrawals</a>
+                <a class="nav-link" href="">Fees</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Solutions</h6>
+                <a class="nav-link" href="">Portfolio<br>
+                            Management</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Instruments</h6>
+                <a class="nav-link" href="">Forex</a>
+                <a class="nav-link" href="">Commodities</a>
+                <a class="nav-link" href="">Stocks</a>
+                <a class="nav-link" href="">Indices</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Platforms</h6>
+                <a class="nav-link" href="">Exness Trade app</a>
+                <a class="nav-link" href="">Exness Terminal</a>
+                <a class="nav-link" href="">MetaTrader 5</a>
+                <a class="nav-link" href="">MetaTrader 4</a>
+                <a class="nav-link" href="">MetaTrader<br>
+                            WebTerminal</a>
+                <a class="nav-link" href="">MetaTrader mobile</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">Tools</h6>
+                <a class="nav-link" href="">Analytical tools</a>
+                <a class="nav-link" href="">Investment calculator</a>
+                <a class="nav-link" href="">Economic calendar</a>
+                <a class="nav-link" href="">Currency converter</a>
+                <a class="nav-link" href="">Tick history</a>
+                <a class="nav-link" href="">VPS hosting</a>
+                <a class="nav-link" href="">Trading Central WebTV</a>
+            </div>
+            <div class="col">
+                <h6 class="fw-bolder">More</h6>
+                <a class="nav-link" href="">Partners</a>
+                <a class="nav-link" href="">Help Center</a>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <a class="navbar-brand text-dark fs-3 fw-bold" href="index.html">
+                    <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
+                </a>
+                <div class="media-logo fs-1">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div id="notes2" class="col-md-8">
+                <p>
+                    <p>​Excel exchange is a Securities Dealer registered in ... with registration number ... and authorised by the Financial Services Authority
+                    (FSA) with licence number ... The registered office of Excel exchange Ltd ...</p>
+    
+                    <p>Excelexchange is a Securities Intermediary registered in Curaçao with registration number ... and authorised by the ... with licence number ... The registered office of Excelexchange  is at ...</p>
+    
+                    <p>Excelexchange is authorised by the Financial Services Commission (FSC) in BVI with registration number ... and investment business licence
+                    number ... The registered office of Excelexchange is ...</p>
+    
+                    <p>The entities above are duly authorized to operate under the Excelexchange brand and trademarks.</p>
+    
+                    <p>Risk Warning: Our services relate to complex derivative products which are traded outside an exchange. These products come with a high risk of losing
+                    money rapidly due to leverage and thus are not appropriate for all investors. Under no circumstances shall Excelexchange have any liability to any person or
+                    entity for any loss or damage in whole or part caused by, resulting from, or relating to any investing activity. Learn more.</p>
+    
+                    <p>The information on this website does not constitute investment advice or a recommendation or a solicitation to engage in any investment activity.</p>
+    
+                    <p>The information on this website may only be copied with the express written permission of Excelexchange.</p>
+    
+                    <p>Excelexchange complies with the Payment Card Industry Data Security Standard (PCI DSS) to ensure your security and privacy. We conduct regular vulnerability
+                    scans and penetration tests in accordance with the PCI DSS requirements for our business model.</p>
+                </p>
+            </div>
+        </div>
+        
+        <hr>
+        <footer>
+           <img src="pci.png" alt="PCI" height="100">
+           <div class="row m-1">
+            <a class="col-sm-4 text-decoration-none" href="#">Risk Disclosure</a>
+            <a class="col-sm-4 text-decoration-none" href="#">Preventing Money Laudering</a>
+            <a class="col-sm-4 text-decoration-none" href="#">Privacy Agreement</a>
+            <a class="text-decoration-none mt-3" href="#"><span>© 2023 excelexchange</span></a>
+           </div>
+        </footer>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+</body>
+</html>
+
+
