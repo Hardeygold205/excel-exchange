@@ -15,7 +15,7 @@ html {
 } */
 
 .herosection {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('mobile.avif');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('mobile.avif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
