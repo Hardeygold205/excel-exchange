@@ -71,14 +71,29 @@
                     <li class="nav-item "><a href="#hero3">Portfolio<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="tooltip" title="Open an account with Excelexchange" href="soon.html">Open account</a>
-                    <a class="btn btn-warning btn-block align-top" type="button" data-bs-toggle="tooltip" title="Sign in to your account" href="soon.html">Sign in</a>
+                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="tooltip" title="Open an account with Excelexchange" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
+                    <a class="btn btn-warning btn-block align-top" type="button" data-bs-toggle="tooltip" title="Sign in to your account" data-bs-toggle="modal" data-bs-target="#myModal">Sign in</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
             </div> 
         </div>      
     </nav>
-    
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              Modal body..
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <!--<div class="mobile-menu">
         <div id="hamburger-icon" class="hamburger">
             <i class="fa-solid fa-bars"></i>
@@ -126,7 +141,7 @@
                             the most stable and reliable.
                         </p>
                         <a href="#hero4" class="btn btn-warning mb-5 py-2 d-sm-block d-block ">EXPLORE MORE</a>
-                        <a href="soon.html" class="btn btn-outline-warning mb-5 px-5 py-2 d-sm-block d-block ">Register</a>
+                        <a class="btn btn-outline-warning mb-5 px-5 py-2 d-sm-block d-block" data-bs-toggle="modal" data-bs-target="#myModal">Register</a>
                     </div>
                 </div>
                 <div class="col-lg-7 mt-auto">
@@ -377,7 +392,7 @@
                         It only takes 3 minutes to get your account set up
                         and ready for trading
                     </p>
-                    <a href="soon.html" class="btn btn-warning d-block mx-5 mt-5 ">Open account</a>
+                    <a class="btn btn-warning d-block mx-5 mt-5" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
                 </div>
             </div>
         </div>
