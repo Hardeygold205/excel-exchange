@@ -44,6 +44,14 @@
         .header-text {
             font-size: 4rem;
         }
+        .card-body:hover {
+            transform: scale(.95);
+            transition: all .3s;
+        }
+        .scale:hover {
+            transform: scale(1.03);
+            transition: all .5s;
+        }
         @media (max-width: 700px) {
             .header-text {
                 font-size: 3rem;
@@ -88,15 +96,15 @@
                     <li class="nav-item "><a href="#hero3">Portfolio<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="tooltip" title="Open an account with Excelexchange" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
-                    <a class="btn btn-warning btn-block align-top" type="button" data-bs-toggle="tooltip" title="Sign in to your account" data-bs-toggle="modal" data-bs-target="#myModal">Sign in</a>
+                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
+                    <a class="btn btn-warning btn-block align-top" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Sign in</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
             </div> 
         </div>      
     </nav>
     <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-fullscreen modal-fullscreen-md-down  modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down  modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title"></h4>
@@ -105,8 +113,8 @@
             <div class="modal-body">
               <div class="container ">
                 <img class="d-block  mx-auto" src="site-under-construct.png" alt="tickicon" width="400">
-                <h1 class="text-center ">Thank You! We are launching our website soon</h1>
-                <p class="text-center ">Site under contruction, Please check back later.<br> Trade with Excelexchange</p>
+                <h3 class="text-center ">Thank You! We are launching our website soon</h3>
+                <p class="text-center "><i>Site under contruction, Please check back later.</i><br> Trade with Excelexchange</p>
                 <a href="index.html" type="button" class="btn btn-warning d-block ">OK</a>
               </div>
             </div>
@@ -328,7 +336,7 @@
         </h1>
         <div class="container-fluid mt-3 p-4">
             <div class="row">
-                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start">
+                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start scale">
                     <h2 class="fw-bolder ">Standard accounts</h2>
                     <div class="d-flex gap-3 mb-3 mt-5 fw-bold dotted">
                         <h4>Standard</h4>
@@ -337,7 +345,7 @@
                     <p>Feature-rich, commission-free accounts that suit the needs of today's traders. Sign up and experience the advantages of our most popular account</p>
                     <a href="#" type="button" class="btn btn-outline-warning px-5 float-end mt-5 ">See details</a>
                 </div>
-                <div class="col-lg-6 p-4 mb-3  text-bg-secondary  rounded-end">
+                <div class="col-lg-6 p-4 mb-3  text-bg-secondary  rounded-end scale">
                     <h2 class="fw-bolder">Professional accounts</h2>
                     <div class="d-flex gap-4 mb-3 mt-5 fw-bold dotted">
                         <h4>Raw Spread</h4>
