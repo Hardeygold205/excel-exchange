@@ -41,6 +41,14 @@
             overflow-x: auto;
         
         }
+        .header-text {
+            font-size: 4rem;
+        }
+        @media (max-width: 700px) {
+            .header-text {
+                font-size: 3rem;
+            }
+        }
 
         @media (max-width: 500px) {
             .coin {
@@ -48,6 +56,15 @@
                 border-radius: 0.5rem;
 
             }
+            .header-text {
+                font-size: 2.5rem;
+            }
+        }
+        @media (max-width: 400px) {
+            .header-text {
+                font-size: 2rem;
+            }
+
         }
 
 
@@ -131,13 +148,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="container-fluid p-5 ">
-                        <h1 class="text-light fs-1 mt-5 mb-4 fw-bolder">
+                    <div class="container-fluid py-5 ">
+                        <h1 class="text-light mt-5 mb-4 fw-bolder text-md-start text-center header-text">
                             Buy & Sell<br>
-                            <span class="text-warning display-5">Cryptocurrency</span><br>
-                            and <span class="text-warning display-5 ">Digital Funds</span>
+                            <span class="text-warning display-5 header-text">Cryptocurrency</span>
+                            and <span class="text-warning display-5 header-text">Digital Funds</span>
                         </h1>
-                        <p class="text-light mb-5 mt-5 ">Trade with the World's Leading Foreign Exchanges Merchant<br class="d-none md-block">
+                        <p class="text-light mb-5 mt-5 text-md-start text-center">Trade with the World's Leading Foreign Exchanges Merchant<br class="d-none md-block">
                             the most stable and reliable.
                         </p>
                         <a href="#hero4" class="btn btn-warning mb-5 py-2 d-sm-block d-block ">EXPLORE MORE</a>
@@ -330,7 +347,7 @@
     </section>
     <section id="hero3" class="container-fluid p-2">
         <div class="row w-100 d-flex align-items-center gap-3 gap-md-0 ">
-            <div id="rates" class="col-md-7 text-md-start text-center ">
+            <div id="rates" class="col-md-7 text-md-start text-center">
                 <h2 class="fw-bolder">The numbers that make up Excelexchange</h2>
                 <p>From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
                     the figures that make us one of the world leading merchant
