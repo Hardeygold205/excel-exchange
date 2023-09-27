@@ -42,10 +42,17 @@ h1 {
     background-position: center;
     position: relative;
     min-width: 100%;
-    min-height: 65vh;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+.soon-background {
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    padding-top: 1px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('male-investor-using-stock-trading-app-smartphone-trader-analyzing-dynamic-forex-chart-price-flow-screen-while-standing-outdoors-selective-focus-hand-holding-mobile-phone_95891-4065.jpg');
+    
 }
 /* 
 .hero-section2 {
@@ -283,7 +290,7 @@ header nav div .logo h3 {
 .hero-section .button3 {
     margin-left: 5%;
 }
-*/
+
 .hero-section2 {
     text-align: center;
     color:#fff;
@@ -714,15 +721,9 @@ header nav div .logo h3 {
 .hero5 .container2 .logo .down-logo {
     width: 40px;
     margin-top: 10px;
-}
-.soon-background {
-    min-height: 100vh;
-    align-items: center;
-    text-align: center;
-    padding-top: 1px;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('male-investor-using-stock-trading-app-smartphone-trader-analyzing-dynamic-forex-chart-price-flow-screen-while-standing-outdoors-selective-focus-hand-holding-mobile-phone_95891-4065.jpg');
-    
-}
+} */
+
+/*
 .soon-background2 .soon-text {
     height: 100%;
     background-color: #ffffff;
@@ -811,6 +812,7 @@ header nav div .logo h3 {
     
 
 }
+/*
 .hero-section .markets div img {
     width: 25px;  
 }
