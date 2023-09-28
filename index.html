@@ -89,15 +89,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item"><a id="home" href="index.html">Home<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
-                    <li class="nav-item "><a href="#hero2">Services<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
-                    <li class="nav-item "><a href="https://wa.me/+2348138553465" target="_blank">Contact<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
-                    <li class="nav-item "><a id="about" href="about.html">About<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
-                    <li class="nav-item "><a href="#hero3">Portfolio<i class="fa-solid fa-angle-down py-1"></i></a></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a id="home" href="index.html">Home</a><i class="fa-solid fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a href="#hero2">Services</a><i class="fa-solid fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a id="about" href="about.html">About</a><i class="fa-solid fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a href="#hero3">Portfolio</a><i class="fa-solid fa-angle-down py-1"></i></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
-                    <a class="btn btn-warning btn-block align-top" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Sign in</a>
+                    <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Buy</a>
+                    <a class="btn btn-warning btn-block d-md-block px-4" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Sell</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
             </div> 
@@ -386,9 +386,15 @@
                     </div>
                     <div class="toast-body">
                       <p>Below are the prices and History of our day to day transaction:</p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myWallet">
-                            Copy wallet to send
-                        </button>
+                        <div class="d-flex justify-content-between ">
+                            <button type="button" class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
+                                Buy
+                            </button>
+                            <button type="button" class="btn btn-danger px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
+                                Sell
+                            </button>
+                        </div>
+                        
                         <div id="myWallet" class="modal">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
@@ -397,7 +403,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="input-group mb-3">Bitcoin
+                                        <div class="input-group mb-3 d-flex align-items-center">BTC
                                             <a type="text" class="form-control" id="btcToCopy">1CRhyscps26GkPLQyNoirUudiLMJJWFS6o</a>
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#btcToCopy">
@@ -405,7 +411,7 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="input-group mb-3"> USDT
+                                        <div class="input-group mb-3 d-flex align-items-center"> USDT
                                             <a type="text" class="form-control" id="usdtToCopy">TRujNVeJYeK9qMzBB7UfDg8HAc9gtZfP1s</a>
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#usdtToCopy">
@@ -413,7 +419,7 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="input-group mb-3"> ETH
+                                        <div class="input-group mb-3 d-flex align-items-center"> ETH
                                             <a type="text" class="form-control" id="ethToCopy">0x92d6b13a8df3ed4acc015ba3ba9794acd29e5c63</a>
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#ethToCopy">
@@ -559,8 +565,8 @@
             </div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-md-4 mx-auto">
+        <div class="row px-3">
+            <div class="col-md-4 mx-auto d-flex flex-column align-items-md-start align-items-center">
                 <a class="navbar-brand text-dark fs-3 fw-bold" href="index.html">
                     <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
                 </a>
@@ -614,6 +620,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 
+
     <script>
         // Initialize tooltips
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -621,6 +628,7 @@
           return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
+
     <script>
         var clipboard = new ClipboardJS('.copy-button');
         
@@ -631,5 +639,7 @@
     </script>
 </body>
 </html>
+
+
 
 
