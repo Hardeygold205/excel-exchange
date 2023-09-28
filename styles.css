@@ -11,11 +11,14 @@ html {
 
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('crypto-background-j6t7raza7y7suv6d.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('HD-wallpaper-technology-blockchain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .herosection {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('HD-wallpaper-technology-blockchain.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crypto-background-j6t7raza7y7suv6d.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -46,6 +49,7 @@ h1 {
     justify-content: center;
     align-items: center;
     display: flex;
+    box-shadow: #555 0px 0px 28px 8px;
 }
 .soon-background {
     min-height: 100vh;
