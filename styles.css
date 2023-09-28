@@ -10,12 +10,12 @@ html {
 
 
 
-/* img {
-    max-width: 5%;
-} */
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('crypto-background-j6t7raza7y7suv6d.jpg');
+}
 
 .herosection {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('mobile.avif');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('HD-wallpaper-technology-blockchain.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,12 +36,13 @@ h1 {
 }
 
 .hero4 {
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('pngtree-online-stock-market-trading-arrow-pointing-to-3d-mobile-phone-illustrated-image_3670288.png');
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('c5w0LQhizcUs.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     min-width: 100%;
+    min-height: 75vh;
     justify-content: center;
     align-items: center;
     display: flex;

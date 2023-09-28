@@ -56,6 +56,9 @@
             .header-text {
                 font-size: 3rem;
             }
+            .hero4 {
+                min-height: 60vh;
+            }
         }
 
         @media (max-width: 500px) {
@@ -63,6 +66,9 @@
                 border: 1px solid #fff;
                 border-radius: 0.5rem;
 
+            }
+            .hero4 {
+                min-height: 50vh;
             }
             .header-text {
                 font-size: 2.5rem;
@@ -72,7 +78,9 @@
             .header-text {
                 font-size: 2rem;
             }
-
+            .hero4 {
+                min-height: 40vh;
+            }
         }
 
 
@@ -96,8 +104,8 @@
                     <li class="nav-item d-flex justify-content-between"><a href="#hero3">Portfolio</a><i class="fa-solid fa-angle-down py-1"></i></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" data-bs-toggle="modal" data-bs-target="#myWallet">Buy</a>
-                    <a class="btn btn-warning btn-block d-md-block px-4" type="button" data-bs-toggle="modal" data-bs-target="#myWallet">Sell</a>
+                    <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
+                    <a class="btn btn-warning btn-block d-md-block px-4" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
             </div> 
@@ -314,7 +322,7 @@
                     <p>Trade and Swap the world's largest Foreign Currencies</p>
                     <a class="text-warning" href="#">Learn more</a>
                 </div>
-                <div class="card-body rounded-3 text-bg-light m-2 text-center p-5 ">
+                <div class="card-body rounded-3 text-bg-dark m-2 text-center p-5 ">
                     <img src="commodities.webp" alt="Commodities" width="100" height="54">
                     <h3>Commodities</h3>
                     <p>Trade and Swap all Commodities, Digital funds and E-wallet</p>
@@ -528,7 +536,7 @@
         </div>
     </section>
     <section class="container-fluid">
-        <div class="row p-4 gap-4">
+        <div class="row p-4 gap-4 text-primary text-opacity-50 ">
             <div class="col">
                 <h6 class="fw-bolder">Corporate</h6>
                 <a class="nav-link text" href="">Excel Exchange blog</a>
@@ -594,10 +602,10 @@
         <hr>
         <div class="row px-3">
             <div class="col-md-4 mx-auto d-flex flex-column align-items-md-start align-items-center">
-                <a class="navbar-brand text-dark fs-3 fw-bold" href="index.html">
+                <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                     <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
                 </a>
-                <div class="media-logo fs-1">
+                <div class="media-logo fs-1 text-light ">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-x-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -606,7 +614,7 @@
                 </div>
             </div>
             <div id="notes2" class="col-md-8">
-                <p>
+                <div class="text-primary text-opacity-50">
                     <p>​Excel exchange is a Securities Dealer registered in ... with registration number ... and authorised by the Financial Services Authority
                     (FSA) with licence number ... The registered office of Excel exchange Ltd ...</p>
     
@@ -627,7 +635,7 @@
     
                     <p>Excelexchange complies with the Payment Card Industry Data Security Standard (PCI DSS) to ensure your security and privacy. We conduct regular vulnerability
                     scans and penetration tests in accordance with the PCI DSS requirements for our business model.</p>
-                </p>
+                    </div>
             </div>
         </div>
         <hr>
