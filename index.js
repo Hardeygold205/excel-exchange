@@ -51,6 +51,7 @@ AllColl.forEach((element) => {
   element.classList.add('col');
 });
 
+
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
