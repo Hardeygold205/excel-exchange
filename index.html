@@ -43,6 +43,7 @@
         .header-text {
             font-size: 4rem;
         }
+        
         .hidden {
             font-family: 'poppins', sans-serif;
             opacity: 0;
@@ -55,12 +56,12 @@
         }
         .col {
             opacity: 0;
-            transform: translateX(70px);
+            transform: translateY(70px);
             transition: opacity 1s, transform 1.5s;
         }
         .col.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
         .card-body {
             opacity: 0;
@@ -76,9 +77,15 @@
             transition: all .3s;
             cursor: pointer;
         }
-        .scale {
+        .col-lg-6 {
             box-shadow: #555 0px 0px 28px 8px;
+            transform: translate3d(10px);
         }
+        .visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         .instant {
             background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent), black;
             box-shadow: #555 0px 0px 28px 8px;
@@ -394,7 +401,7 @@
         </h1>
         <div class="container-fluid mt-3 p-4">
             <div class="row">
-                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start scale">
+                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start">
                     <h2 class="fw-bolder ">Standard accounts</h2>
                     <div class="d-flex gap-3 mb-3 mt-5 fw-bold dotted">
                         <h4>Standard</h4>
@@ -403,7 +410,7 @@
                     <p>Feature-rich, commission-free accounts that suit the needs of today's traders. Sign up and experience the advantages of our most popular account</p>
                     <a href="#" type="button" class="btn btn-outline-warning px-5 float-end mt-5 ">See details</a>
                 </div>
-                <div class="col-lg-6 p-4 mb-3  text-bg-secondary  rounded-end scale">
+                <div class="col-lg-6 p-4 mb-3  text-bg-secondary rounded-end">
                     <h2 class="fw-bolder">Professional accounts</h2>
                     <div class="d-flex gap-4 mb-3 mt-5 fw-bold dotted">
                         <h4>Raw Spread</h4>
