@@ -31,32 +31,55 @@ $(document).on('click', function (e) {
   }
 });
 
+const elementsToAnimate = document.querySelector('h1');
+let isVisibleArray = Array.from({ length: elementsToAnimate.length }, () => false);
 
+const h1Elements = document.querySelectorAll('h1');
+const CardBody = document.querySelectorAll('.card-body');
+const AllColl = document.querySelectorAll('.col');
 
-
-/*
-document.addEventListener('click', (event) => {
-  const target = event.target;
-
-  if (!target.closest(".navbar") && !target.closest(".navbar-collapse")) {
-    NavDiv.classList.collapse('hide');
-  }
-
+h1Elements.forEach((element) => {
+    element.classList.add('hidden');
 });
 
-document.addEventListener("click", (event) => {
-  const target = event.target;
-
-  
-  if (!target.closest(".navbar-toggler") && !target.closest(".navbarNav")) {
-    OpenMenu.classList.remove("showmenu");
-  }
+CardBody.forEach((element) => {
+  element.classList.add('card-body');
 });
 
-MenuItems.forEach((MenuItem) => {
-  MenuItem.addEventListener('click', () => {
-    OpenMenu.classList.toggle("showmenu");
+AllColl.forEach((element) => {
+  element.classList.add('col');
+});
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    h1Elements.forEach((element) => {
+        const elementOffset = element.getBoundingClientRect();
+
+        if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+            element.classList.add('visible');
+        } else {
+            element.classList.remove('visible');
+        }
+    });
+
+    CardBody.forEach((element) => {
+      const elementOffset = element.getBoundingClientRect();
+
+      if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+          element.classList.add('visible');
+      } else {
+          element.classList.remove('visible');
+      }
+  });
+
+    AllColl.forEach((element) => {
+      const elementOffset = element.getBoundingClientRect();
+
+      if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+          element.classList.add('visible');
+      } else {
+          element.classList.remove('visible');
+      }
   });
 });
-
-*/
