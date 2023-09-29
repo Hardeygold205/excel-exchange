@@ -37,7 +37,6 @@ let isVisibleArray = Array.from({ length: elementsToAnimate.length }, () => fals
 const h1Elements = document.querySelectorAll('h1');
 const CardBody = document.querySelectorAll('.card-body');
 const AllColl = document.querySelectorAll('.col');
-const Scale = document.querySelector('col-lg-6');
 
 h1Elements.forEach((element) => {
     element.classList.add('hidden');
@@ -52,20 +51,11 @@ AllColl.forEach((element) => {
 });
 
 
+
 window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
+  const scrollY = window.scrollY;
 
-    h1Elements.forEach((element) => {
-        const elementOffset = element.getBoundingClientRect();
-
-        if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
-            element.classList.add('visible');
-        } else {
-            element.classList.remove('visible');
-        }
-    });
-
-    CardBody.forEach((element) => {
+  h1Elements.forEach((element) => {
       const elementOffset = element.getBoundingClientRect();
 
       if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
@@ -75,14 +65,34 @@ window.addEventListener('scroll', () => {
       }
   });
 
-    AllColl.forEach((element) => {
-      const elementOffset = element.getBoundingClientRect();
+  CardBody.forEach((element) => {
+    const elementOffset = element.getBoundingClientRect();
 
-      if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
-          element.classList.add('visible');
-      } else {
-          element.classList.remove('visible');
-      }
+    if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+        element.classList.add('visible');
+    } else {
+        element.classList.remove('visible');
+    }
+  });
+
+  AllColl.forEach((element) => {
+    const elementOffset = element.getBoundingClientRect();
+
+    if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+        element.classList.add('visible');
+    } else {
+        element.classList.remove('visible');
+    }
+  });
+
+  ToastD.forEach((element) => {
+    const elementOffset = element.getBoundingClientRect();
+
+    if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+        element.classList.add('visible');
+    } else {
+        element.classList.remove('visible');
+    }
   });
 
 });

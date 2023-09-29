@@ -77,15 +77,11 @@
             transition: all .3s;
             cursor: pointer;
         }
-        .col-lg-6 {
-            box-shadow: #555 0px 0px 28px 8px;
-            transform: translate3d(10px);
+        .scale {
+            box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.3);
         }
-        .visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
+        
+        
         .instant {
             background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent), black;
             box-shadow: #555 0px 0px 28px 8px;
@@ -300,7 +296,7 @@
                     <img src="Perfect_Money.png" alt="perfectmoney" width="80">
                 </div>
             </div>
-            <div class="container-fluid mt-5">
+            <div class="container-fluid mt-5 col">
                 <p class="text-center mt5 text-secondary">We comply with the Payment Card Industry Data Security Standard (PCI DSS) to ensure<br class="d-none d-md-block">
                    your security and privacy. We guarantee a protected payment experience for you. <a class="text-warning" href="#notes2"><span>Learn more</span></a>
                 </p>
@@ -309,7 +305,7 @@
     </section>
     <section class="container-fluid twins">
         <div class="row">
-            <div class="col py-5 text-bg-dark twin">
+            <div class="col-6 py-5 text-bg-dark twin">
                 <h4 class="mb-5 fw-bold ">
                     Standard Rates & Fast Payout 
                 </h4>
@@ -320,7 +316,7 @@
                     See Rates here
                 </a>
             </div>
-            <div class="col py-5  text-bg-secondary twin">
+            <div class="col-6 py-5  text-bg-secondary twin">
                 <h4 class="mb-5 fw-bold">
                     Tranparent Price History & Record
                 </h4>
@@ -400,8 +396,8 @@
             Account to suit your buying strategy
         </h1>
         <div class="container-fluid mt-3 p-4">
-            <div class="row">
-                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start">
+            <div class="row ">
+                <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start scale">
                     <h2 class="fw-bolder ">Standard accounts</h2>
                     <div class="d-flex gap-3 mb-3 mt-5 fw-bold dotted">
                         <h4>Standard</h4>
@@ -410,7 +406,7 @@
                     <p>Feature-rich, commission-free accounts that suit the needs of today's traders. Sign up and experience the advantages of our most popular account</p>
                     <a href="#" type="button" class="btn btn-outline-warning px-5 float-end mt-5 ">See details</a>
                 </div>
-                <div class="col-lg-6 p-4 mb-3  text-bg-secondary rounded-end">
+                <div class="col-lg-6 p-4 mb-3  text-bg-secondary rounded-end scale">
                     <h2 class="fw-bolder">Professional accounts</h2>
                     <div class="d-flex gap-4 mb-3 mt-5 fw-bold dotted">
                         <h4>Raw Spread</h4>
@@ -425,7 +421,7 @@
     </section>
     <section id="hero3" class="container-fluid px-2 py-5">
         <div class="row w-100 d-flex align-items-center gap-3 gap-md-0">
-            <div id="rates" class="col-md-5 text-center">
+            <div id="rates" class="col-md-5 text-center col">
                 <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
                 <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
                     the figures that make us one of the world leading merchant
@@ -444,7 +440,7 @@
                 </div>
             </div>
             <div id="more" class="col-md-7 p-0">
-                <div id="prices" class="toast text-bg-dark show mb-5 mx-auto">
+                <div id="prices" class="toast text-bg-dark show mb-5 mx-auto col">
                     <div class="toast-header text-bg-secondary d-flex justify-content-between">
                       <h6><strong>Price and History</strong></h6>
                       <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
@@ -508,7 +504,7 @@
     <section id="hero4" class="p-sm-5 p hero4">
         <div class="container">
             <div class="row"  >
-                <div class="d-block  text-center p-3 mx-md-auto">
+                <div class="d-block  text-center p-3 mx-md-auto col">
                     <h1 class="text-light p-2 hidden">Ready to get started?</h1>
                     <p class="text-light p-2 mt-5">
                         It only takes 3 minutes to get your account set up
@@ -585,7 +581,7 @@
         </div>
         <hr class="hr">
         <div class="row">
-            <div class="col-md-4 mx-auto d-flex flex-column align-items-md-start align-items-center px-3">
+            <div class="col-md-4 mx-auto d-flex flex-column align-items-md-start align-items-center px-3 py-5 py-md-0">
                 <a class="navbar-brand text-light text-opacity-75  fs-3 fw-bold" href="index.html">
                     <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
                 </a>
