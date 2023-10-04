@@ -47,6 +47,12 @@
             display: block;
             overflow-x: auto;
         }
+        .img-mcontainer {
+            overflow-x: auto;
+            transform: rotate(30deg);  
+            margin-left: 6rem;
+        }
+
         .header-text {
             font-size: 4rem;
             font-family: 'poppins', sans-serif;
@@ -470,8 +476,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid img-container d-block">
-                    <video autoplay loop height="550"> <source src="882D5049A31E763B.mp4" alt="" type="video/mp4"></video>
+                <div class="container-fluid img-container d-sm-block d-none">
+                    <!--<video autoplay loop height="550"> <source src="macbook-view.png" alt="" type="video/mp4"></video> -->
+                    <img src="macbook-trade.png" alt="macbook-view" height="550" width="900">
+                </div>
+                <div class="img-mcontainer d-sm-none d-block ">
+                   <!-- <video autoplay loop height="550"> <source src="mobile.gif" alt="" type="video/mp4"></video> -->
+                   <img src="mobile-trade.png" alt="excel-mobile-phone-view" height="400">
                 </div>
             </div>
         </div>
@@ -552,8 +563,7 @@
                 <h6 class="fw-bolder">More</h6>
                 <a class="nav-link" href="">Partners</a>
                 <a class="nav-link" href="">Help Center</a>
-            </div>
-        </div>
+            </div>        </div>
         <hr class="hr">
         <div class="row">
             <div class="col-md-4 mx-auto d-flex flex-column align-items-md-start align-items-center px-3 py-5 py-md-0">
