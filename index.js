@@ -17,7 +17,7 @@ $.ajax(settings).done(function (response){
 const HMenu = document.getElementById("navbarNav"); 
 const NavDiv = document.querySelector(".navbar-collapse");
 const MenuItems = document.querySelectorAll(".navbar-nav a");
-const Nav = document.querySelector(".navbar")
+const Nav = document.querySelector(".navbar");
 
 
 $('.navbar-nav a').on('click', function () {
