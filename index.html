@@ -77,14 +77,12 @@
         }
         .rows {
             opacity: 0;
-            transform: translateX(70px);
-            transition: opacity 1s, transform .8s;
-            display: block;
-            overflow-x: auto;
+            transform: translateY(50px);
+            transition: opacity 1.5s, transform 1s;
         }
         .rows.visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
         .card-body {
             opacity: 0;
