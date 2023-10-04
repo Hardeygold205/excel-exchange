@@ -31,9 +31,8 @@ body {
 
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background-color: #555;
     border-radius: 50%; 
-    transform: rotate(45deg);
+    transform: rotate(90deg);
 }
 
 .hero4 {
