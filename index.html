@@ -49,7 +49,6 @@
         }
         .img-mcontainer {
             overflow-x: auto;
-            transform: rotate(30deg);
         }
 
         .header-text {
@@ -70,9 +69,18 @@
         .col {
             opacity: 0;
             transform: translateY(70px);
-            transition: opacity 1s, transform 1.5s;
+            transition: opacity 1.5s, transform .7s;
         }
         .col.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .rows {
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity 1s, transform .8s;
+        }
+        .row.visible {
             opacity: 1;
             transform: translateX(0);
         }
@@ -93,7 +101,6 @@
         .scale {
             box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.3);
         }
-        
         
         .instant {
             background: radial-gradient(circle at center, rgba(20, 20, 255, 0.2), transparent), black;
@@ -439,13 +446,16 @@
     </section>
     <section id="hero3" class="container-fluid d-flex justify-content-center py-5">
         <div class="row w-100 d-flex align-items-center gap-3 gap-md-0">
-            <div id="rates" class="col-md-5 text-center col">
-                <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
-                <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
-                    the figures that make us one of the world leading merchant
-                </p>
-                <a class="text-warning" href="#">Learn more</a>
-                <div class="toast show mt-5 mx-auto text-bg-dark">
+            <div id="rates" class="col-md-5 text-center">
+                <div class="col">
+                    <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
+                    <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
+                        the figures that make us one of the world leading merchant
+                    </p>
+                    <a class="text-warning" href="#">Learn more</a>
+                </div>
+                
+                <div class="toast show mt-5 mx-auto text-bg-dark col">
                     <div class="toast-header text-bg-secondary d-flex justify-content-between">
                       <h6><strong>Rates</strong></h6>
                       <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
@@ -479,7 +489,7 @@
                     <!--<video autoplay loop height="550"> <source src="macbook-view.png" alt="" type="video/mp4"></video> -->
                     <img src="macbook-trade.png" alt="macbook-view" height="550" width="900">
                 </div>
-                <div class="img-mcontainer d-sm-none d-block d-flex justify-content-center">
+                <div class="img-mcontainer d-sm-none d-block d-flex justify-content-center col">
                    <!-- <video autoplay loop height="550"> <source src="mobile.gif" alt="" type="video/mp4"></video> -->
                    <img src="mobile-trade.png" alt="excel-mobile-phone-view" height="400">
                 </div>
