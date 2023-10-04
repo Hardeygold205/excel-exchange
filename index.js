@@ -37,6 +37,7 @@ let isVisibleArray = Array.from({ length: elementsToAnimate.length }, () => fals
 const h1Elements = document.querySelectorAll('h1');
 const CardBody = document.querySelectorAll('.card-body');
 const AllColl = document.querySelectorAll('.col');
+const AllRow = document.querySelectorAll('.rows');
 
 h1Elements.forEach((element) => {
     element.classList.add('hidden');
@@ -50,6 +51,9 @@ AllColl.forEach((element) => {
   element.classList.add('col');
 });
 
+AllRow.forEach((element) => {
+  element.classList.add('rows');
+});
 
 
 window.addEventListener('scroll', () => {
@@ -85,7 +89,7 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  ToastD.forEach((element) => {
+  AllRow.forEach((element) => {
     const elementOffset = element.getBoundingClientRect();
 
     if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {

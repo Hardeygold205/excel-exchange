@@ -77,10 +77,12 @@
         }
         .rows {
             opacity: 0;
-            transform: translateX(10px);
+            transform: translateX(70px);
             transition: opacity 1s, transform .8s;
+            display: block;
+            overflow-x: auto;
         }
-        .row.visible {
+        .rows.visible {
             opacity: 1;
             transform: translateX(0);
         }
@@ -489,7 +491,7 @@
                     <!--<video autoplay loop height="550"> <source src="macbook-view.png" alt="" type="video/mp4"></video> -->
                     <img src="macbook-trade.png" alt="macbook-view" height="550" width="900">
                 </div>
-                <div class="img-mcontainer d-sm-none d-block d-flex justify-content-center col">
+                <div class="img-mcontainer d-sm-none d-block d-flex justify-content-center rows">
                    <!-- <video autoplay loop height="550"> <source src="mobile.gif" alt="" type="video/mp4"></video> -->
                    <img src="mobile-trade.png" alt="excel-mobile-phone-view" height="400">
                 </div>
