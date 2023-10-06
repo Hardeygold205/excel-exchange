@@ -8,19 +8,6 @@ html {
     transform: transition 0.3s ease;
 }
 
-
-
-body {
-    left: 0;
-    bottom: 0;
-    top: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('HD-wallpaper-technology-blockchain.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #212121;
-}
-
 .herosection {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crypto-background-j6t7raza7y7suv6d.jpg');
     background-size: cover;
