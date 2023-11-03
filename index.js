@@ -101,6 +101,29 @@ window.addEventListener('scroll', () => {
 
 });
 
+const NavToggler = document.getElementById("nav-toggler");
+const NavIcon = document.getElementById("nav-icon");
+let isBar = true;
+
+NavToggler.addEventListener('click', () => {
+  if (isBar) {
+    NavIcon.classList.remove("navbar-toggler-icon");
+    NavIcon.classList.add("fas", "fa-times");
+    NavIcon.style.fontSize = "24px";
+    //NavIcon.style.transform = "rotate(30deg)";
+    isBar = false;
+  } else {
+    NavIcon.classList.remove("fas", "fa-times");
+    NavIcon.classList.add("navbar-toggler-icon");
+    //NavIcon.style.transform = "none";
+    NavIcon.style.fontSize = "1.25rem";
+    isBar = true;
+  }
+});
+
+
+
+
 const button = document.getElementById("btn-swap");
 const icon = document.getElementById("icon");
 let isPlus = true;
@@ -117,18 +140,3 @@ let isPlus = true;
       }
   });
 
-const NavToggler = document.getElementById("nav-toggler");
-const NavIcon = document.getElementById("nav-icon");
-let isBar = true;
-
-NavToggler.addEventListener('click', () => {
-  if (isBar) {
-    NavIcon.classList.remove("navbar-toggler-icon");
-    NavIcon.classList.add("fa-xmark");
-    isBar = false;
-  } else {
-    NavIcon.classList.remove("fa-xmark");
-    NavIcon.classList.add("navbar-toggler-icon");
-    isBar = true;
-  }
-});
