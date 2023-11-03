@@ -26,6 +26,7 @@ html {
     transform: rotate(90deg);
 }
 
+
 .hero4 {
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('d-phone2.png');
     background-size: cover;
