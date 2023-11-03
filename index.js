@@ -100,3 +100,35 @@ window.addEventListener('scroll', () => {
   });
 
 });
+
+const button = document.getElementById("btn-swap");
+const icon = document.getElementById("icon");
+let isPlus = true;
+
+  button.addEventListener("click", () => {
+      if (isPlus) {
+          icon.classList.remove("fa-plus");
+          icon.classList.add("fa-times");
+          isPlus = false;
+      } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-plus");
+          isPlus = true;
+      }
+  });
+
+const NavToggler = document.getElementById("nav-toggler");
+const NavIcon = document.getElementById("nav-icon");
+let isBar = true;
+
+NavToggler.addEventListener('click', () => {
+  if (isBar) {
+    NavIcon.classList.remove("navbar-toggler-icon");
+    NavIcon.classList.add("fa-xmark");
+    isBar = false;
+  } else {
+    NavIcon.classList.remove("fa-xmark");
+    NavIcon.classList.add("navbar-toggler-icon");
+    isBar = true;
+  }
+});

@@ -174,6 +174,7 @@
             .hero4 {
                 min-height: 40vh;
             }
+            
         }
 
 
@@ -185,8 +186,8 @@
             <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                 <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
             </a>
-            <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button id="nav-toggler" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span id="nav-icon" class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
@@ -211,7 +212,7 @@
     </nav>
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active justify-content-center d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crypto-background-j6t7raza7y7suv6d.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; height: 100vh;">
+            <div class="carousel-item active justify-content-center d-flex align-items-center position-relative" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crypto-background-j6t7raza7y7suv6d.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; height: 100vh; position: relative;">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-5">
@@ -615,7 +616,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Corporate</h3>
-                    <a href="#demo1" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo1" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo1" class="collapse text-secondary">
                     <a class="nav-link text" href="">Excel Exchange blog</a>
@@ -626,7 +629,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Media Center</h3 >
-                    <a href="#demo2" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo2" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo2" class="collapse text-secondary">
                     <a class="nav-link" href="">Excelexchange in the media</a>
@@ -636,7 +641,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Legal & Reporting</h3>
-                    <a href="#demo3" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo3" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo3" class="collapse text-secondary">
                     <a class="nav-link" href="">Regulation</a>
@@ -648,7 +655,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Platforms</h3 >
-                    <a href="#demo4" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                        <a id="btn-swap" type="button" href="#demo4" data-bs-toggle="collapse">
+                            <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                        </a>
                 </div>
                 <div id="demo4" class="collapse text-secondary">
                     <a class="nav-link" href="">Excel Trade app</a>
@@ -661,7 +670,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Solutions</h3>
-                    <a href="#demo5" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo5" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo5" class="collapse text-secondary">
                     <a class="nav-link" href="">Portfolio Management</a>
@@ -670,7 +681,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Instruments</h3 >
-                    <a href="#demo6" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                        <a id="btn-swap" type="button" href="#demo6" data-bs-toggle="collapse">
+                            <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                        </a>
                 </div>
                 <div id="demo6" class="collapse text-secondary">
                     <a class="nav-link" href="">Forex</a>
@@ -682,7 +695,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Accounts</h3>
-                    <a href="#demo7" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo7" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo7" class="collapse text-secondary">
                     <a class="nav-link" href="">Standard accounts</a>
@@ -695,7 +710,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">Tools</h3 >
-                    <a href="#demo8" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo8" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo8" class="collapse text-secondary">
                     <a class="nav-link" href="">Analytical tools</a>
@@ -710,7 +727,9 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <h3 class="text-light">More</h3>
-                    <a href="#demo9" data-bs-toggle="collapse"> <i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
+                    <a id="btn-swap" type="button" href="#demo9" data-bs-toggle="collapse">
+                        <i id="icon" class="fa fa-plus fs-5" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div id="demo9" class="collapse text-secondary">
                     <a class="nav-link" href="">Partners</a>
@@ -719,68 +738,71 @@
             </div><hr class="text-light hr">
         </div>
 
-        <div class="row p-sm-5 p-4 gap-4 text-light text-opacity-50 hero5 d-none d-md-block">
-            <div class="col">
-                <h6 class="fw-bolder">Corporate</h6>
-                <a class="nav-link text" href="">Excel Exchange blog</a>
-                <a class="nav-link" href="">Social responsibility</a>
-                <a class="nav-link" href="">Contact us</a>
+        <div class="d-none d-sm-block ">
+            <div class="row p-sm-5 p-4 gap-4 text-light text-opacity-50 hero5">
+                <div class="col">
+                    <h6 class="fw-bolder">Corporate</h6>
+                    <a class="nav-link text" href="">Excel Exchange blog</a>
+                    <a class="nav-link" href="">Social responsibility</a>
+                    <a class="nav-link" href="">Contact us</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">Media center</h6>
+                    <a class="nav-link" href="">Excelexchange in the media</a>
+                    <a class="nav-link" href="">Team Pro</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">Legal & reporting</h6>
+                    <a class="nav-link" href="">Regulation</a>
+                    <a class="nav-link" href="">Financial reports</a>
+                    <a class="nav-link" href="">Legal documents</a>
+                    <a class="nav-link" href="">Compesation fund</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">Platforms</h6>
+                    <a class="nav-link" href="">Excel Trade app</a>
+                    <a class="nav-link" href="">MetaTrader 5</a>
+                    <a class="nav-link" href="">MetaTrader 4</a>
+                    <a class="nav-link" href="">MetaTrader WebTerminal</a>
+                    <a class="nav-link" href="">MetaTrader mobile</a>
+                </div>
+                
+                <div class="col">
+                    <h6 class="fw-bolder">Solutions</h6>
+                    <a class="nav-link" href="">Portfolio Management</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">Instruments</h6>
+                    <a class="nav-link" href="">Forex</a>
+                    <a class="nav-link" href="">Commodities</a>
+                    <a class="nav-link" href="">Stocks</a>
+                    <a class="nav-link" href="">Indices</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">Accounts</h6>
+                    <a class="nav-link" href="">Standard accounts</a>
+                    <a class="nav-link" href="">Professional accounts</a>
+                    <a class="nav-link" href="">Portfolio Management accounts</a>
+                    <a class="nav-link" href="">Deposits & withdrawals</a>
+                    <a class="nav-link" href="">Fees</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">Tools</h6>
+                    <a class="nav-link" href="">Analytical tools</a>
+                    <a class="nav-link" href="">Investment calculator</a>
+                    <a class="nav-link" href="">Economic calendar</a>
+                    <a class="nav-link" href="">Currency converter</a>
+                    <a class="nav-link" href="">Tick history</a>
+                    <a class="nav-link" href="">VPS hosting</a>
+                    <a class="nav-link" href="">Trading Central WebTV</a>
+                </div>
+                <div class="col">
+                    <h6 class="fw-bolder">More</h6>
+                    <a class="nav-link" href="">Partners</a>
+                    <a class="nav-link" href="">Help Center</a>
+                </div>
             </div>
-            <div class="col">
-                <h6 class="fw-bolder">Media center</h6>
-                <a class="nav-link" href="">Excelexchange in the media</a>
-                <a class="nav-link" href="">Team Pro</a>
-            </div>
-            <div class="col">
-                <h6 class="fw-bolder">Legal & reporting</h6>
-                <a class="nav-link" href="">Regulation</a>
-                <a class="nav-link" href="">Financial reports</a>
-                <a class="nav-link" href="">Legal documents</a>
-                <a class="nav-link" href="">Compesation fund</a>
-            </div>
-            <div class="col">
-                <h6 class="fw-bolder">Platforms</h6>
-                <a class="nav-link" href="">Excel Trade app</a>
-                <a class="nav-link" href="">MetaTrader 5</a>
-                <a class="nav-link" href="">MetaTrader 4</a>
-                <a class="nav-link" href="">MetaTrader WebTerminal</a>
-                <a class="nav-link" href="">MetaTrader mobile</a>
-            </div>
-            
-            <div class="col">
-                <h6 class="fw-bolder">Solutions</h6>
-                <a class="nav-link" href="">Portfolio Management</a>
-            </div>
-            <div class="col">
-                <h6 class="fw-bolder">Instruments</h6>
-                <a class="nav-link" href="">Forex</a>
-                <a class="nav-link" href="">Commodities</a>
-                <a class="nav-link" href="">Stocks</a>
-                <a class="nav-link" href="">Indices</a>
-            </div>
-            <div class="col">
-                <h6 class="fw-bolder">Accounts</h6>
-                <a class="nav-link" href="">Standard accounts</a>
-                <a class="nav-link" href="">Professional accounts</a>
-                <a class="nav-link" href="">Portfolio Management accounts</a>
-                <a class="nav-link" href="">Deposits & withdrawals</a>
-                <a class="nav-link" href="">Fees</a>
-            </div>
-            <div class="col">
-                <h6 class="fw-bolder">Tools</h6>
-                <a class="nav-link" href="">Analytical tools</a>
-                <a class="nav-link" href="">Investment calculator</a>
-                <a class="nav-link" href="">Economic calendar</a>
-                <a class="nav-link" href="">Currency converter</a>
-                <a class="nav-link" href="">Tick history</a>
-                <a class="nav-link" href="">VPS hosting</a>
-                <a class="nav-link" href="">Trading Central WebTV</a>
-            </div>
-            <div class="col">
-                <h6 class="fw-bolder">More</h6>
-                <a class="nav-link" href="">Partners</a>
-                <a class="nav-link" href="">Help Center</a>
-            </div>        </div>
+        </div>
         <hr class="hr d-none d-sm-block ">
         <div class="row">
             <div class="col-md-4 mx-auto d-flex flex-column align-items-md-start align-items-center px-3 py-5 py-md-0">
