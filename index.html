@@ -60,6 +60,16 @@
         .header-text {
             font-size: 4rem;
             font-family: 'poppins', sans-serif;
+            line-height: 1.3;
+        }
+        
+        .header-text3 {
+            font-size: 4rem;
+            font-family: 'poppins', sans-serif;
+        }
+        .header-text2 {
+            font-size: 4rem;
+            font-family: 'poppins', sans-serif;
         }
         
         .hidden {
@@ -97,9 +107,6 @@
         }
         .flow {
             margin-top: -200px;
-        }
-        .flow-body {
-
         }
         .card-body.visible {
             opacity: 1;
@@ -153,6 +160,54 @@
             background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('HD-wallpaper-technology-blockchain.jpg');
     
         }
+        .header-text1 {
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1.45;
+        }
+        .p-text1 {
+            display: none;
+        }
+
+        @media (max-width: 865px) {
+           .header-text1 {
+            font-size: 6rem;
+            line-height: 1.3;
+           }
+           .header-text3 {
+            line-height: 1.8;
+            font-size: 5.5rem;
+           }
+           .p-text3 {
+            font-size: 1.2rem;
+           }
+           .header-text {
+            font-size: 5.5rem;
+           }
+           .p-text {
+            font-size: 1.2rem;
+           }
+        }
+        @media (min-height: 1200px) {
+           .header-text1 {
+            font-size: 6.1rem;
+            line-height: 1.55;
+           }
+           .header-text3 {
+            line-height: 2;
+            font-size: 6rem;
+           }
+        }
+
+        @media (max-width: 783px) {
+            .header-text1 {
+                font-size: 5.6rem;
+            }
+            .header-text3 {
+            line-height: 1.6;
+            font-size: 5.2rem;
+           }
+        }
 
         @media (max-width: 700px) {
             .header-text {
@@ -160,6 +215,9 @@
             }
             .hero4 {
                 min-height: 60vh;
+            }
+            .header-text1 {
+                font-size: 4.7rem;
             }
         }
 
@@ -174,10 +232,17 @@
             .header-text {
                 font-size: 2.5rem;
             }
+            .header-text1 {
+                font-size: 4.2rem;
+            }
         }
-        @media (max-width: 400px) {
+        
+        @media (max-width: 428px) {
             .header-text {
                 font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 4rem;
             }
             .hero4 {
                 min-height: 40vh;
@@ -187,6 +252,51 @@
             }
         }
 
+        @media (max-width: 415px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 3.5rem;
+            }
+        }
+        @media (max-width: 400px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 3.3rem;
+            }
+        }
+        @media (max-width: 380px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 2.8rem;
+            }
+
+        }
+        @media (max-width: 350px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                display: none;
+            }
+            .p-text1 {
+                display: block;
+                font-size: 2.2rem;
+                line-height: 1.5;
+                pad: 5px;
+            }
+            
+        }
+        @media (max-width: 320px) {
+            .flow {
+                padding-top: 60px;
+            }
+        }
 
     </style>
 </head>
@@ -227,12 +337,12 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="container-fluid py-5">
-                                <div class="text-light mt-5 mb-4 fw-bolder text-md-start text-center header-text">
+                                <div class="text-light mt-5 mb-4 fw-bolder text-lg-start text-center header-text">
                                     Buy & Sell<br>
                                     <span class="text-warning header-text">Cryptocurrency</span>
                                     and <span class="text-warning header-text">Digital Funds</span>
                                 </div>
-                                <p class="text-light mb-5 mt-5 text-md-start text-center">Trade with the World's Leading Foreign Exchanges Merchant<br class="d-none md-block">
+                                <p class="text-light mb-5 mt-5 text-lg-start text-center p-text">Trade with the World's Leading Foreign Exchanges Merchant<br class="d-none md-block">
                                     the most stable and reliable.
                                 </p>
                                 <a href="#hero4" class="btn btn-warning mb-5 py-2 d-sm-block d-block ">EXPLORE MORE</a>
@@ -334,15 +444,15 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="container-fluid py-5">
-                            <div class="text-light mt-5 mb-2 fw-bolder text-md-start text-center header-text">
+                            <div class="text-light mt-5 mb-2 fw-bolder text-lg-start text-center header-text3">
                                 Buy your first<br>
-                                <span class="text-warning header-text">Crypto</span>
-                                and <span class="text-warning header-text">Digital Funds</span> today
+                                <span class="text-warning header-text3">Crypto</span>
+                                and <span class="text-warning header-text3">Digital Funds</span> today
                             </div>
-                            <p class="text-light mb-5 mt-5 text-md-start text-center">Buy, sell, trade, and invest in Bitcoin & crypto - all in one safe and simple app.<br class="d-none md-block">
+                            <p class="text-light mb-5 mt-5 text-lg-start text-center p-text3">Buy, sell, trade, and invest in Bitcoin & crypto - all in one safe and simple app.<br class="d-none md-block">
                                 Bitcoin is Money Over Internet Protocol. One must acknowledge with cryptography no amount of violence will ever solve a math problem.
                             </p>
-                            <div class="d-flex justify-content-md-start justify-content-center gap-2">
+                            <div class="d-flex justify-content-lg-start justify-content-center gap-2">
                                 <a class="btn btn-outline-warning btn-block d-md-block py-1  px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
                                 <a class="btn btn-warning btn-block d-md-block py-1 px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                             </div>
@@ -493,10 +603,19 @@
         </div>
     </section>
     <div class="container my-5 rounded rounded-5 text-center p-4 w-100 world" style="background: #021a3f; width: 80%; height: 90vh; ">
-        <h3 class="text-light ">Money makes the world go round</h3>
-        <div class="header-text text-light my-5 ">CRYPTO<br class="d-block d-sm-none"> MAKES<br> THE WORLD<br class="d-block d-sm-none"> GO<br> FORWARD</div>
-        <img class="" src="world_map.png" alt="" width="50">
-        <a class="btn btn-primary " href="">See what crypto can be</a>
+        <div class="container-sm ">
+            <h3 class="text-light ">Money makes the world go round</h3>
+            <div class=" fs-1 fw-bolder fw-bold text-light ">CRYPTO MAKES THE WORLD GO FORWARD</div>
+            <div>
+                <div>
+                    <img class="img-fluid my-3" src="world_map.png" alt=""  width="100">
+                </div>
+                <div>
+                    <a class="btn btn-primary rounded rounded-5 " href="">See what crypto can be</a>
+                </div>
+            </div>    
+        </div>
+        
     </div>
     <div class="container flow">
         <div class="row d-flex justify-content-center p-4 gap-4">
@@ -1106,7 +1225,7 @@
         </div>
         <hr class="hr d-none d-sm-block ">
         
-        <div class="container-fluid text-light opacity-75 py-3 d-flex flex-column justify-content-center align-items-center d-block d-sm-none">
+        <div class="container-fluid text-light opacity-75 py-3 d-flex flex-column justify-content-center align-items-center d-block d-md-none">
             <div class="text-center ">
                 <h3 class="fw-bold fs-3 ">Get started with crypto</h3>
                 <a class="btn btn-primary rounded-5 my-4 py-2 d-block " href="" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa fa-apple" aria-hidden="true"></i> Download App</a>
@@ -1119,6 +1238,14 @@
                     <i class="fa fa-slack border rounded-circle p-3 me-3" aria-hidden="true"></i>
                     <i class="fa fa-spotify border rounded-circle p-3 " aria-hidden="true"></i>
                 </div>
+                <div class="d-flex my-3">
+                    <i class="fa-brands fa-x-twitter border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                    <i class="fa fa-instagram border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                    <i class="fa-brands fa-threads border rounded-circle p-3 me-3"></i>
+                    <i class="fa fa-slack border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                    <i class="fa fa-spotify border rounded-circle p-3 " aria-hidden="true"></i>
+                </div>
+                <!--
                 <div class="d-flex my-2">
                     <i class="fa-brands fa-discord border rounded-circle p-3 me-3"></i>
                     <i class="fa fa-linkedin border rounded-circle p-3 me-3" aria-hidden="true"></i>
@@ -1126,21 +1253,37 @@
                     <i class="fa-brands fa-telegram border rounded-circle p-3 me-3"></i>
                     <i class="fa fa-amazon border rounded-circle p-3" aria-hidden="true"></i> 
                 </div>
+                -->
             </div>
             
         </div>
         <div class="row">
-            <div class="col-md-4 d-none d-sm-block d-flex flex-column px-3 py-5 py-md-0 ">
-                <a class="navbar-brand text-light text-opacity-75  fs-3 fw-bold" href="index.html">
+            <div class="col-md-4 d-none d-md-block d-flex flex-column px-3 py-5 py-md-0 ">
+                <a class="navbar-brand text-light text-opacity-75 fs-3 fw-bold" href="index.html">
                     <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
                 </a>
-                <div class="media-logo fs-1 text-light text-opacity-75">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-youtube"></i>
+                <!--<div class="media-logo fs-6  text-light text-opacity-75">
+                    <i class="fa-brands fa-youtube border rounded-circle p-2  me-3"></i>
+                    <i class="fa fa-linkedin border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa-brands fa-reddit-alien border rounded-circle p-2  me-3"></i>
+                    <i class="fa-brands fa-telegram border rounded-circle p-2  me-3"></i>
+                    <i class="fa fa-amazon border rounded-circle p-2 " aria-hidden="true"></i>
+                </div> -->
+                <div class="media-logo fs-6  text-light text-opacity-75 mb-2 ">
+                    <i class="fa-brands fa-x-twitter border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa fa-instagram border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa-brands fa-threads border rounded-circle  p-2  me-3"></i>
+                    <i class="fa fa-slack border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa fa-spotify border rounded-circle p-2  " aria-hidden="true"></i>
                 </div>
+                <div class="media-logo fs-6  text-light text-opacity-75">
+                    <i class="fa-brands fa-x-twitter border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa fa-instagram border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa-brands fa-threads border rounded-circle  p-2  me-3"></i>
+                    <i class="fa fa-slack border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                    <i class="fa fa-spotify border rounded-circle p-2  " aria-hidden="true"></i>
+                </div>
+                
             </div>
             <div id="notes2" class="col-md-8 hero6">
                 <div class="text-light text-opacity-50 px-0">
