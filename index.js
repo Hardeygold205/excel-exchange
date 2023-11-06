@@ -124,19 +124,41 @@ NavToggler.addEventListener('click', () => {
 
 
 
-const button = document.getElementById("btn-swap");
-const icon = document.getElementById("icon");
-let isPlus = true;
+const buttons = document.querySelectorAll(".btn-swap");
 
-  button.addEventListener("click", () => {
-      if (isPlus) {
-          icon.classList.remove("fa-plus");
-          icon.classList.add("fa-times");
-          isPlus = false;
-      } else {
-          icon.classList.remove("fa-times");
-          icon.classList.add("fa-plus");
-          isPlus = true;
-      }
-  });
+buttons.forEach(button => {
+    const icon = button.querySelector("i");
+    let isPlus = true;
 
+    button.addEventListener("click", () => {
+        if (isPlus) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-times");
+            isPlus = false;
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-plus");
+            isPlus = true;
+        }
+    });
+});
+
+
+const Arrows = document.querySelectorAll(".up-swap");
+
+Arrows.forEach(Arrow => {
+    const icon = Arrow.querySelector("i");
+    let isUp = true;
+
+    Arrow.addEventListener("click", () => {
+        if (isUp) {
+            icon.classList.remove("fa-chevron-down");
+            icon.classList.add("fa-chevron-up");
+            isUp = false;
+        } else {
+            icon.classList.remove("fa-chevron-up");
+            icon.classList.add("fa-chevron-down");
+            isUp = true;
+        }
+    });
+});
