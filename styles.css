@@ -7,6 +7,9 @@ html {
     scroll-behavior: smooth;
     transform: transition 0.3s ease;
 }
+:root {
+    --font-size: 4rem;
+}
 /*
 .herosection {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crypto-background-j6t7raza7y7suv6d.jpg');
