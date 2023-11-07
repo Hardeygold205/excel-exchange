@@ -36,7 +36,6 @@ let isVisibleArray = Array.from({ length: elementsToAnimate.length }, () => fals
 
 const h1Elements = document.querySelectorAll('h1');
 const CardBody = document.querySelectorAll('.card-body');
-const AllColl = document.querySelectorAll('.col');
 const AllRow = document.querySelectorAll('.rows');
 
 h1Elements.forEach((element) => {
@@ -47,9 +46,6 @@ CardBody.forEach((element) => {
   element.classList.add('card-body');
 });
 
-AllColl.forEach((element) => {
-  element.classList.add('col');
-});
 
 AllRow.forEach((element) => {
   element.classList.add('rows');

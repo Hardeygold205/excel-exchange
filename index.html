@@ -86,11 +86,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .col {
-            opacity: 0;
-            transform: translateY(70px);
-            transition: opacity 1.5s, transform .7s;
-        }
         .col.visible {
             opacity: 1;
             transform: translateX(0);
@@ -106,8 +101,8 @@
         }
         .card-body {
             opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 1s, transform 1.5s;
+            transform: translateY(40px);
+            transition: opacity 1.3s, transform 1.5s;
         }
         .flow {
             margin-top: -200px;
@@ -161,7 +156,7 @@
             left: 0;
             bottom: 0;
             top: 0;
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('HD-wallpaper-technology-blockchain.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('abs'); 
     
         }
         .header-text1 {
@@ -742,7 +737,7 @@
     <section id="hero3" class="container-fluid d-flex justify-content-center py-5 hero4">
         <div class="row w-100 d-flex align-items-center gap-3 gap-md-0">
             <div id="rates" class="col-md-5 text-center">
-                <div class="col">
+                <div class="card-body">
                     <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
                     <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
                         the figures that make us one of the world leading merchant
@@ -750,7 +745,7 @@
                     <a class="text-warning" href="#">Learn more</a>
                 </div>
                 
-                <div class="toast show mt-5 mx-auto text-bg-dark col">
+                <div class="toast show mt-5 mx-auto text-bg-dark card-body">
                     <div class="toast-header text-bg-secondary d-flex justify-content-between">
                       <h6><strong>Rates</strong></h6>
                       <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
@@ -763,7 +758,7 @@
                 </div>
             </div>
             <div id="more" class="col-md-7 p-0">
-                <div id="prices" class="toast text-bg-dark show mb-5 mx-auto col">
+                <div id="prices" class="toast text-bg-dark show mb-5 mx-auto card-body">
                     <div class="toast-header text-bg-secondary d-flex justify-content-between">
                       <h6><strong>Price and History</strong></h6>
                       <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
@@ -780,7 +775,7 @@
                         </div>
                     </div>
                 </div>
-                 <div class="container-fluid img-container">
+                <div class="container-fluid img-container">
                   <!--  <video autoplay loop height="550"> <source src="macbook-view.png" alt="" type="video/mp4"></video> -->
                     <img class="img-fluid " src="macbook-trade.png" alt="macbook-view" height="550" width="900">
                 </div>
@@ -793,11 +788,11 @@
             <div class="row d-flex align-content-center align-items-center  " >
                 <div class="col-lg-6 d-block text-center py-3 mx-md-auto">
                     <h1 class="text-dark">Ready to get started?</h1>
-                    <p class="text-dark p-2 p-md-5 col">
+                    <p class="text-dark p-2 p-md-5 card-body">
                         It only takes 3 minutes to get your account set up
                         and ready for trading.<br class="d-none d-md-block"> Trade bitcoin and other crypto with confidence on the world's fastest and most secure crypto exchange
                     </p>
-                    <h4 class="col">Get your step-by-step guide to setting up an account with Crypto.com</h4>
+                    <h4 class="card-body">Get your step-by-step guide to setting up an account with Crypto.com</h4>
                     <a class="btn btn-primary rounded rounded-4 d-block mx-5 mt-5" data-bs-toggle="modal" data-bs-target="#myModal">Open account</a>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center">
@@ -808,7 +803,7 @@
     </section>
     <section class="container-fluid h-100 w-100">
         <div class="container py-5 d-block text-center">
-            <h4 class="text-primary ">OUR VISION</h4>
+            <h4 class="text-primary card-body">OUR VISION</h4>
             <h1 class="text-light">Cryptocurrency in<br> Every Wallet</h1>
             <div class="shadow">
                 <img class="img-fluid img-d" src="Excel_Blue_Logo.png" alt="crypto-ai">
