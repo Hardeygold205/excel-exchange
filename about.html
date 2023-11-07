@@ -16,25 +16,30 @@
     <script src="https://kit.fontawesome.com/c309dedf53.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black  fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                 <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
             </a>
-            <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button id="nav-toggler" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span id="nav-icon" class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item"><a class="nav-link text-light m-0 " id="home" href="index.html">Home<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a class="nav-link text-light m-0" href="#hero2">Services<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a class="nav-link text-light m-0" href="https://wa.me/+2348138553465" target="_blank">Contact<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a class="nav-link text-light m-0" id="about" href="about.html">About<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
-                    <li class="nav-item "><a class="nav-link text-light m-0" href="#hero3">Portfolio<i class="fa-solid fa-angle-down float-end py-1"></i></a></li><hr>
+                <ul class="navbar-nav nav-underline mx-auto text-light">
+                    <li class="nav-item d-flex justify-content-between">
+                        <a class="nav-link" aria-current="page" id="home" href="index.html">
+                            Home
+                        </a>
+                        <i class="fa-solid d-block d-sm-none fa-angle-down py-1" type="button" data-bs-toggle="dropdown"></i>
+                    </li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link" aria-current="page" href="#hero2">Services</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link" aria-current="page" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link" aria-current="page" id="about" href="about.html">About</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link" aria-current="page" href="#hero3">Portfolio</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block" type="button" data-bs-toggle="tooltip" title="Open an account with Excelexchange" href="soon.html">Open account</a>
-                    <a class="btn btn-warning btn-block align-top" type="button" href="soon.html">Sign in</a>
+                    <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
+                    <a class="btn btn-warning btn-block d-md-block px-4" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
             </div> 
