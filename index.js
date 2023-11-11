@@ -92,7 +92,7 @@ window.addEventListener('scroll', () => {
         element.classList.add('visible');
     } else {
         element.classList.remove('visible');
-    }
+    } 
   });
 
 });
@@ -176,7 +176,8 @@ const yearElement = document.getElementById('yearCounter');
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.5 }
+        );
 
         observer.observe(yearElement);
 
