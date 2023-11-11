@@ -165,4 +165,33 @@ Arrows.forEach(Arrow => {
     });
 });
 
-;
+const yearElement = document.getElementById('yearCounter');
+        const targetValue = 2023;
+        let currentValue = 0;
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounting();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(yearElement);
+
+        function animateCounting() {
+            const startTime = performance.now();
+
+            function updateValue(timestamp) {
+                const progress = (timestamp - startTime) / 1000; // 1500ms = 1.5s
+                currentValue = Math.min(progress * targetValue, targetValue);
+                yearElement.textContent = Math.floor(currentValue);
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateValue);
+                }
+            }
+
+            requestAnimationFrame(updateValue);
+        }
