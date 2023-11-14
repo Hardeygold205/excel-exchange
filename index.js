@@ -196,3 +196,7 @@ const yearElement = document.getElementById('yearCounter');
 
             requestAnimationFrame(updateValue);
         }
+
+
+
+  

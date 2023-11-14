@@ -105,7 +105,7 @@
             transition: opacity 1.3s, transform 1.5s;
         }
         .flow {
-            margin-top: -200px;
+            margin-top: -150px;
         }
         .card-body.visible {
             opacity: 1;
@@ -169,11 +169,6 @@
         }
         .nav-item:hover .dropdown-menu {
             display: block;
-        }
-
-        
-        .position-static {
-            position: static !important;
         }
 
         @media (max-width: 885px) {
@@ -325,7 +320,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-        <div class="container-fluid">
+        <div class="container-fluid" style="max-width: 1440px; margin: auto;">
             <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                 <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
             </a>
@@ -632,10 +627,10 @@
             </div>
         </div>
     </section>
-    <div class="container my-5 rounded rounded-5 text-center p-4 w-100 world" style="background: #021a3f; width: 80%; height: 90vh; ">
-        <div class="container-sm " style="width: 100%;">
-            <h3 class="text-light display-6">Money makes the world go round</h3>
-            <div class="fw-bolder fw-bold text-light display-1">CRYPTO MAKES THE WORLD GO FORWARD</div>
+    <div class="container-sm pb-3  mt-5 rounded rounded-top-5 text-center" style="background: #021a3f; max-width: 1440px; margin: auto;">
+        <div>
+            <h3 class="text-light display-6 pt-3">Money makes the world go round</h3>
+            <p class="fw-bolder fw-bold text-light display-1">CRYPTO MAKES THE WORLD GO FORWARD</p>
             <div>
                 <div>
                     <img class="img-fluid my-3 m-world" src="world_map.png" alt=""  width="100">
@@ -643,11 +638,15 @@
                 <div>
                     <a class="btn btn-primary rounded rounded-5 " href="#f-a-q">See what crypto can be</a>
                 </div>
-            </div>    
+            </div>
+            
         </div>
     </div>
-    <div class="container flow">
-        <div class="row d-flex justify-content-center p-4 gap-5">
+    <div class="container-sm rounded-bottom-5 p-5 " style="background: #021a3f; max-width: 1440px; margin: auto; height: 150px;">
+    
+    </div>
+    <div class="container " style="max-width: 1440px; margin: auto;">
+        <div class="row d-flex justify-content-center p-4 gap-3 flow">
             <div class="col-lg-3 rounded-3 text-light m-2 text-center p-4 py-5 flow-body" style="background: #021f4c; border: 1px solid #555;">
                 <img src="eur-usd-removebg-preview.png" alt="EurUsd" width="100" height="54">
                 <h3>Currencies</h3>
@@ -658,13 +657,13 @@
                 <img src="stocks.png" alt="Commodities" width="100" height="54">
                 <h3>Commodities</h3>
                 <p>Trade and Swap all Commodities, Digital funds and E-wallet</p>
-                <a class="text-warning href="#">Learn more</a>
+                <a class="text-warning" href="#">Learn more</a>
             </div>
-            <div class="col-lg-3  rounded-3  text-light m-2 text-center p-4 py-5 flow-body" style="background: #021f4c; border: 1px solid #555;">
+            <div class="col-lg-3 rounded-3  text-light m-2 text-center p-4 py-5 flow-body" style="background: #021f4c; border: 1px solid #555;">
                 <img src="eth-btc.png" alt="Cryptocurrency" width="120" height="64">
                 <h3>Cryptocurrency</h3>
                 <p>Buy and Sell BTC, ETH & USDT and all other cryptocurrency</p>
-                <a class="text-warning href="#">Learn more</a>
+                <a class="text-warning" href="#">Learn more</a>
             </div>
         </div>
     </div>
@@ -724,25 +723,12 @@
         </div>
     </section>
     -->
-    <div class="container-sm d-flex flex-column  justify-content-center ">
-        <div class="col-md-12 rounded-5 w-100 h-50 ">
-
-        </div>
-        <div class="row my-3 d-flex justify-content-center ">
-            <div class="col bg-black rounded-5 w-50 h-75 " style="background: #021a3f; ">
-
-            </div>
-            <div class="col bg-black rounded-5 w-50 h-75 " style="background: #021a3f; ">
-    
-            </div>
-        </div>
-    </div>
     <section id="hero2" class="container-fluid mt-3 w-100">
         <h1 class="text-center text-light fw-bolder fs-2 hidden">
             Account to suit your buying strategy
         </h1>
         <p class="text-center text-light fs-6 px-2 card-body">Grow your portfolio automatically with daily, weekly, or monthly trades.<br class="d-none d-sm-block"> Excel is a crypto exchange for everyone.</p>
-        <div class="container-fluid mt-3 p-4">
+        <div style="max-width: 1440px; margin: auto;" class="container-fluid mt-3 p-4">
             <div class="row ">
                 <div class="col-lg-6 p-4 mb-3 text-bg-dark rounded-start scale">
                     <h2 class="fw-bolder ">Standard accounts</h2>
@@ -767,52 +753,53 @@
         </div>
     </section>
     <section id="hero3" class="container-fluid d-flex justify-content-center py-5 hero4">
-        <div class="row w-100 d-flex align-items-center gap-3 gap-md-0">
-            <div id="rates" class="col-md-5 text-center">
-                <div class="">
-                    <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
-                    <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
-                        the figures that make us one of the world leading merchant
-                    </p>
-                    <a class="text-warning" href="#">Learn more</a>
-                </div>
-                
-                <div class="toast show mt-5 mx-auto text-bg-dark card-body">
-                    <div class="toast-header text-bg-secondary d-flex justify-content-between">
-                      <h6><strong>Rates</strong></h6>
-                      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        <div class="container " style="max-width: 1440px; margin: auto;">
+            <div class="row w-100 d-flex align-items-center gap-3 gap-md-0">
+                <div id="rates" class="col-md-5 text-center">
+                    <div class="">
+                        <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
+                        <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
+                            the figures that make us one of the world leading merchant
+                        </p>
+                        <a class="text-warning" href="#">Learn more</a>
                     </div>
-                    <div class="toast-body d-flex gap-3 justify-content-center ">
-                      <p>USDT &rArr; 950/$</p>
-                      <p>BTC &rArr; 940/$</p>
-                      <p>ETH &rArr; 920/$</p>
-                    </div>
-                </div>
-            </div>
-            <div id="more" class="col-md-7 p-0">
-                <div id="prices" class="toast text-bg-dark show mb-5 mx-auto card-body">
-                    <div class="toast-header text-bg-secondary d-flex justify-content-between">
-                      <h6><strong>Price and History</strong></h6>
-                      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-                    </div>
-                    <div class="toast-body">
-                      <p>Perform your first trade with Excelechange:</p>
-                        <div class="d-flex justify-content-between ">
-                            <button type="button" class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
-                                Buy
-                            </button>
-                            <button type="button" class="btn btn-danger px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
-                                Sell
-                            </button>
+                    
+                    <div class="toast show mt-5 mx-auto text-bg-dark card-body">
+                        <div class="toast-header text-bg-secondary d-flex justify-content-between">
+                          <h6><strong>Rates</strong></h6>
+                          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                        </div>
+                        <div class="toast-body d-flex gap-3 justify-content-center ">
+                          <p>USDT &rArr; 950/$</p>
+                          <p>BTC &rArr; 940/$</p>
+                          <p>ETH &rArr; 920/$</p>
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid img-container">
-                  <!--  <video autoplay loop height="550"> <source src="macbook-view.png" alt="" type="video/mp4"></video> -->
-                    <img class="img-fluid " src="macbook-trade.png" alt="macbook-view" height="550" width="900">
+                <div id="more" class="col-md-7 p-0">
+                    <div id="prices" class="toast text-bg-dark show mb-5 mx-auto card-body">
+                        <div class="toast-header text-bg-secondary d-flex justify-content-between">
+                          <h6><strong>Price and History</strong></h6>
+                          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                        </div>
+                        <div class="toast-body">
+                          <p>Perform your first trade with Excelechange:</p>
+                            <div class="d-flex justify-content-between ">
+                                <button type="button" class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
+                                    Buy
+                                </button>
+                                <button type="button" class="btn btn-danger px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
+                                    Sell
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid img-container">
+                      <!--  <video autoplay loop height="550"> <source src="macbook-view.png" alt="" type="video/mp4"></video> -->
+                        <img class="img-fluid " src="macbook-trade.png" alt="macbook-view" height="550" width="900">
+                    </div>
                 </div>
-                
-            </div>
+            </div>  
         </div>
     </section>
     <section id="hero4" class="p-sm-5 bg-light">
@@ -1196,7 +1183,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-none d-sm-block ">
+        <div class="d-none d-sm-block " style="max-width: 1440px; margin: auto;">
             <div class="row p-sm-5 p-4 gap-4 text-light text-opacity-50 hero5">
                 <div class="col">
                     <h6 class="fw-bolder">Corporate</h6>
@@ -1299,71 +1286,75 @@
             </div>
             
         </div>
-        <div class="row">
-            <div class="col-md-4 d-none d-md-block d-flex flex-column px-3 py-5 py-md-0 ">
-                <a class="navbar-brand text-light text-opacity-75 fs-3 fw-bold" href="index.html">
-                    <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
-                </a>
-                <!--<div class="media-logo fs-6  text-light text-opacity-75">
-                    <i class="fa-brands fa-youtube border rounded-circle p-2  me-3"></i>
-                    <i class="fa fa-linkedin border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa-brands fa-reddit-alien border rounded-circle p-2  me-3"></i>
-                    <i class="fa-brands fa-telegram border rounded-circle p-2  me-3"></i>
-                    <i class="fa fa-amazon border rounded-circle p-2 " aria-hidden="true"></i>
-                </div> -->
-                <div class="media-logo fs-6  text-light text-opacity-75 mb-2 ">
-                    <i class="fa-brands fa-x-twitter border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa fa-instagram border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa-brands fa-threads border rounded-circle  p-2  me-3"></i>
-                    <i class="fa fa-slack border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa fa-spotify border rounded-circle p-2  " aria-hidden="true"></i>
-                </div>
-                <div class="media-logo fs-6  text-light text-opacity-75">
-                    <i class="fa-brands fa-x-twitter border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa fa-instagram border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa-brands fa-threads border rounded-circle  p-2  me-3"></i>
-                    <i class="fa fa-slack border rounded-circle p-2  me-3" aria-hidden="true"></i>
-                    <i class="fa fa-spotify border rounded-circle p-2  " aria-hidden="true"></i>
-                </div>
-                
-            </div>
-            <div id="notes2" class="col-md-8 hero6">
-                <div class="text-light text-opacity-50 px-0">
-                    <p>​Excel exchange is a Securities Dealer registered in ... with registration number ... and authorised by the Financial Services Authority
-                    (FSA) with licence number ... The registered office of Excel exchange Ltd ...</p>
-    
-                    <p>Excelexchange is authorised by the Financial Services Commission (FSC) in BVI with registration number ... and investment business licence
-                    number ... The registered office of Excelexchange is ...</p>
-    
-                    <p>Risk Warning: Our services relate to complex derivative products which are traded outside an exchange. These products come with a high risk of losing
-                    money rapidly due to leverage and thus are not appropriate for all investors. Under no circumstances shall Excelexchange have any liability to any person or
-                    entity for any loss or damage in whole or part caused by, resulting from, or relating to any investing activity. Learn more.</p>
-    
-                    <p>The information on this website does not constitute investment advice or a recommendation or a solicitation to engage in any investment activity.</p>
-    
-                    <p>Excelexchange complies with the Payment Card Industry Data Security Standard (PCI DSS) to ensure your security and privacy. We conduct regular vulnerability
-                    scans and penetration tests in accordance with the PCI DSS requirements for our business model.</p>
+        <div class="container-fluid " style="max-width: 1440px; margin: auto;">
+            <div class="row">
+                <div class="col-md-4 d-none d-md-block d-flex flex-column px-3 py-5 py-md-0 ">
+                    <a class="navbar-brand text-light text-opacity-75 fs-3 fw-bold" href="index.html">
+                        <img class="d-inline-block" src="Excel-icon.png" alt="logo" width="30" height="34">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
+                    </a>
+                    <!--<div class="media-logo fs-6  text-light text-opacity-75">
+                        <i class="fa-brands fa-youtube border rounded-circle p-2  me-3"></i>
+                        <i class="fa fa-linkedin border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                        <i class="fa-brands fa-reddit-alien border rounded-circle p-2  me-3"></i>
+                        <i class="fa-brands fa-telegram border rounded-circle p-2  me-3"></i>
+                        <i class="fa fa-amazon border rounded-circle p-2 " aria-hidden="true"></i>
+                    </div> -->
+                    <div class="media-logo fs-6  text-light text-opacity-75 mb-2 ">
+                        <i class="fa-brands fa-x-twitter border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                        <i class="fa fa-instagram border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                        <i class="fa-brands fa-threads border rounded-circle  p-2  me-3"></i>
+                        <i class="fa fa-slack border rounded-circle p-2  me-3" aria-hidden="true"></i>
+                        <i class="fa fa-spotify border rounded-circle p-2  " aria-hidden="true"></i>
                     </div>
-            </div>
-        </div>
-        <hr class="hr">
-        <footer>
-           <img src="pci.png" alt="PCI" height="100">
-            <div class="float-end m-3 me-5">
-                <div class="btn-group rounded rounded-5" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-sm btn-outline-primary" for="btnradio1">Dark</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-sm btn-outline-primary" for="btnradio2">Light</label>
+                    <div class="media-logo fs-6  text-light text-opacity-75">
+                        <i class="fa-brands fa-linkedin border rounded-circle p-2 me-3" aria-hidden="true"></i>
+                        <i class="fa fa-github border rounded-circle p-2 me-3" aria-hidden="true"></i>
+                        <i class="fa-brands fa-telegram border rounded-circle p-2 me-3"></i>
+                        <i class="fa-brands fa-threads border rounded-circle p-2 me-3" aria-hidden="true"></i>
+                        <i class="fa fa-whatsapp border rounded-circle p-2 " aria-hidden="true"></i>
+                    </div>
+                    
+                </div>
+                <div id="notes2" class="col-md-8 hero6">
+                    <div class="text-light text-opacity-50 px-0">
+                        <p>​Excel exchange is a Securities Dealer registered in ... with registration number ... and authorised by the Financial Services Authority
+                        (FSA) with licence number ... The registered office of Excel exchange Ltd ...</p>
+        
+                        <p>Excelexchange is authorised by the Financial Services Commission (FSC) in BVI with registration number ... and investment business licence
+                        number ... The registered office of Excelexchange is ...</p>
+        
+                        <p>Risk Warning: Our services relate to complex derivative products which are traded outside an exchange. These products come with a high risk of losing
+                        money rapidly due to leverage and thus are not appropriate for all investors. Under no circumstances shall Excelexchange have any liability to any person or
+                        entity for any loss or damage in whole or part caused by, resulting from, or relating to any investing activity. Learn more.</p>
+        
+                        <p>The information on this website does not constitute investment advice or a recommendation or a solicitation to engage in any investment activity.</p>
+        
+                        <p>Excelexchange complies with the Payment Card Industry Data Security Standard (PCI DSS) to ensure your security and privacy. We conduct regular vulnerability
+                        scans and penetration tests in accordance with the PCI DSS requirements for our business model.</p>
+                        </div>
                 </div>
             </div>
-            <div class="row m-1">
-                <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Risk Disclosure</a>
-                <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Preventing Money Laudering</a>
-                <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Privacy Agreement</a>
-                <a class="text-decoration-none mt-3 text-light opacity-75" href="#"><span>© 2023 excelexchange</span></a>
-            </div>
-            
+            <hr class="hr">
+        </div>
+        
+        <footer>
+            <div class="container-fluid " style="max-width: 1440px; margin: auto;" >
+                <img src="pci.png" alt="PCI" height="100">
+                <div class="float-end m-3 me-5">
+                    <div class="btn-group rounded rounded-5" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-sm btn-outline-primary" for="btnradio1">Dark</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-sm btn-outline-primary" for="btnradio2">Light</label>
+                    </div>
+                </div>
+                <div class="row m-1">
+                    <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Risk Disclosure</a>
+                    <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Preventing Money Laudering</a>
+                    <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Privacy Agreement</a>
+                    <a class="text-decoration-none mt-3 text-light opacity-75" href="#"><span>© 2023 excelexchange</span></a>
+                </div>
+            </div>    
         </footer>
     </section>
     <script src="index.js"></script>
@@ -1379,9 +1370,7 @@
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
           return new bootstrap.Tooltip(tooltipTriggerEl)
         })
-    </script>
 
-    <script>
         var clipboard = new ClipboardJS('.copy-button');
         
         clipboard.on('success', function(e) {
