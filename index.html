@@ -43,7 +43,7 @@
             color: #fff;
 
         }
-        .nav-item a:hover {
+        .nav-item .nav-link:hover {
             color: #ffc107;
         }
         .dotted {
@@ -163,9 +163,6 @@
         }
         .p-text1 {
             display: none;
-        }
-        .nav-item:hover .dropdown-menu {
-            display: block;
         }
 
         @media (max-width: 885px) {
@@ -325,21 +322,13 @@
                 <span id="nav-icon" class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav nav-underline mx-auto text-light">
+                <ul class="navbar-nav mx-auto text-light">
                     <li class="nav-item dropdown d-flex justify-content-between">
                         <a class="nav-link text-light fw-bolder" aria-current="page" href="index.html" id="uniqueID" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Home
                         </a>
-                        <!--
                         <i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i>
-                        
-                        -->
                     </li>
-                    <div class="dropdown-menu dropdown-menu-end mt-5 " aria-labelledby="uniqueID">
-                        <a class="dropdown-item text-black" href="#">Service 1</a>
-                        <a class="dropdown-item text-black" href="#">Service 2</a>
-                        <a class="dropdown-item text-black" href="#">Service 3</a>
-                    </div>
                     <hr>
                     <li class="nav-item dropdown d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero2">Services</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
                     <li class="nav-item dropdown d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
