@@ -38,6 +38,13 @@
             display: flex;
             align-items: center;
         }
+        .nav-item .nav-link:hover {
+            text-decoration: 3px underline #ffc107;
+            
+        }
+        .nav-item .nav-link:active {
+            text-decoration: 3px underline #fff;
+        }
         .dotted {
             text-decoration: underline;
             text-decoration-style: dashed;
@@ -156,7 +163,15 @@
         .p-text1 {
             display: none;
         }
-
+        .carousel-item {
+            height: 100vh;
+        }
+        @media(max-width: 995px) {
+            .nav-item .nav-link:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
         @media (max-width: 885px) {
            .header-text1 {
             font-size: 6rem;
@@ -175,6 +190,7 @@
            .p-text {
             font-size: 1.2rem;
            }
+           
         }
 
         @media (min-height: 1200px) {
@@ -235,9 +251,6 @@
             }
             .hero4 {
                 min-height: 40vh;
-            }
-            .carousel-item {
-                height: 100%;
             }
             .header-text3 {
                 font-size: 3rem;
@@ -312,13 +325,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item d-flex justify-content-between">
-                        <a class="nav-link text-light fw-bolder " aria-current="page" href="index.html" id="uniqueID" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Home
-                        </a>
-                        <i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i>
-                    </li>
-                    <hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder"  href="index.html"  aria-expanded="false">Home</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
                     <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero2">Services</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
                     <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
                     <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
@@ -437,64 +444,35 @@
                     </div>
                 </div>
             </div>
-          <div class="carousel-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('business-banking-slider_1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-            <div class="container-fluid mt-5" style="max-width: 1440px; margin: auto;">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="container-fluid py-5">
-                            <div class="text-light mt-5 mb-2 fw-bolder text-lg-start text-center header-text">
-                                Buy your first<br>
-                                <span class="text-warning fw-bold header-text">Crypto</span>
-                                and build<br> <span class="text-warning display-1 fw-bold header-text">Personal Portfolio</span><br> today
-                            </div>
-                            <p class="text-light mb-5 mt-5 text-lg-start text-center p-text3">Buy, sell, trade, and invest in Bitcoin & crypto - all in one safe and simple app.<br class="d-none md-block">
-                                Bitcoin is Money Over Internet Protocol. One must acknowledge with cryptography no amount of violence will ever solve a math problem.
-                            </p>
-                            <div class="d-flex justify-content-lg-start justify-content-center gap-2">
-                                <a class="btn btn-outline-warning d-block  py-2 px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
-                                <a class="btn btn-warning d-block  py-2 px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--
-                    <div class="col-lg-7 mt-auto mb-1 mb-sm-5">
-                        <div class="container-fluid text-light py-4 ">
-                            <div class="card-group d-flex justify-content-center gap-1">
-                                <div class="card-body d-flex justify-content-center py-1 coin">
-                                    <img class="mt-1" src="bitcoin-btc-logo.png" alt="btc" width="30" height="30">
-                                    <div>
-                                        <h6 class="mb-0 ">$<span id="bitcoin"></span></h6>
-                                        <h6 class="mb-0 ">Bitcoin</h6>
-                                    </div>
+            <div class="carousel-item " style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('business-banking-slider_1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height:">
+                <div class="container-fluid mt-5" style="max-width: 1440px; margin: auto;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="container-fluid py-5">
+                                <div class="text-light mt-5 mb-2 fw-bolder text-lg-start text-center header-text">
+                                    Buy your first<br>
+                                    <span class="text-warning fw-bold header-text">Crypto</span>
+                                    and build<br> <span class="text-warning display-1 fw-bold header-text">Personal Portfolio</span><br> today
                                 </div>
-                                <div class="card-body d-flex justify-content-center py-1  coin">
-                                    <img class="mt-1" src="Ethereum-Logo-PNG-Pic.png" alt="eth" height="30">
-                                    <div>
-                                        <h6 class="mb-0 ">$<span id="ethereum"></span></h6>
-                                        <h6 class="mb-0 ">Ethereum</h6>
-                                    </div>
-                                </div>
-                                <div class="card-body d-flex justify-content-center py-1  coin">
-                                    <img class="mt-1" src="tether.png" alt="usdt" width="30" height="30">
-                                    <div>
-                                        <h6 class="mb-0">$1.00</h6>
-                                        <h6 class="mb-0">USDT</h6>
-                                    </div>
+                                <p class="text-light mb-5 mt-5 text-lg-start text-center p-text3">Buy, sell, trade, and invest in Bitcoin & crypto - all in one safe and simple app.<br class="d-none md-block">
+                                    Bitcoin is Money Over Internet Protocol. One must acknowledge with cryptography no amount of violence will ever solve a math problem.
+                                </p>
+                                <div class="d-flex justify-content-lg-start justify-content-center gap-2">
+                                    <a class="btn btn-outline-warning d-block  py-2 px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
+                                    <a class="btn btn-warning d-block  py-2 px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    -->
                 </div>
             </div>
-          </div>
         </div>
         <div class=" fixed-bottom text-end text-light" style="max-width: 1440px; margin: auto;">
             <a href="https://wa.me/+2348138553465" target="_blank"><i class="fa-regular fa-comment-dots fa-fade fs-1 p-3"></i></a>
         </div>
     </div>
     <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-lg modal-fullscreen-sm-down  modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title"></h4>
@@ -787,7 +765,7 @@
         </div>
     </section>
     <hr class="hr">
-    <div id="f-a-q" class="container-fluid">
+    <div id="f-a-q" class="container-fluid" style="max-width: 1440px; margin: auto;">
         <div class="row d-flex justify-content-center ">
             <div class="col-md-4">
                 <h2 class="text-light fw-bold text-center text-md-start py-sm-0 py-3">Frequently Asked<br> Questions</h2>
@@ -1122,8 +1100,8 @@
                 </div>
             </div>
         </div>
-        <div class="d-none d-sm-block " style="max-width: 1440px; margin: auto;">
-            <div class="row p-sm-5 p-4 gap-4 text-light text-opacity-50 hero5">
+        <div class="d-none d-sm-block" >
+            <div class="row p-sm-5 py-4 gap-4 text-light text-opacity-50 hero5">
                 <div class="col">
                     <h6 class="fw-bolder">Corporate</h6>
                     <a class="nav-link text" href="">Excel Exchange blog</a>
