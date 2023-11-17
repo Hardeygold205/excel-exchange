@@ -101,6 +101,8 @@ const NavToggler = document.getElementById("nav-toggler");
 const NavIcon = document.getElementById("nav-icon");
 let isBar = true;
 
+const NavbarNav = document.getElementById("navbarNav");
+
 NavToggler.addEventListener('click', () => {
   if (isBar) {
     NavIcon.classList.remove("navbar-toggler-icon");
@@ -117,7 +119,13 @@ NavToggler.addEventListener('click', () => {
   }
 });
 
-
+NavbarNav.addEventListener('hidden.bs.collapse', () => {
+  
+  NavIcon.classList.remove("fas", "fa-times");
+  NavIcon.classList.add("navbar-toggler-icon");
+  NavIcon.style.fontSize = "1.25rem";
+  isBar = true;
+});
 
 
 const buttons = document.querySelectorAll(".btn-swap");
@@ -129,13 +137,9 @@ buttons.forEach(button => {
     icon.style.transition = "transform 0.7s ease"
     button.addEventListener("click", () => {
         if (isPlus) {
-            //icon.classList.remove("fa-plus");
-            //icon.classList.add("fa-times");
             icon.style.transform = "rotate(45deg)"
             isPlus = false;
         } else {
-            //icon.classList.remove("fa-times");
-            //icon.classList.add("fa-plus");
             icon.style.transform = "rotate(0deg)"
             isPlus = true;
         }
@@ -152,13 +156,9 @@ Arrows.forEach(Arrow => {
     icon.style.transition = "transform 0.7s ease"
     Arrow.addEventListener("click", () => {
         if (isUp) {
-            //icon.classList.remove("fa-chevron-down");
-            //icon.classList.add("fa-chevron-up");
             icon.style.transform = "rotate(180deg)";
             isUp = false;
         } else {
-            //icon.classList.remove("fa-chevron-up");
-            //icon.classList.add("fa-chevron-down");
             icon.style.transform = "rotate(0deg)"
             isUp = true;
         }
@@ -185,14 +185,14 @@ const yearElement = document.getElementById('yearCounter');
             const startTime = performance.now();
 
             function updateValue(timestamp) {
-                const progress = (timestamp - startTime) / 1000; // 1500ms = 1.5s
-                currentValue = Math.min(progress * targetValue, targetValue);
-                yearElement.textContent = Math.floor(currentValue);
+              const progress = (timestamp - startTime) / 800;
+              currentValue = Math.min(progress * targetValue, targetValue);
+              yearElement.textContent = Math.floor(currentValue);
 
-                if (progress < 1) {
-                    requestAnimationFrame(updateValue);
-                }
-            }
+              if (progress < 1) {
+                  requestAnimationFrame(updateValue);
+              };
+            };
 
             requestAnimationFrame(updateValue);
         }
