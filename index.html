@@ -183,7 +183,7 @@
             display: none;
         }
 
-        @media(max-width: 995px) {
+        @media(max-width: 992px) {
             .nav-item .nav-link:hover {
                 color: #fff;
                 border: none;
@@ -342,11 +342,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder"  href="index.html"  aria-expanded="false">Home</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero2">Services</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero3">Portfolio</a><i class="fa-solid d-block d-sm-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder"  href="index.html"  aria-expanded="false">Home</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero2">Services</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero3">Portfolio</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
                     <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
@@ -1187,25 +1187,41 @@
             </div>
         </div>
         <hr class="hr d-none d-sm-block">
-        <div class="container-fluid text-light opacity-75 py-3 d-flex flex-column justify-content-center align-items-center d-block d-md-none">
-            <div class="text-center w-100">
+        <div class="container-fluid w-100 text-light opacity-75 py-3 d-flex flex-column d-block d-md-none">
+            <div class="text-center">
                 <h3 class="fw-bold fs-3 ">Get started with crypto</h3>
                 <a type="button" class="btn btn-primary rounded-5 my-4 py-2 d-block " href="" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa fa-apple" aria-hidden="true"></i> Download App</a>
             </div>
-            <div class="container-fluid mt-4 d-flex flex-column align-items-center d-block ">
-                <div class="d-flex my-3">
-                    <i class="fa-brands fa-x-twitter border rounded-circle p-3 me-3" aria-hidden="true"></i>
-                    <i class="fa fa-instagram border rounded-circle p-3 me-3" aria-hidden="true"></i>
-                    <i class="fa-brands fa-threads border rounded-circle p-3 me-3"></i>
-                    <i class="fa fa-slack border rounded-circle p-3 me-3" aria-hidden="true"></i>
-                    <i class="fa fa-spotify border rounded-circle p-3 " aria-hidden="true"></i>
-                </div>
-                <div class="d-flex my-3">
-                    <i class="fa-brands fa-linkedin border rounded-circle p-3 me-3" aria-hidden="true"></i>
-                    <i class="fa fa-github border rounded-circle p-3 me-3" aria-hidden="true"></i>
-                    <i class="fa-brands fa-telegram border rounded-circle p-3 me-3"></i>
-                    <i class="fa-brands fa-threads border rounded-circle p-3 me-3" aria-hidden="true"></i>
-                    <i class="fa fa-whatsapp border rounded-circle p-3 " aria-hidden="true"></i>
+            <div class="container-fluid mt-2 d-flex mx-auto flex-column align-items-center">
+                <div class="row text-center ">
+                    <div class="d-flex my-3 gap-1">
+                        <div class="col-3">
+                            <i class="fa-brands fa-x-twitter border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-instagram border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa-brands fa-threads border rounded-circle p-3 me-3"></i>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-slack border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3 gap-1 ">
+                        <div class="col-3">
+                            <i class="fa-brands fa-linkedin border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-github border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa-brands fa-telegram border rounded-circle p-3 me-3"></i>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa-brands fa-threads border rounded-circle p-3 me-3" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
             
