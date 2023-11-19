@@ -185,13 +185,45 @@
         .fa-arrow-right:hover {
             transform: scale(1.2);
         }
-        .dropdwown:hover .dropdown-menu {
+        .nav-item:hover .dropdown-menu {
             display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
         }
+        .nav-item .dropdown-menu {
+            background: #fff;
+        }
+
+        .nav-item .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -17px; 
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px; 
+            border-style: solid;
+            border-color: transparent transparent #fff transparent; 
+        }
+
+        .nav-item .dropdown-menu h6,
+        .nav-item .dropdown-menu a {
+            margin: 0;
+            padding: 0;
+        }
+
         @media(max-width: 960px) {
             .nav-item .nav-link:hover {
                 color: #fff;
                 border: none;
+            }
+            .nav-item:hover .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: 10px;
             }
         }
         @media (max-width: 885px) {
@@ -356,15 +388,52 @@
                             <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
                         </div>
                     </li><hr>
-                    <li class="nav-item position-relative d-flex justify-content-between dropdown ">
+                    <li class="nav-item position-relative d-flex justify-content-between dropdown">
                         <div class="d-flex justify-content-between ">
                             <a class="nav-link text-light fw-bolder" href="#hero2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                             <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
                         </div>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Link 1</a></li>
-                            <li><a class="dropdown-item" href="#">Link 2</a></li>
-                            <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <ul class="dropdown-menu ">
+                            <div class="row p-3 ">
+                                <div class="col text-center ">
+                                    <li>
+                                        <h2>Get started</h2 >
+                                    </li>
+                                </div>
+                                <div class="dropdown-divider ">
+
+                                </div>
+                                <div class="col d-flex px-3 py-2 ">
+                                    <div>
+                                        <h6 class="fw-bolder">Corporate</h6>
+                                        <a class="nav-link text-dark " href="">Excel Exchange blog</a>
+                                        <a class="nav-link text-dark" href="">Social responsibility</a>
+                                        <a class="nav-link text-dark" href="">Contact us</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Media center</h6>
+                                        <a class="nav-link text-dark" href="">Excelexchange in the media</a>
+                                        <a class="nav-link text-dark" href="">Team Pro</a>
+                                    </div>
+                                    
+                                    <div>
+                                        <h6 class="fw-bolder">Legal & reporting</h6>
+                                        <a class="nav-link text-dark" href="">Regulation</a>
+                                        <a class="nav-link text-dark" href="">Financial reports</a>
+                                        <a class="nav-link text-dark" href="">Legal documents</a>
+                                        <a class="nav-link text-dark" href="">Compesation fund</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Platforms</h6>
+                                        <a class="nav-link text-dark" href="">Excel Trade app</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 5</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 4</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader WebTerminal</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </ul>
                     </li><hr>
                     <li class="nav-item position-relative d-flex justify-content-between ">
