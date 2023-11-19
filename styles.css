@@ -10,7 +10,7 @@ html {
 :root {
     --font-size: 4rem;
 }
-/*
+
 .herosection {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('crypto-background-j6t7raza7y7suv6d.jpg');
     background-size: cover;
@@ -22,7 +22,7 @@ html {
     justify-content: center;
     align-items: center;
 }
-*/
+
 
 /*
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -50,6 +50,7 @@ html {
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('navbar.avif');
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
 }
 
 .hr {

@@ -25,6 +25,16 @@
             top: 0;
             left: 0;
         }
+        .media-logo i:hover {
+            border-color: #fff;
+            opacity: 1;
+            
+        }
+        .media-logo i {
+            cursor: pointer;
+            opacity: .8;
+        }
+
         .ratings {
             display: block;
             overflow-x: auto;
@@ -38,16 +48,6 @@
             display: flex;
             align-items: center;
         }
-
-        .nav-item .nav-link:hover {
-            border-bottom: 3px solid #007bff;
-            
-        }
-
-        .nav-item .nav-link:active {
-            border-bottom: 3px solid #fff;
-        }
-
         .nav-link::after {
             content: "";
             position: absolute;
@@ -185,7 +185,9 @@
         .fa-arrow-right:hover {
             transform: scale(1.2);
         }
-
+        .dropdwown:hover .dropdown-menu {
+            display: block;
+        }
         @media(max-width: 960px) {
             .nav-item .nav-link:hover {
                 color: #fff;
@@ -275,6 +277,9 @@
             .header-text3 {
                 font-size: 3rem;
             }
+            .carousel-item {
+                height: 100%;
+            }
         }
 
         @media (max-width: 415px) {
@@ -340,24 +345,54 @@
             <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                 <img class="d-inline-block" src="excel-yellow-blue.png" alt="logo" width="34" height="30">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
             </a>
-            <button id="nav-toggler" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+            <button id="nav-toggler" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
                 <span id="nav-icon" class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder"  href="index.html"  aria-expanded="false">Home</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero2">Services</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero3">Portfolio</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="index.html">Home</a>
+                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between dropdown ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="#hero2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link 1</a></li>
+                            <li><a class="dropdown-item" href="#">Link 2</a></li>
+                            <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        </ul>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a>
+                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a>
+                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="#hero3">Portfolio</a>
+                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
                     <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
                     <a class="btn btn-warning btn-block d-md-block px-4" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
-            </div> 
-        </div>      
+            </div>
+        </div>
     </nav>
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
