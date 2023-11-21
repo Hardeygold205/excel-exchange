@@ -29,6 +29,7 @@ var btcInput = document.getElementById("btcInput");
 var currencyInput = document.getElementById("currencyInput");
 var currencySelect = document.getElementById("currencySelect");
 var btc3 = document.getElementById("bitcoin3");
+var response; // Declare response variable in a wider scope
 
 var settings = {
   "async": true,
@@ -38,69 +39,53 @@ var settings = {
   "header": {}
 };
 
-$.ajax(settings).done(function (response){
+/*
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=gbp",
+  "method": "GET",
+  "header": {}
+};
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=eur",
+  "method": "GET",
+  "header": {}
+};
+*/
+
+$.ajax(settings).done(function (data){
+  response = data; // Assign data to the response variable
   btc3.innerHTML = response.bitcoin.ngn;
-  
 });
 
 btcInput.addEventListener("input", function() {
-  // Get the selected currency
   var selectedCurrency = currencySelect.value;
-
-  // Get the BTC value entered by the user
   var btcValue = parseFloat(btcInput.value) || 0;
-
-  // Get the conversion rate for the selected currency
   var conversionRate = getConversionRate(selectedCurrency);
-
-  // Calculate the converted amount
   var convertedAmount = btcValue * conversionRate;
-
-  // Update the currency input field with the converted amount
   currencyInput.value = convertedAmount.toFixed(4);
 });
 
 currencyInput.addEventListener("input", function() {
-  // Get the selected currency
   var selectedCurrency = currencySelect.value;
-
-  // Get the amount entered by the user in the currency input field
   var currencyAmount = parseFloat(currencyInput.value) || 0;
-
-  // Get the conversion rate for the selected currency
   var conversionRate = getConversionRate(selectedCurrency);
-
-  // Calculate the converted amount back to BTC
   var convertedToBTC = currencyAmount / conversionRate;
-
-  // Update the BTC input field with the converted amount
   btcInput.value = convertedToBTC.toFixed(4);
 });
 
-
 function getConversionRate(currency) {
-
   var conversionRates = {
-      ngn: 4600000, 
-      usd: 55000,   
-      eur: 47000,  
-      gbp: 40000    
+    ngn: response.bitcoin.ngn    
   };
-
-  return conversionRates[currency] || 1; // Default to 1 if currency not found
+  return conversionRates[currency] || 1;
 }
 
-/*
-btcInput.addEventListener("input", function () {
-  var inputValue = parseFloat(btcInput.value);
-  if (!isNaN(inputValue)) {
-      var conversionRate = parseFloat(btc3.innerHTML);
-      var equivalentValue = inputValue * conversionRate;
 
-      btc3.textContent = equivalentValue.toFixed(2);
-  }
-});
-*/
 
 const HMenu = document.getElementById("navbarNav"); 
 const NavDiv = document.querySelector(".navbar-collapse");
