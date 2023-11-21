@@ -86,6 +86,7 @@
             font-size: 4rem;
             font-family: 'poppins', sans-serif;
         }
+
         .header-text2 {
             font-size: 4rem;
             font-family: 'poppins', sans-serif;
@@ -97,14 +98,17 @@
             transform: translateY(50px);
             transition: opacity 1s, transform 1s;
         }
+
         .hidden.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         .col.visible {
             opacity: 1;
             transform: translateX(0);
         }
+
         .rows {
             opacity: 0;
             transform: translateY(50px);
@@ -114,14 +118,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+
         .card-body {
             opacity: 0;
             transform: translateY(40px);
             transition: opacity 1.3s, transform 1.5s;
         }
+
         .flow {
             margin-top: -150px;
         }
+
         .card-body.visible {
             opacity: 1;
             transform: translateY(0px);
@@ -185,6 +192,15 @@
         .fa-arrow-right:hover {
             transform: scale(1.2);
         }
+        ul .nav-item div a, 
+        ul .nav-item div i{
+            opacity: .8;
+        }
+        ul .nav-item a:hover,
+        ul .nav-item i:hover {
+            opacity: 1;
+    
+        }
         .nav-item:hover .dropdown-menu {
             display: block;
             position: absolute;
@@ -200,7 +216,7 @@
             content: '';
             position: absolute;
             top: -17px; 
-            left: 50%;
+            left: 5%;
             transform: translateX(-50%);
             border-width: 10px; 
             border-style: solid;
@@ -224,6 +240,9 @@
                 top: 100%;
                 left: 0;
                 margin-top: 10px;
+            }
+            .c-down {
+                display: none;
             }
         }
         @media (max-width: 885px) {
@@ -385,13 +404,20 @@
                     <li class="nav-item position-relative d-flex justify-content-between ">
                         <div class="d-flex justify-content-between ">
                             <a class="nav-link text-light fw-bolder" href="index.html">Home</a>
-                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
                         </div>
                     </li><hr>
                     <li class="nav-item position-relative d-flex justify-content-between dropdown">
                         <div class="d-flex justify-content-between ">
-                            <a class="nav-link text-light fw-bolder" href="#hero2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                            <a class="nav-link text-light fw-bolder" href="#hero2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
                         </div>
                         <ul class="dropdown-menu ">
                             <div class="row p-3 ">
@@ -415,7 +441,26 @@
                                         <a class="nav-link text-dark" href="">Excelexchange in the media</a>
                                         <a class="nav-link text-dark" href="">Team Pro</a>
                                     </div>
-                                    
+                                    <div>
+                                        <h6 class="fw-bolder">Legal & reporting</h6>
+                                        <a class="nav-link text-dark" href="">Regulation</a>
+                                        <a class="nav-link text-dark" href="">Financial reports</a>
+                                        <a class="nav-link text-dark" href="">Legal documents</a>
+                                        <a class="nav-link text-dark" href="">Compesation fund</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Platforms</h6>
+                                        <a class="nav-link text-dark" href="">Excel Trade app</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 5</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 4</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader WebTerminal</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader mobile</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Media center</h6>
+                                        <a class="nav-link text-dark" href="">Excelexchange in the media</a>
+                                        <a class="nav-link text-dark" href="">Team Pro</a>
+                                    </div>
                                     <div>
                                         <h6 class="fw-bolder">Legal & reporting</h6>
                                         <a class="nav-link text-dark" href="">Regulation</a>
@@ -433,31 +478,24 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </ul>
                     </li><hr>
                     <li class="nav-item position-relative d-flex justify-content-between ">
                         <div class="d-flex justify-content-between ">
-                            <a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a>
-                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                            <a class="nav-link text-light fw-bolder" id="about" href="about.html">Company <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
                         </div>
                     </li><hr>
                     <li class="nav-item position-relative d-flex justify-content-between ">
                         <div class="d-flex justify-content-between ">
-                            <a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a>
-                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
-                        </div>
-                    </li><hr>
-                    <li class="nav-item position-relative d-flex justify-content-between ">
-                        <div class="d-flex justify-content-between ">
-                            <a class="nav-link text-light fw-bolder" href="#hero3">Portfolio</a>
-                            <i class="fa-solid d-block d-lg-none fa-angle-down py-1 position-absolute" style="bottom: 0; right: 0;"></i>
+                            <a class="nav-link text-light fw-bolder" href="#hero3">Portfolio <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
                         </div>
                     </li><hr>
                 </ul>
                 <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
-                    <a class="btn btn-warning btn-block d-md-block px-4" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
+                    <a class="btn btn-outline-warning btn-block d-md-block px-5 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
+                    <a class="btn btn-warning btn-block d-md-block px-4 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
                 </div>
             </div>
@@ -803,6 +841,15 @@
     </section>
     <section id="hero3" class="container-fluid d-flex justify-content-center py-5 hero4">
         <div class="container " style="max-width: 1440px; margin: auto;">
+            <div class="d-flex flex-column  mx-auto mt-2 mb-5 ">
+                <h5 class="text-primary text-center ">EXCELEXCHANGE.COM EXCHANGE</h5 >
+                <h1 class="text-center text-light display-5 ">
+                    Trade bitcoin and other crypto with <br class="d-lg-block d-none">
+                    confidence on the world's fastest and <br class="d-lg-block d-none">
+                    most secure crypto exchange <br class="d-lg-block d-none">
+                </h1>    
+            </div>
+            
             <div class="row d-flex align-items-center gap-3 gap-md-0">
                 <div id="rates" class="col-md-5 text-center">
                     <div class="">
