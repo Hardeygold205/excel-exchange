@@ -41,14 +41,13 @@ $.ajax(settings).done(function (response){
   
 });
 
-
 btcInput.addEventListener("input", function () {
   var inputValue = parseFloat(btcInput.value);
   if (!isNaN(inputValue)) {
       var conversionRate = parseFloat(btc3.innerHTML);
       var equivalentValue = inputValue * conversionRate;
       
-      document.getElementById("bitcoin3").textContent = equivalentValue.toFixed(2);
+      btc3.textContent = equivalentValue.toFixed(2);
   }
 });
 
