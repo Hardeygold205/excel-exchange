@@ -39,23 +39,6 @@ var settings = {
   "header": {}
 };
 
-/*
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=gbp",
-  "method": "GET",
-  "header": {}
-};
-
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=eur",
-  "method": "GET",
-  "header": {}
-};
-*/
 
 $.ajax(settings).done(function (data){
   response = data; // Assign data to the response variable
@@ -80,7 +63,10 @@ currencyInput.addEventListener("input", function() {
 
 function getConversionRate(currency) {
   var conversionRates = {
-    ngn: response.bitcoin.ngn    
+    ngn: response.bitcoin.ngn,
+    usd: response.bitcoin.usd,
+    eur: response.bitcoin.eur,
+    gbp: response.bitcoin.gbp    
   };
   return conversionRates[currency] || 1;
 }
