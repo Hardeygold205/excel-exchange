@@ -735,19 +735,26 @@
                                 <legend class="my-4 fs-2 fw-bold">Currency Converter</legend>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">BTC</span>
-                                    <input type="text" step="0.0001" class="form-control bg-light border" id="btcInput" aria-label="Username" placeholder="1.0" aria-describedby="basic-addon1">
+                                    <input type="text" step="0.0001" class="form-control bg-light text-dark border" id="btcInput" placeholder="Enter BTC" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="text-primary fs-3 text-center mb-3">
                                     <i class="fa-solid fa-arrow-up-long"></i>
                                     <i class="fa-solid fa-arrow-down-long"></i>
                                 </div>
                                 <div class="mb-3">
-                                    <select id="disabledSelect" class="form-select">
-                                        <option>NGN</option>
-                                        <option>USD</option>
-                                        <option>EUR</option>
-                                        <option>GBP</option>
-                                    </select>
+                                    <div class="row g-2">
+                                        <div class="col-md-2">
+                                            <select id="currencySelect" class="form-select">
+                                                <option value="ngn">NGN</option>
+                                                <option value="usd">USD</option>
+                                                <option value="eur">EUR</option>
+                                                <option value="gbp">GBP</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-10 d-flex ">
+                                            <input type="text" step="0.0001" class="form-control bg-light text-dark  border ms-auto "  id="currencyInput" placeholder="Converted Amount">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <h3>1 BTC = <span id="bitcoin3"></span> NGN</h3>
