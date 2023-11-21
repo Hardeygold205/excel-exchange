@@ -1,10 +1,15 @@
 var btc = document.getElementById("bitcoin");
 var eth = document.getElementById("ethereum");
+var btc2 = document.getElementById("bitcoin2");
+var eth2 = document.getElementById("ethereum2");
+var doge = document.getElementById("dogecoin");
+var sol = document.getElementById("solana");
+var xrp = document.getElementById("stellar");
 
 var settings = {
   "async": true,
   "scrossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin&vs_currencies=usd",
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=usd",
   "method": "GET",
   "header": {}
 };
@@ -12,6 +17,11 @@ var settings = {
 $.ajax(settings).done(function (response){
   btc.innerHTML = response.bitcoin.usd;
   eth.innerHTML = response.ethereum.usd;
+  btc2.innerHTML = response.bitcoin.usd;
+  eth2.innerHTML = response.ethereum.usd;
+  doge.innerHTML = response.dogecoin.usd;
+  sol.innerHTML = response.solana.usd;
+  xrp.innerHTML = response.stellar.usd
 });
 
 const HMenu = document.getElementById("navbarNav"); 
