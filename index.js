@@ -1,4 +1,5 @@
 var btc = document.getElementById("bitcoin");
+//var btc3 = document.getElementById("bitcoin3");
 var eth = document.getElementById("ethereum");
 var btc2 = document.getElementById("bitcoin2");
 var eth2 = document.getElementById("ethereum2");
@@ -21,7 +22,34 @@ $.ajax(settings).done(function (response){
   eth2.innerHTML = response.ethereum.usd;
   doge.innerHTML = response.dogecoin.usd;
   sol.innerHTML = response.solana.usd;
-  xrp.innerHTML = response.stellar.usd
+  xrp.innerHTML = response.stellar.usd;
+});
+
+var btcInput = document.getElementById("btcInput");
+var btc3 = document.getElementById("bitcoin3");
+
+var settings = {
+  "async": true,
+  "scrossDomain": true,
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=ngn",
+  "method": "GET",
+  "header": {}
+};
+
+$.ajax(settings).done(function (response){
+  btc3.innerHTML = response.bitcoin.ngn;
+  
+});
+
+
+btcInput.addEventListener("input", function () {
+  var inputValue = parseFloat(btcInput.value);
+  if (!isNaN(inputValue)) {
+      var conversionRate = parseFloat(btc3.innerHTML);
+      var equivalentValue = inputValue * conversionRate;
+      
+      document.getElementById("bitcoin3").textContent = equivalentValue.toFixed(2);
+  }
 });
 
 const HMenu = document.getElementById("navbarNav"); 
