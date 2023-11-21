@@ -228,6 +228,34 @@
             margin: 0;
             padding: 0;
         }
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(-100%);
+                opacity: .7;
+            }
+            100% {
+                transform: translateX(100%);
+                opacity: 1;
+            }
+        }
+
+        .c-port {
+            overflow: hidden;
+        }
+
+        .flex {
+            display: flex;
+            animation: moveLeftToRight 30s linear infinite;
+        }
+
+        .btn {
+            white-space: nowrap;
+            margin: 10px;
+        }
+        .c-port:hover .flex {
+            animation-play-state: paused;
+        }
+
         @media (max-width: 1093px) {
             .c-down {
                 display: none;
@@ -991,6 +1019,74 @@
                     </div>
                 </div>
             </div>
+            <div class="container-fluid mt-5 d-flex flex-column  mx-auto justify-content-center">
+                <h1 class="text-primary opacity-75 text-center ">Build your crypto portfolio</h1>
+                <div class="container c-port">
+                    <div class="flex">
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25"> Ethereum</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="doge-coin-png.png" alt="btc" width="25" height="25"> Dogecoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="tether.png" alt="btc" width="25" height="25"> Tether</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="stellar.png" alt="btc" width="25" height="25"> Stellar</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Solana_logo.png" alt="btc" width="25" height="25"> Solana</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                    </div>
+                </div>
+                <div class="container c-port">
+                    <div class="flex">
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25"> Ethereum</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="doge-coin-png.png" alt="btc" width="25" height="25"> Dogecoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="tether.png" alt="btc" width="25" height="25"> Tether</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="stellar.png" alt="btc" width="25" height="25"> Stellar</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Solana_logo.png" alt="btc" width="25" height="25"> Solana</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                    </div>
+                </div>
+                <div class="container c-port">
+                    <div class="flex">
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25"> Ethereum</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="doge-coin-png.png" alt="btc" width="25" height="25"> Dogecoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="tether.png" alt="btc" width="25" height="25"> Tether</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="stellar.png" alt="btc" width="25" height="25"> Stellar</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Solana_logo.png" alt="btc" width="25" height="25"> Solana</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                    </div>
+                </div>
+                <div class="container c-port">
+                    <div class="flex">
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25"> Ethereum</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="doge-coin-png.png" alt="btc" width="25" height="25"> Dogecoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="tether.png" alt="btc" width="25" height="25"> Tether</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="stellar.png" alt="btc" width="25" height="25"> Stellar</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="Solana_logo.png" alt="btc" width="25" height="25"> Solana</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                        <a class="btn btn-primary rounded rounded-5 px-4 m-4" href=""><img class="" src="bitcoin-btc-logo.png" alt="btc" width="25" height="25"> Bitcoin</a>
+                    </div>
+                </div>
+            </div>
+            <!--
             <div class="row d-flex align-items-center gap-3 gap-md-0 mt-3 ">
                 <div id="rates" class="col-md-5 text-center">
                     <div class="">
@@ -1034,7 +1130,8 @@
                         <img class="img-fluid " src="macbook-trade.png" alt="macbook-view" height="550" width="900">
                     </div>
                 </div>
-            </div>  
+            </div>
+            -->  
         </div>
     </section>
     <section id="hero4" class="p-sm-5 bg-light">
