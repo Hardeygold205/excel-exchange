@@ -22,6 +22,44 @@ html {
     align-items: center;
 }
 
+.marquee {
+    height: 100px;
+    width: 100%;
+  
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee div {
+    display: flex;
+    width: 200%;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+  
+    animation: marquee 75s linear infinite;
+  }
+
+.marquee.flex2 div{
+    animation: marquee 55s  linear infinite;
+}
+.marquee.flex3 div{
+    animation: marquee 75s  linear infinite;
+}
+.marquee.flex4 div{
+    animation: marquee 55s  linear infinite;
+}
+  
+  .marquee span {
+    float: left;
+    width: 100%;
+  }
+  
+  @keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+
 
 /*
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
