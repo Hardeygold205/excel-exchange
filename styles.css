@@ -36,7 +36,6 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    min-width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
