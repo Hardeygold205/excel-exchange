@@ -22,6 +22,9 @@ html {
     align-items: center;
 }
 
+.frame {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%);
+}
 .marquee {
     height: 100px;
     width: 100%;
@@ -38,22 +41,25 @@ html {
     overflow: hidden;
   
     animation: marquee 75s linear infinite;
-  }
+    }
 
-.marquee.flex2 div{
-    animation: marquee 55s  linear infinite;
-}
-.marquee.flex3 div{
-    animation: marquee 75s  linear infinite;
-}
-.marquee.flex4 div{
-    animation: marquee 55s  linear infinite;
-}
-  
-  .marquee span {
-    float: left;
-    width: 100%;
-  }
+    .marquee.flex2 div{
+        animation: marquee 55s  linear infinite;
+    }
+    .marquee.flex3 div{
+        animation: marquee 75s  linear infinite;
+    }
+    .marquee.flex4 div{
+        animation: marquee 55s  linear infinite;
+    }
+    
+    .marquee span {
+        float: left;
+        width: 100%;
+    }
+    .marquee:hover div {
+        animation-play-state: paused;
+    }
   
   @keyframes marquee {
     0% { left: 0; }
@@ -61,12 +67,6 @@ html {
   }
 
 
-/*
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    border-radius: 50%; 
-    transform: rotate(90deg);
-}
-*/
 
 .hero4 {
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('d-phone2.png');
