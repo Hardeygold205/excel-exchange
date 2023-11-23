@@ -23,24 +23,22 @@ html {
 }
 
 .frame {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #555 15%, #555 85%, transparent 100%);
 }
 .marquee {
     height: 100px;
     width: 100%;
-  
     overflow: hidden;
     position: relative;
   }
   
-  .marquee div {
-    display: flex;
-    width: 200%;
-    height: auto;
-    position: absolute;
-    overflow: hidden;
-  
-    animation: marquee 75s linear infinite;
+    .marquee div {
+        display: flex;
+        width: 200%;
+        height: auto;
+        position: absolute;
+        overflow: hidden;
+        animation: marquee 75s linear infinite;
     }
 
     .marquee.flex2 div{
@@ -76,7 +74,6 @@ html {
     position: relative;
     justify-content: center;
     align-items: center;
-    display: flex;
     box-shadow: #555 0px 0px 28px 8px;
 }
 .soon-background {
