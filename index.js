@@ -96,6 +96,7 @@ let isVisibleArray = Array.from({ length: elementsToAnimate.length }, () => fals
 const h1Elements = document.querySelectorAll('h1');
 const CardBody = document.querySelectorAll('.card-body');
 const AllRow = document.querySelectorAll('.rows');
+const AllFlow = document.querySelectorAll('.flow-body');
 
 h1Elements.forEach((element) => {
     element.classList.add('hidden');
@@ -108,6 +109,10 @@ CardBody.forEach((element) => {
 
 AllRow.forEach((element) => {
   element.classList.add('rows');
+});
+
+AllFlow.forEach((element) => {
+  element.classList.add('flow-body');
 });
 
 
@@ -127,17 +132,17 @@ window.addEventListener('scroll', () => {
   CardBody.forEach((element) => {
     const elementOffset = element.getBoundingClientRect();
 
-    if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+    if (elementOffset.top >=  0 && elementOffset.bottom <= window.innerHeight) {
         element.classList.add('visible');
     } else {
         element.classList.remove('visible');
     }
   });
 
-  AllColl.forEach((element) => {
+  AllFlow.forEach((element) => {
     const elementOffset = element.getBoundingClientRect();
 
-    if (elementOffset.top >= 0 && elementOffset.bottom <= window.innerHeight) {
+    if (elementOffset.top <= /* 0 && elementOffset.bottom <=*/ window.innerHeight) {
         element.classList.add('visible');
     } else {
         element.classList.remove('visible');

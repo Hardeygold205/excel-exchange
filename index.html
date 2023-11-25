@@ -124,6 +124,16 @@
             transform: translateY(40px);
             transition: opacity 1.3s, transform 1.5s;
         }
+        .flow-body {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .flow-body.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         .flow {
             margin-top: -150px;
