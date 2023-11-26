@@ -23,6 +23,8 @@ html {
 
 .frame {
     -webkit-mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%);
+    margin: 0;
+    padding: 0;
 }
 .marquee {
     height: 100px;
