@@ -25,6 +25,9 @@
             top: 0;
             left: 0;
         }
+        .c3:hover {
+            background-color: rgba(0, 47, 97, 0.2);
+        }
         .media-logo i:hover {
             border-color: #fff;
             opacity: 1;
@@ -152,7 +155,7 @@
         }
         
         .instant {
-            background: radial-gradient(circle at center, rgba(7, 7, 255, 0.4), transparent), black;
+            background: radial-gradient(circle at center, rgba(7, 7, 255, 0.4)) /*, transparent), black */;
         }
         .twins {
             box-shadow: #555 0px 0px 18px 4px;
@@ -352,10 +355,6 @@
         }
 
         @media (max-width: 500px) {
-            .coin {
-                border: 1px solid #fff;
-                border-radius: 0.5rem;
-            }
             .hero4 {
                 min-height: 50vh;
             }
@@ -545,7 +544,7 @@
                         </div>
                     </li><hr>
                 </ul>
-                <div class="d-grid d-lg-flex gap-3 text-center align-items-center ">
+                <div class="d-grid d-lg-flex text-center align-items-center ">
                     <a class="btn btn-outline-warning btn-block d-md-block px-5 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
                     <a class="btn btn-warning btn-block d-md-block px-4 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
                     <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
@@ -713,10 +712,10 @@
     
     <section class="herosection" >
         <div class="container-fluid" style="max-width: 1440px; margin: auto;">
-            <div class="row justify-content-between ">
+            <div class="row justify-content-between mt-5 pt-5">
                 <div class="col-lg-5">
-                    <div class="container-fluid pt-5 ">
-                        <div class="text-light mt-5 mb-4 fw-bolder text-md-start text-center header-text">
+                    <div class="container-fluid">
+                        <div class="text-light mb-4 fw-bolder text-md-start text-center header-text">
                             Buy & Sell<br>
                             <span class="text-warning header-text">Cryptocurrency</span>
                             and <span class="text-warning header-text">Digital Funds</span>
@@ -728,7 +727,7 @@
                         <a class="btn btn-outline-warning mb-5 px-5 py-2 d-sm-block d-block" data-bs-toggle="modal" data-bs-target="#myModal">Register</a>
                     </div>
                 </div>
-                <div class="col-lg-5 d-flex flex-column  justify-content-center align-items-center ">
+                <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center ">
                     <div class="container-fluid bg-light rounded rounded-3" style="opacity: .9;">
                         <form>
                             <fieldset>
@@ -764,23 +763,79 @@
                             </fieldset>
                         </form>
                     </div>
-                    <div class="container-fluid text-light py-4 ">
+                    <div class="container-fluid d-none d-sm-block pt-3">
+                        <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3" style="background-color: #021f4c transparent; cursor: pointer; ">
+                            <div class="d-flex py-1 text-light ">
+                                <img class="mt-1 p-1 " src="bitcoin-btc-logo.png" alt="btc" width="25" height="25">
+                                <div>
+                                    <h6 class="mb-0 ">Bitcoin</h6>
+                                    <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">BTC</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-light bitcoin">$<span id="bitcoin"></span></h6>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-light bitcoin">$<span id="mc-bitcoin">4,235,456,866</span></h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-light rounded-4 fw-bold" href="">Trade</a>
+                            </div>
+                        </div><hr class="text-secondary p-0 m-0">
+                        <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
+                            <div class="d-flex py-1 text-light ">
+                                <img class="mt-1 p-1 " src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25">
+                                <div>
+                                    <h6 class="mb-0 ">Ethereum</h6>
+                                    <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">ETH</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-light">$<span id="ethereum2"></span></h6>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-light">$<span id="mc-ethereum"></span>835,456,166</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
+                            </div>
+                        </div><hr class="text-secondary p-0 m-0">
+                        <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
+                            <div class="d-flex py-1 text-light ">
+                                <img class="mt-1 p-1 " src="tether.png" alt="btc" width="25" height="25">
+                                <div>
+                                    <h6 class="mb-0 ">Tether US</h6>
+                                    <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">USDT</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-light">$<span id="USDT"></span>1.00</h6>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-light">$<span id="mc-usdt"></span>2,435,456,906</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
+                            </div>
+                        </div><hr class="text-secondary p-0 m-0">
+                    </div>
+                    <div class="container-fluid text-light py-4 d-block d-sm-none ">
                         <div class="card-group d-flex justify-content-between  gap-1">
-                            <div class="d-flex justify-content-center py-1">
+                            <div class="d-flex justify-content-center py-1 flow-body">
                                 <img class="mt-1" src="bitcoin-btc-logo.png" alt="btc" width="30" height="30">
                                 <div>
                                     <h6 class="mb-0 ">$<span id="bitcoin2"></span></h6>
                                     <h6 class="mb-0 ">Bitcoin</h6>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center py-1">
+                            <div class="d-flex justify-content-center py-1 flow-body">
                                 <img class="mt-1" src="Ethereum-Logo-PNG-Pic.png" alt="eth" height="30">
                                 <div>
                                     <h6 class="mb-0 ">$<span id="ethereum"></span></h6>
                                     <h6 class="mb-0 ">Ethereum</h6>
                                 </div>
                             </div>
-                            <div class=" d-flex justify-content-center py-1">
+                            <div class=" d-flex justify-content-center py-1 flow-body">
                                 <img class="mt-1" src="tether.png" alt="usdt" width="30" height="30">
                                 <div>
                                     <h6 class="mb-0">$1.00</h6>
@@ -797,7 +852,7 @@
         </div>
     </section>
     
-    <section class="container-fluid py-2 py-sm-5 instant">
+    <section class="container-fluid pt-5 instant" style="max-width: 1440px; margin: auto;">
         <div class="container text-center mb-2 mb-sm-4">
             <h2 class="mb-4 text-light">Instant Transaction, 24/7</h2>
 
@@ -806,32 +861,40 @@
             </p>
             <a class="text-decoration-none text-warning" href="#more">More about deposits & withdrawals at excelexchange</a>
         </div>
-        <div class="container py-4">
-            <div class="row gap-4 gap-sm-3 mx-0 d-flex align-items-center">  
-                <div class="col">
-                    <img src="bitcoin-btc-logo.png" alt="bitcoin" width="70" height="70">
+        <div class="container-sm pt-4">
+            <div class="row d-flex align-items-center justify-content-center ">  
+                <div class="col-md-6 justify-content-center">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img class="img-fluid " src="bitcoin-btc-logo.png" alt="bitcoin" width="70" height="70">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid" src="Ethereum-Logo-PNG-Pic.png" alt="etherium" width="70" height="70">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid" src="tether.png" alt="usdt" width="70" height="70">
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <img src="Ethereum-Logo-PNG-Pic.png" alt="etherium" width="70" height="70">
-                </div>
-                <div class="col">
-                    <img src="tether.png" alt="usdt" width="70" height="70">
-                </div>              
-                <div class="col">
-                    <img src="Skrill_logo.svg.png" alt="skrill" width="80">
-                </div>
-                <div class="col">
-                    <img src="Neteller_logo_logotype.png" alt="neteller" width="80">
-                </div>
-                <div class="col">
-                    <img src="Perfect_Money.png" alt="perfectmoney" width="80">
+                <div class="col-md-6 justify-content-center">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img class="img-fluid " src="Skrill_logo.svg.png" alt="skrill" width="70">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid " src="Neteller_logo_logotype.png" alt="neteller" width="70">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid " src="Perfect_Money.png" alt="perfectmoney" width="70">
+                        </div>
+                    </div>                    
                 </div>
             </div>
-            <div class="container-fluid mt-5 col">
-                <p class="text-center mt5 text-secondary">We comply with the Payment Card Industry Data Security Standard (PCI DSS) to ensure<br class="d-none d-md-block">
-                   your security and privacy. We guarantee a protected payment experience for you. <a class="text-warning" href="#notes2"><span>Learn more</span></a>
-                </p>
-            </div>
+        </div>
+        <div class="mt-5">
+            <p class="text-center mt5 text-secondary">We comply with the Payment Card Industry Data Security Standard (PCI DSS) to ensure<br class="d-none d-md-block">
+               your security and privacy. We guarantee a protected payment experience for you. <a class="text-warning" href="#notes2"><span>Learn more</span></a>
+            </p>
         </div>
     </section>
     <div class="container-sm pb-3  mt-5 rounded-top-5 text-center" style="background: #021a3f; max-width: 1440px; margin: auto;">
@@ -961,7 +1024,7 @@
                                 <h3 class="fs-4 ">Be notified on BTC, ETH, DOGE prices, and more.</h3>
                             </div>
                             <div class="container-fluid mt-3 ">
-                                <div class="d-flex justify-content-between ">
+                                <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
                                         <img class="mt-1 p-1 " src="bitcoin-btc-logo.png" alt="btc" width="25" height="25">
                                         <div>
@@ -973,7 +1036,7 @@
                                         <h6 class="mb-0 text-light bitcoin">$<span id="bitcoin"></span></h6>
                                     </div>
                                 </div><hr class="text-secondary ">
-                                <div class="d-flex justify-content-between ">
+                                <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
                                         <img class="mt-1 p-1 " src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25">
                                         <div>
@@ -985,7 +1048,7 @@
                                         <h6 class="mb-0 text-light">$<span id="ethereum2"></span></h6>
                                     </div>
                                 </div><hr class="text-secondary ">
-                                <div class="d-flex justify-content-between ">
+                                <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
                                         <img class="mt-1 p-1 " src="tether.png" alt="btc" width="25" height="25">
                                         <div>
@@ -997,7 +1060,7 @@
                                         <h6 class="mb-0 text-light">$<span id="USDT"></span>1.00</h6>
                                     </div>
                                 </div><hr class="text-secondary ">
-                                <div class="d-flex justify-content-between ">
+                                <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
                                         <img class="mt-1 p-1 " src="doge-coin-png.png" alt="btc" width="25" height="25">
                                         <div>
@@ -1009,7 +1072,7 @@
                                         <h6 class="mb-0 text-light">$<span id="dogecoin"></span></h6>
                                     </div>
                                 </div><hr class="text-secondary ">
-                                <div class="d-flex justify-content-between ">
+                                <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
                                         <img class="mt-1 p-1 " src="Solana_logo.png" alt="btc" width="25" height="25">
                                         <div>
@@ -1021,7 +1084,7 @@
                                         <h6 class="mb-0 text-light">$<span id="solana"></span></h6>
                                     </div>
                                 </div><hr class="text-secondary ">
-                                <div class="d-flex justify-content-between ">
+                                <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
                                         <img class="mt-1 p-1 " src="stellar.png" alt="btc" width="25" height="25">
                                         <div>
@@ -1214,7 +1277,7 @@
             </div>
         </div>
     </section>
-    <section class="container-fluid h-100 w-100">
+    <section class="container-fluid w-100">
         <div class="container py-5 d-block text-center">
             <h4 class="text-primary card-body">OUR VISION</h4>
             <h1 class="text-light">Cryptocurrency in<br>Every Wallet™</h1>

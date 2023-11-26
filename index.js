@@ -10,7 +10,7 @@ var xrp = document.getElementById("stellar");
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=usd",
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true",
   "method": "GET",
   "header": {}
 };
@@ -34,7 +34,7 @@ var response; // Declare response variable in a wider scope
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=ngn",
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=ngn&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true",
   "method": "GET",
   "header": {}
 };
