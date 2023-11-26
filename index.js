@@ -35,6 +35,39 @@ $.ajax(settings).done(function (response){
   mcEthereum.innerHTML = numberWithCommas(Math.floor(response.ethereum.usd_market_cap));
   mcSolana.innerHTML = numberWithCommas(Math.floor(response.solana.usd_market_cap));
 
+  var changeBitcoin = document.getElementById("change-bitcoin");
+  changeBitcoin.innerHTML = response.bitcoin.usd_24h_change.toFixed(2) + "%";
+
+    changeBitcoin.style.color = "white";
+
+    if (response.bitcoin.usd_24h_change < 0) {
+      changeBitcoin.style.color = "red"
+    } else {
+      changeBitcoin.style.color = "green"
+    }
+
+  var changeEthereum = document.getElementById("change-ethereum");
+  changeEthereum.innerHTML = response.ethereum.usd_24h_change.toFixed(2) + "%";
+
+    changeEthereum.style.color = "white";
+
+    if (response.ethereum.usd_24h_change < 0) {
+      changeEthereum.style.color = "red"
+    } else {
+      changeEthereum.style.color = "green"
+    }
+
+  var changeSolana = document.getElementById("change-solana");
+  changeSolana.innerHTML = response.solana.usd_24h_change.toFixed(2) + "%";
+
+    changeSolana.style.color = "white";
+
+    if (response.solana.usd_24h_change < 0) {
+      changeBitcoin.style.color = "red"
+    } else {
+      changeSolana.style.color = "green"
+    }
+      
 });
 
 function numberWithCommas(x) {
