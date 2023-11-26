@@ -1,5 +1,6 @@
 var btc = document.getElementById("bitcoin");
-//var btc3 = document.getElementById("bitcoin3");
+var btc4 = document.getElementById("bitcoin4");
+var eth3 = document.getElementById("ethereum3");
 var eth = document.getElementById("ethereum");
 var btc2 = document.getElementById("bitcoin2");
 var eth2 = document.getElementById("ethereum2");
@@ -20,6 +21,8 @@ $.ajax(settings).done(function (response){
   eth.innerHTML = response.ethereum.usd;
   btc2.innerHTML = response.bitcoin.usd;
   eth2.innerHTML = response.ethereum.usd;
+  btc4.innerHTML = response.bitcoin.usd;
+  eth3.innerHTML = response.ethereum.usd;
   doge.innerHTML = response.dogecoin.usd;
   sol.innerHTML = response.solana.usd;
   xrp.innerHTML = response.stellar.usd;
