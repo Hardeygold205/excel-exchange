@@ -6,7 +6,11 @@ var btc2 = document.getElementById("bitcoin2");
 var eth2 = document.getElementById("ethereum2");
 var doge = document.getElementById("dogecoin");
 var sol = document.getElementById("solana");
+var sol2 = document.getElementById("solana2");
 var xrp = document.getElementById("stellar");
+var mcBitcoin = document.getElementById("mc-bitcoin");
+var mcEthereum = document.getElementById("mc-ethereum");
+var mcSolana = document.getElementById("mc-solana");
 
 var settings = {
   "async": true,
@@ -25,8 +29,17 @@ $.ajax(settings).done(function (response){
   eth3.innerHTML = response.ethereum.usd;
   doge.innerHTML = response.dogecoin.usd;
   sol.innerHTML = response.solana.usd;
+  sol2.innerHTML = response.solana.usd;
   xrp.innerHTML = response.stellar.usd;
+  mcBitcoin.innerHTML = numberWithCommas(Math.floor(response.bitcoin.usd_market_cap));
+  mcEthereum.innerHTML = numberWithCommas(Math.floor(response.ethereum.usd_market_cap));
+  mcSolana.innerHTML = numberWithCommas(Math.floor(response.solana.usd_market_cap));
+
 });
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 var btcInput = document.getElementById("btcInput");
 var currencyInput = document.getElementById("currencyInput");

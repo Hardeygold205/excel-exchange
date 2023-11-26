@@ -354,15 +354,16 @@
             }
         }
 
-        @media (max-width: 500px) {
-            .hero4 {
-                min-height: 50vh;
-            }
+        @media (max-width: 575px) {
             .header-text {
                 font-size: 2.5rem;
             }
             .header-text1 {
                 font-size: 4.2rem;
+            }
+            div.col-lg-2.col-sm-4.mb-3 {
+                flex: 0 0 auto;
+                width: 33.33333333%;
             }
         }
         
@@ -727,7 +728,7 @@
                         <a class="btn btn-outline-warning mb-5 px-5 py-2 d-sm-block d-block" data-bs-toggle="modal" data-bs-target="#myModal">Register</a>
                     </div>
                 </div>
-                <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center ">
+                <div class="col-lg-6 col-xl-5 d-flex flex-column justify-content-center align-items-center ">
                     <div class="container-fluid bg-light rounded rounded-3" style="opacity: .9;">
                         <form>
                             <fieldset>
@@ -776,7 +777,7 @@
                                 <h6 class="mb-0 text-light bitcoin">$<span id="bitcoin4"></span></h6>
                             </div>
                             <div>
-                                <h6 class="mb-0 text-light bitcoin">$<span id="mc-bitcoin">4,235,456,866</span></h6>
+                                <h6 class="mb-0 text-light bitcoin">$<span id="mc-bitcoin"></span></h6>
                             </div>
                             <div>
                                 <a class="btn btn-light rounded-4 fw-bold" href="">Trade</a>
@@ -794,7 +795,7 @@
                                 <h6 class="mb-0 text-light">$<span id="ethereum3"></span></h6>
                             </div>
                             <div>
-                                <h6 class="mb-0 text-light">$<span id="mc-ethereum"></span>835,456,166</h6>
+                                <h6 class="mb-0 text-light">$<span id="mc-ethereum"></span></h6>
                             </div>
                             <div>
                                 <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
@@ -802,17 +803,17 @@
                         </div><hr class="text-secondary p-0 m-0">
                         <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
                             <div class="d-flex py-1 text-light ">
-                                <img class="mt-1 p-1 " src="tether.png" alt="btc" width="25" height="25">
+                                <img class="mt-1 p-1 " src="Solana_logo.png" alt="btc" width="25" height="25">
                                 <div>
-                                    <h6 class="mb-0 ">Tether US</h6>
-                                    <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">USDT</h6>
+                                    <h6 class="mb-0 ">Solana</h6>
+                                    <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">SOL</h6>
                                 </div>
                             </div>
                             <div>
-                                <h6 class="mb-0 text-light">$<span id="USDT"></span>1.00</h6>
+                                <h6 class="mb-0 text-light">$<span id="solana2"></span></h6>
                             </div>
                             <div>
-                                <h6 class="mb-0 text-light">$<span id="mc-usdt"></span>2,435,456,906</h6>
+                                <h6 class="mb-0 text-light">$<span id="mc-solana"></span></h6>
                             </div>
                             <div>
                                 <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
@@ -862,35 +863,28 @@
             <a class="text-decoration-none text-warning" href="#more">More about deposits & withdrawals at excelexchange</a>
         </div>
         <div class="container-sm pt-4">
-            <div class="row d-flex align-items-center justify-content-center ">  
-                <div class="col-md-6 justify-content-center">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <img class="img-fluid " src="bitcoin-btc-logo.png" alt="bitcoin" width="70" height="70">
-                        </div>
-                        <div class="col">
-                            <img class="img-fluid" src="Ethereum-Logo-PNG-Pic.png" alt="etherium" width="70" height="70">
-                        </div>
-                        <div class="col">
-                            <img class="img-fluid" src="tether.png" alt="usdt" width="70" height="70">
-                        </div>
-                    </div>
+            <div class="row text-center align-items-center">
+                <div class="col-lg-2 col-sm-4 mb-3">
+                    <img class="img-fluid" src="bitcoin-btc-logo.png" alt="Bitcoin" width="70" height="70">
                 </div>
-                <div class="col-md-6 justify-content-center">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <img class="img-fluid " src="Skrill_logo.svg.png" alt="skrill" width="70">
-                        </div>
-                        <div class="col">
-                            <img class="img-fluid " src="Neteller_logo_logotype.png" alt="neteller" width="70">
-                        </div>
-                        <div class="col">
-                            <img class="img-fluid " src="Perfect_Money.png" alt="perfectmoney" width="70">
-                        </div>
-                    </div>                    
+                <div class="col-lg-2 col-sm-4 mb-3">
+                    <img class="img-fluid" src="Ethereum-Logo-PNG-Pic.png" alt="Ethereum" width="70" height="70">
+                </div>
+                <div class="col-lg-2 col-sm-4 mb-3">
+                    <img class="img-fluid" src="tether.png" alt="Tether" width="70" height="70">
+                </div>
+                <div class="col-lg-2 col-sm-4 mb-3">
+                    <img class="img-fluid" src="Skrill_logo.svg.png" alt="Skrill" width="70">
+                </div>
+                <div class="col-lg-2 col-sm-4 mb-3">
+                    <img class="img-fluid" src="Neteller_logo_logotype.png" alt="Neteller" width="70">
+                </div>
+                <div class="col-lg-2 col-sm-4 mb-3">
+                    <img class="img-fluid" src="Perfect_Money.png" alt="Perfect Money" width="70">
                 </div>
             </div>
         </div>
+                       
         <div class="mt-5">
             <p class="text-center mt5 text-secondary">We comply with the Payment Card Industry Data Security Standard (PCI DSS) to ensure<br class="d-none d-md-block">
                your security and privacy. We guarantee a protected payment experience for you. <a class="text-warning" href="#notes2"><span>Learn more</span></a>
