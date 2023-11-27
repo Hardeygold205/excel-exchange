@@ -18,8 +18,9 @@
     <script src="https://kit.fontawesome.com/c309dedf53.js" crossorigin="anonymous"></script>
     
     <style>
-        .trade {
-            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(HD-wallpaper-technology-blockchain.jpg);
+       
+       .trade {
+            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Hd-2.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -31,7 +32,7 @@
 
 </head>
 <body>
-    <div class="container-fluid  pt-4  trade">
+    <div class="container-fluid  pt-4 trade">
         <h2 class="text-light text-center ">Trade with Excelexchange</h2>
         <br>
         <!-- Nav tabs -->
@@ -54,7 +55,7 @@
                     <div>
                         <h5>BITCOIN</h5>
                         <div class="d-flex">
-                            <a type="text" class="form-control" id="btcToCopy">1CRhyscps26GkPLQyNoirUudiLMJJWFS6o</a>
+                            <a type="text" class="form-control" id="btcToCopy" style="font-size: 0.8rem;">1CRhyscps26GkPLQyNoirUudiLMJJWFS6o</a>
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#btcToCopy">
                                     <i class="far fa-copy"></i>
@@ -67,7 +68,7 @@
                     <div>
                         <h5>USDT</h5>
                         <div class="d-flex">
-                            <a type="text" class="form-control" id="usdtToCopy">TRujNVeJYeK9qMzBB7UfDg8HAc9gtZfP1s</a>
+                            <a type="text" class="form-control" id="usdtToCopy" style="font-size: 0.8rem;">TRujNVeJYeK9qMzBB7UfDg8HAc9gtZfP1s</a>
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#usdtToCopy">
                                     <i class="far fa-copy"></i>
@@ -80,7 +81,7 @@
                     <div>
                         <h5>ETHEREUM</h5>
                         <div class="d-flex">
-                            <a type="text" class="form-control" id="ethToCopy">0x92d6b13a8df3ed4acc015ba3ba9794acd29e5c63</a>
+                            <a type="text" class="form-control " id="ethToCopy" style="font-size: 0.8rem;">0x92d6b13a8df3ed4acc015ba3ba9794acd29e5c63</a>
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary copy-button" type="button" data-clipboard-target="#ethToCopy">
                                     <i class="far fa-copy"></i>
@@ -102,15 +103,78 @@
                 <h3>GBP - Naira</h3>
                 <p></p>
             </div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container ">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                "symbols": [
+                {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100"
+                },
+                {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR to USD"
+                },
+                {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                },
+                {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                },
+                {
+                    "description": "Solana",
+                    "proName": "COINBASE:SOLUSD"
+                },
+                {
+                    "description": "USD to NGN",
+                    "proName": "FX_IDC:NGNUSD"
+                }
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
         </div>
-        <div class="container mx-auto border-secondary border ">
-            <canvas id="bitcoinChart" width="100" height="50"></canvas>
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                {
+                    "width": "100%",
+                    "height": "1000",
+                    "defaultColumn": "overview",
+                    "screener_type": "crypto_mkt",
+                    "displayCurrency": "USD",
+                    "colorTheme": "dark",
+                    "locale": "en",
+                    "isTransparent": false
+                }
+            </script>
         </div>
     </div>
     
-
+    
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://widgets.coingecko.com/coingecko-coin-market-ticker-list-widget.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
