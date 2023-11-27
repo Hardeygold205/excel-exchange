@@ -37,53 +37,77 @@ $.ajax(settings).done(function (response){
   mcEthereum.innerHTML = numberWithCommas(Math.floor(response.ethereum.usd_market_cap));
   mcSolana.innerHTML = numberWithCommas(Math.floor(response.solana.usd_market_cap));
 
-  var changeBitcoin = document.getElementById("change-bitcoin");
+  var changeBitcoinElements = document.querySelectorAll(".change-bitcoin");
 
-  changeBitcoin.innerHTML = response.bitcoin.usd_24h_change.toFixed(2) + "%";
-
-    changeBitcoin.style.color = "white";
-
+  changeBitcoinElements.forEach(function (element) {
+    element.innerHTML = response.bitcoin.usd_24h_change.toFixed(2) + "%";
+  
     if (response.bitcoin.usd_24h_change < 0) {
-      changeBitcoin.style.color = "red"
+      element.style.color = "red";
     } else {
-      changeBitcoin.style.color = "green"
+      element.style.color = "green";
     }
+  });
 
-  var changeEthereum = document.getElementById("change-ethereum");
+  var changeEthereumElements = document.querySelectorAll(".change-ethereum");
 
-  changeEthereum.innerHTML = response.ethereum.usd_24h_change.toFixed(2) + "%";
-
-    changeEthereum.style.color = "white";
-
+  changeEthereumElements.forEach(function (element) {
+    element.innerHTML = response.ethereum.usd_24h_change.toFixed(2) + "%";
+  
     if (response.ethereum.usd_24h_change < 0) {
-      changeEthereum.style.color = "red"
+      element.style.color = "red";
     } else {
-      changeEthereum.style.color = "green"
+      element.style.color = "green";
     }
+  });
 
-  var changeSolana = document.getElementById("change-solana");
+  var changeSolanaElements = document.querySelectorAll(".change-solana");
 
-  changeSolana.innerHTML = response.solana.usd_24h_change.toFixed(2) + "%";
-
-    changeSolana.style.color = "white";
-
+  changeSolanaElements.forEach(function (element) {
+    element.innerHTML = response.solana.usd_24h_change.toFixed(2) + "%";
+  
     if (response.solana.usd_24h_change < 0) {
-      changeSolana.style.color = "red"
+      element.style.color = "red";
     } else {
-      changeSolana.style.color = "green"
+      element.style.color = "green";
     }
+  });
 
-    var changeDogecoin = document.getElementById("change-dogecoin");
+  var changeDogecoin = document.getElementById("change-dogecoin");
 
-    changeDogecoin.innerHTML = response.dogecoin.usd_24h_change.toFixed(2) + "%";
-  
-      changeDogecoin.style.color = "white";
-  
-      if (response.dogecoin.usd_24h_change < 0) {
-        changeDogecoin.style.color = "red"
-      } else {
-        changeDogecoin.style.color = "green"
-      }
+  changeDogecoin.innerHTML = response.dogecoin.usd_24h_change.toFixed(2) + "%";
+
+  changeDogecoin.style.color = "white";
+
+  if (response.dogecoin.usd_24h_change < 0) {
+    changeDogecoin.style.color = "red";
+  } else {
+    changeDogecoin.style.color = "green";
+  }
+
+  var changeTron = document.getElementById("change-tron");
+
+  changeTron.innerHTML = response.tron.usd_24h_change.toFixed(2) + "%";
+
+  changeTron.style.color = "white";
+
+  if (response.tron.usd_24h_change < 0) {
+    changeTron.style.color = "red";
+  } else {
+    changeTron.style.color = "green";
+  }
+
+  var changeStellar = document.getElementById("change-stellar");
+
+  changeStellar.innerHTML = response.stellar.usd_24h_change.toFixed(2) + "%";
+
+  changeStellar.style.color = "white";
+
+  if (response.stellar.usd_24h_change < 0) {
+    changeStellar.style.color = "red";
+  } else {
+    changeStellar.style.color = "green";
+  }
       
 });
 
