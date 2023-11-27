@@ -115,6 +115,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+/*
 var btcInput = document.getElementById("btcInput");
 var currencyInput = document.getElementById("currencyInput");
 var currencySelect = document.getElementById("currencySelect");
@@ -161,6 +162,7 @@ function getConversionRate(currency) {
   return conversionRates[currency] || 1;
 }
 
+*/
 
 
 const HMenu = document.getElementById("navbarNav"); 
@@ -394,3 +396,53 @@ function renderBitcoinChart(timestamps, prices) {
     }
   });
 };
+
+
+$(document).ready(function () {
+
+  $.ajax({
+    url: "https://api.coingecko.com/api/v3/exchange_rates",
+    method: "GET",
+    success: function (response) {
+
+      var rates = response.rates;
+      var btcToNgnRate = rates.ngn.value;
+      var btcToUsdRate = rates.usd.value;
+      var btcToEurRate = rates.eur.value;
+      var btcToGbpRate = rates.gbp.value;
+
+      var currencySymbols = {
+        ngn: "NGN",
+        usd: "USD",
+        eur: "EUR",
+        gbp: "GBP"
+      };
+
+      $("#bitcoin3").text(btcToNgnRate.toFixed(2) + " " + currencySymbols.ngn);
+      $("#bitcoin3").text(btcToUsdRate.toFixed(2) + " " + currencySymbols.usd);
+      $("#bitcoin3").text(btcToEurRate.toFixed(2) + " " + currencySymbols.eur);
+      $("#bitcoin3").text(btcToGbpRate.toFixed(2) + " " + currencySymbols.gbp);
+
+      $("#btcInput").on("input", function () {
+        var btcAmount = $(this).val();
+        var convertedAmount = btcAmount * btcToNgnRate;
+        $("#currencyInput").val(convertedAmount.toFixed(2) + " " + currencySymbols.ngn);
+      });
+
+      $("#currencySelect").on("change", function () {
+        var selectedCurrency = $(this).val();
+        var newRate = rates[selectedCurrency].value;
+
+        $("#bitcoin3").text(newRate.toFixed(2) + " " + currencySymbols[selectedCurrency]);
+        var btcAmount = $("#btcInput").val();
+        var convertedAmount = btcAmount * newRate;
+        $("#currencyInput").val(convertedAmount.toFixed(2) + " " + currencySymbols[selectedCurrency]);
+      });
+
+      $("#currencySelect").val("ngn").change();
+    },
+    error: function (error) {
+      console.error("Error fetching exchange rates:", error);
+    },
+  });
+});
