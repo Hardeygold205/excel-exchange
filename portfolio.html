@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Excel Exchanges</title>
+    <link rel="icon" type="x-icon" href="excel-yellow-blue.png" height="30" width="40">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c309dedf53.js" crossorigin="anonymous"></script>
+
+    <style>
+        .navbar {
+            /*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(navbar.avif); */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            left: 0;
+        }
+        .c3:hover {
+            background-color: rgba(0, 47, 97, 0.2);
+        }
+        .media-logo i:hover {
+            border-color: #fff;
+            opacity: 1;
+            
+        }
+        .media-logo i {
+            cursor: pointer;
+            opacity: .8;
+        }
+
+        .ratings {
+            display: block;
+            overflow-x: auto;
+        }
+        .d-app {
+            padding: 15px 115px;
+        }
+        .nav-item {
+            margin-right: 20px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #007bff; 
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        .dotted {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
+
+        .img-container {
+            display: block;
+            overflow-x: auto;
+        }
+        .img-mcontainer {
+            overflow-x: auto;
+        }
+        .header-text {
+            font-size: 4rem;
+            font-family: 'poppins', sans-serif;
+            line-height: 1.3;
+        }
+        
+        .header-text3 {
+            font-size: 4rem;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .header-text2 {
+            font-size: 4rem;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        .hidden {
+            font-family: 'poppins', sans-serif;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .hidden.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .col.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .rows {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s, transform 1s;
+        }
+        .rows.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-body {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.3s, transform 1.5s;
+        }
+        .flow-body {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .flow-body.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .flow {
+            margin-top: -150px;
+        }
+
+        .card-body.visible {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .card-body:hover {
+            transition: all .3s;
+            cursor: pointer;
+        }
+        .scale {
+            box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.3);
+        }
+        
+        .instant {
+            background: radial-gradient(circle at center, rgba(7, 7, 255, 0.4)) /*, transparent), black */;
+        }
+        .twins {
+            box-shadow: #555 0px 0px 18px 4px;
+        }
+        .twin {
+            min-height: 37vh;
+        }
+        .form-control {
+            font-size: 0.9rem;
+            text-align: center;
+            background-color: #212529;
+            color: #fff;
+            border: none;
+        }
+        .hero5 .col {
+            font-size: 0.85em;
+        }
+        .hero5 .col a:hover {
+            text-decoration: underline;
+        }
+        .hero6 p {
+            font-size: 0.85em;
+        }
+        footer a {
+            font-size: .85em;
+        }
+
+        .header-text1 {
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1.45;
+        }
+        .p-text1 {
+            display: none;
+        }
+        .fa-arrow-right:hover {
+            transform: scale(1.2);
+        }
+        ul .nav-item div a, 
+        ul .nav-item div i{
+            opacity: .8;
+        }
+        ul .nav-item a:hover,
+        ul .nav-item i:hover {
+            opacity: 1;
+    
+        }
+        .nav-item:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+        }
+        .nav-item .dropdown-menu {
+            background: #fff;
+        }
+
+        .nav-item .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -17px; 
+            left: 5%;
+            transform: translateX(-50%);
+            border-width: 10px; 
+            border-style: solid;
+            border-color: transparent transparent #fff transparent; 
+        }
+
+        .nav-item .dropdown-menu h6,
+        .nav-item .dropdown-menu a {
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(-100%);
+                
+            }
+            100% {
+                transform: translateX(100%);
+                
+            }
+        }
+
+        .c-port {
+            overflow: hidden;
+        }
+
+        .flex {
+            display: flex;
+            animation: moveLeftToRight 100s linear infinite;
+        }
+        /* .flex2 {
+            display: flex;
+            animation: moveLeftToRight 80s linear infinite;
+        }
+        .flex3 {
+            display: flex;
+            animation: moveLeftToRight 90s linear infinite;
+        } */
+        /* .flex4 {
+            display: flex;
+            animation: moveLeftToRight 70s linear infinite;
+        } */
+        .btn {
+            white-space: nowrap;
+            margin: 10px;
+        }
+       
+
+        @media (max-width: 1093px) {
+            .c-down {
+                display: none;
+            }
+        }
+        @media(max-width: 960px) {
+            .nav-item .nav-link:hover {
+                color: #fff;
+                border: none;
+            }
+            
+            .nav-item:hover .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: 10px;
+            }
+            .c-down {
+                display: none;
+            }
+        }
+        @media (max-width: 885px) {
+           .header-text1 {
+            font-size: 6rem;
+            line-height: 1.3;
+           }
+           .header-text3 {
+            line-height: 1.8;
+            font-size: 5.5rem;
+           }
+           .p-text3 {
+            font-size: 1.2rem;
+           }
+           .header-text {
+            font-size: 5.5rem;
+           }
+           .p-text {
+            font-size: 1.2rem;
+           }
+           
+        }
+
+        @media (min-height: 1200px) {
+           .header-text1 {
+            font-size: 6.1rem;
+            line-height: 1.55;
+           }
+           .header-text3 {
+            line-height: 2;
+            font-size: 6rem;
+           }
+        }
+
+        @media (max-width: 783px) {
+            .header-text1 {
+                font-size: 5.6rem;
+            }
+            .header-text3 {
+            line-height: 1.6;
+            font-size: 5.2rem;
+           }
+        }
+
+        @media (max-width: 700px) {
+            .header-text {
+                font-size: 3rem;
+            }
+            .hero4 {
+                min-height: 60vh;
+            }
+            .header-text1 {
+                font-size: 4.7rem;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .header-text {
+                font-size: 2.5rem;
+            }
+            .header-text1 {
+                font-size: 4.2rem;
+            }
+            div.col-lg-2.col-sm-4.mb-3 {
+                flex: 0 0 auto;
+                width: 33.33333333%;
+            }
+        }
+        
+        @media (max-width: 428px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 4rem;
+            }
+            .hero4 {
+                min-height: 40vh;
+            }
+            .header-text3 {
+                font-size: 3rem;
+            }
+            .carousel-item {
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 415px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 3.5rem;
+            }
+        }
+        @media (max-width: 400px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                font-size: 3.3rem;
+            }
+            .header-text3 {
+                font-size: 2.7rem;
+            }
+        }
+        @media (max-width: 380px) {
+            .header-text {
+                font-size: 2rem;
+            }
+
+        }
+        @media (max-width: 350px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .header-text1 {
+                display: none;
+            }
+            .p-text1 {
+                display: block;
+                font-size: 2.2rem;
+                line-height: 1.5;
+                pad: 5px;
+            }
+            
+        }
+        @media (max-width: 320px) {
+            .flow {
+                padding-top: 60px;
+            }
+            .header-text3 {
+                font-size: 2.4rem;
+            }
+            .p-text3 {
+                font-size: 1.2rem;
+            }
+            .m-world {
+                width: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #021f4c;">
+        <div class="container-fluid" style="max-width: 1440px; margin: auto;">
+            <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
+                <img class="d-inline-block" src="excel-yellow-blue.png" alt="logo" width="34" height="30">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
+            </a>
+            <button id="nav-toggler" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span id="nav-icon" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-light">
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="index.html">Home</a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between dropdown">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="#hero2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                        <ul class="dropdown-menu ">
+                            <div class="row p-3 ">
+                                <div class="col text-center ">
+                                    <li>
+                                        <h2>Get started</h2 >
+                                    </li>
+                                </div>
+                                <div class="dropdown-divider ">
+
+                                </div>
+                                <div class="col d-flex px-3 py-2 ">
+                                    <div>
+                                        <h6 class="fw-bolder">Corporate</h6>
+                                        <a class="nav-link text-dark " href="">Excel Exchange blog</a>
+                                        <a class="nav-link text-dark" href="">Social responsibility</a>
+                                        <a class="nav-link text-dark" href="">Contact us</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Media center</h6>
+                                        <a class="nav-link text-dark" href="">Excelexchange in the media</a>
+                                        <a class="nav-link text-dark" href="">Team Pro</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Legal & reporting</h6>
+                                        <a class="nav-link text-dark" href="">Regulation</a>
+                                        <a class="nav-link text-dark" href="">Financial reports</a>
+                                        <a class="nav-link text-dark" href="">Legal documents</a>
+                                        <a class="nav-link text-dark" href="">Compesation fund</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Platforms</h6>
+                                        <a class="nav-link text-dark" href="">Excel Trade app</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 5</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 4</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader WebTerminal</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader mobile</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Media center</h6>
+                                        <a class="nav-link text-dark" href="">Excelexchange in the media</a>
+                                        <a class="nav-link text-dark" href="">Team Pro</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Legal & reporting</h6>
+                                        <a class="nav-link text-dark" href="">Regulation</a>
+                                        <a class="nav-link text-dark" href="">Financial reports</a>
+                                        <a class="nav-link text-dark" href="">Legal documents</a>
+                                        <a class="nav-link text-dark" href="">Compesation fund</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Platforms</h6>
+                                        <a class="nav-link text-dark" href="">Excel Trade app</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 5</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 4</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader WebTerminal</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" id="about" href="about.html">Company <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" type="button" href="portfolio.html">Portfolio <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                </ul>
+                <div class="d-grid d-lg-flex text-center align-items-center ">
+                    <a class="btn btn-outline-warning btn-block d-md-block px-5 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
+                    <a class="btn btn-warning btn-block d-md-block px-4 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
+                    <i class="fa-solid fa-globe text-light py-2 fs-5 d-none d-lg-block"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="mt-3">
+        <div class="cryptohopper-web-widget" data-id="1" data-chart_color="#020202" data-table_style="dark"></div>
+    </div>
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+            {
+                "proName": "FOREXCOM:SPXUSD",
+                "title": "S&P 500"
+            },
+            {
+                "proName": "FOREXCOM:NSXUSD",
+                "title": "US 100"
+            },
+            {
+                "proName": "FX_IDC:EURUSD",
+                "title": "EUR to USD"
+            },
+            {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "Bitcoin"
+            },
+            {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "Ethereum"
+            },
+            {
+                "description": "Solana",
+                "proName": "COINBASE:SOLUSD"
+            },
+            {
+                "description": "USD to NGN",
+                "proName": "FX_IDC:NGNUSD"
+            }
+            ],
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+        </script>
+    </div>
+
+    <script src="https://www.cryptohopper.com/widgets/js/script"></script>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://widgets.coingecko.com/coingecko-coin-market-ticker-list-widget.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="https://public.bnbstatic.com/unpkg/growth-widget/cryptoCurrencyWidget@0.0.9.min.js" ></script>
+
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        var clipboard = new ClipboardJS('.copy-button');
+        
+        clipboard.on('success', function(e) {
+            e.clearSelection();
+            alert('Text copied to clipboard');
+        });
+    </script>
+</body>
