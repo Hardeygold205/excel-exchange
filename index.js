@@ -418,10 +418,11 @@ $(document).ready(function () {
         gbp: "GBP"
       };
 
-      $("#bitcoin3").text(btcToNgnRate.toFixed(2) + " " + currencySymbols.ngn);
-      $("#bitcoin3").text(btcToUsdRate.toFixed(2) + " " + currencySymbols.usd);
-      $("#bitcoin3").text(btcToEurRate.toFixed(2) + " " + currencySymbols.eur);
-      $("#bitcoin3").text(btcToGbpRate.toFixed(2) + " " + currencySymbols.gbp);
+      $("#bitcoin3").text(numberWithCommas(btcToNgnRate.toFixed(2)) + " " + currencySymbols.ngn);
+      $("#bitcoin3").text(numberWithCommas(btcToUsdRate.toFixed(2)) + " " + currencySymbols.usd);
+      $("#bitcoin3").text(numberWithCommas(btcToEurRate.toFixed(2)) + " " + currencySymbols.eur);
+      $("#bitcoin3").text(numberWithCommas(btcToGbpRate.toFixed(2)) + " " + currencySymbols.gbp);
+
 
       $("#btcInput").on("input", function () {
         var btcAmount = $(this).val();
