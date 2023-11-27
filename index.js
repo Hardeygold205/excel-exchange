@@ -8,6 +8,7 @@ var doge = document.getElementById("dogecoin");
 var sol = document.getElementById("solana");
 var sol2 = document.getElementById("solana2");
 var xrp = document.getElementById("stellar");
+var trx = document.getElementById("tron");
 var mcBitcoin = document.getElementById("mc-bitcoin");
 var mcEthereum = document.getElementById("mc-ethereum");
 var mcSolana = document.getElementById("mc-solana");
@@ -15,17 +16,18 @@ var mcSolana = document.getElementById("mc-solana");
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true",
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true&sparkline=true",
   "method": "GET",
   "header": {}
 };
 
 $.ajax(settings).done(function (response){
-  btc.innerHTML = response.bitcoin.usd;
+  btc.innerHTML = numberWithCommas(response.bitcoin.usd);
+  trx.innerHTML = response.tron.usd;
   eth.innerHTML = response.ethereum.usd;
-  btc2.innerHTML = response.bitcoin.usd;
+  btc2.innerHTML = numberWithCommas(response.bitcoin.usd);
   eth2.innerHTML = response.ethereum.usd;
-  btc4.innerHTML = response.bitcoin.usd;
+  btc4.innerHTML = numberWithCommas(response.bitcoin.usd);
   eth3.innerHTML = response.ethereum.usd;
   doge.innerHTML = response.dogecoin.usd;
   sol.innerHTML = response.solana.usd;
@@ -36,6 +38,7 @@ $.ajax(settings).done(function (response){
   mcSolana.innerHTML = numberWithCommas(Math.floor(response.solana.usd_market_cap));
 
   var changeBitcoin = document.getElementById("change-bitcoin");
+
   changeBitcoin.innerHTML = response.bitcoin.usd_24h_change.toFixed(2) + "%";
 
     changeBitcoin.style.color = "white";
@@ -47,6 +50,7 @@ $.ajax(settings).done(function (response){
     }
 
   var changeEthereum = document.getElementById("change-ethereum");
+
   changeEthereum.innerHTML = response.ethereum.usd_24h_change.toFixed(2) + "%";
 
     changeEthereum.style.color = "white";
@@ -58,15 +62,28 @@ $.ajax(settings).done(function (response){
     }
 
   var changeSolana = document.getElementById("change-solana");
+
   changeSolana.innerHTML = response.solana.usd_24h_change.toFixed(2) + "%";
 
     changeSolana.style.color = "white";
 
     if (response.solana.usd_24h_change < 0) {
-      changeBitcoin.style.color = "red"
+      changeSolana.style.color = "red"
     } else {
       changeSolana.style.color = "green"
     }
+
+    var changeDogecoin = document.getElementById("change-dogecoin");
+
+    changeDogecoin.innerHTML = response.dogecoin.usd_24h_change.toFixed(2) + "%";
+  
+      changeDogecoin.style.color = "white";
+  
+      if (response.dogecoin.usd_24h_change < 0) {
+        changeDogecoin.style.color = "red"
+      } else {
+        changeDogecoin.style.color = "green"
+      }
       
 });
 
@@ -83,7 +100,7 @@ var response; // Declare response variable in a wider scope
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=ngn&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true",
+  "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin,solana,tron,stellar&vs_currencies=ngn&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true",
   "method": "GET",
   "header": {}
 };
@@ -91,7 +108,7 @@ var settings = {
 
 $.ajax(settings).done(function (data){
   response = data; // Assign data to the response variable
-  btc3.innerHTML = response.bitcoin.ngn;
+  btc3.innerHTML = numberWithCommas(response.bitcoin.ngn);
 });
 
 btcInput.addEventListener("input", function() {
@@ -279,39 +296,77 @@ Arrows.forEach(Arrow => {
 });
 
 const yearElement = document.getElementById('yearCounter');
-        const targetValue = 2023;
-        let currentValue = 0;
+const targetValue = 2023;
+let currentValue = 0;
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounting();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 }
-        );
-
-        observer.observe(yearElement);
-
-        function animateCounting() {
-            const startTime = performance.now();
-
-            function updateValue(timestamp) {
-              const progress = (timestamp - startTime) / 800;
-              currentValue = Math.min(progress * targetValue, targetValue);
-              yearElement.textContent = Math.floor(currentValue);
-
-              if (progress < 1) {
-                  requestAnimationFrame(updateValue);
-              };
-            };
-
-            requestAnimationFrame(updateValue);
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounting();
+            observer.unobserve(entry.target);
         }
+    });
+}, { threshold: 0.5 }
+);
+
+observer.observe(yearElement);
+
+function animateCounting() {
+  const startTime = performance.now();
+
+  function updateValue(timestamp) {
+    const progress = (timestamp - startTime) / 800;
+    currentValue = Math.min(progress * targetValue, targetValue);
+    yearElement.textContent = Math.floor(currentValue);
+
+    if (progress < 1) {
+        requestAnimationFrame(updateValue);
+    };
+  };
+
+  requestAnimationFrame(updateValue);
+};
 
 
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1",
+  "method": "GET",
+  "header": {}
+};
 
+$.ajax(settings).done(function (response) {
+  // Extract timestamps and prices
+  var timestamps = response.prices.map(entry => entry[0]);
+  var prices = response.prices.map(entry => entry[1]);
 
+  // Use timestamps and prices to render the chart
+  renderBitcoinChart(timestamps, prices);
+});
 
-  
+function renderBitcoinChart(timestamps, prices) {
+  var ctx = document.getElementById('bitcoinChart').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: timestamps,
+      datasets: [{
+        label: 'Bitcoin 24hr Price Change',
+        data: prices,
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1,
+        fill: false
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom'
+        }
+      }
+    }
+  });
+};

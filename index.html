@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -738,8 +739,8 @@
                                     <input type="text" step="0.0001" class="form-control bg-light text-dark border" id="btcInput" placeholder="Enter BTC" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="text-primary fs-3 text-center mb-3">
-                                    <i class="fa-solid fa-arrow-up-long"></i>
-                                    <i class="fa-solid fa-arrow-down-long"></i>
+                                    <i class="fas fa-arrow-up fa-lg fa-fw"></i>
+                                    <i class="fas fa-arrow-down fa-lg fa-fw"></i>
                                 </div>
                                 <div class="mb-3">
                                     <div class="row g-2">
@@ -905,8 +906,7 @@
                 <div>
                     <a class="btn btn-primary rounded rounded-5 " href="#f-a-q">See what crypto can be</a>
                 </div>
-            </div>
-            
+            </div> 
         </div>
     </div>
     <div class="container-sm p-5 " style="background: #021a3f; max-width: 1440px; margin: auto; height: 150px;">
@@ -1047,14 +1047,15 @@
                                 </div><hr class="text-secondary ">
                                 <div class="d-flex justify-content-between align-items-center c3">
                                     <div class="d-flex py-1 text-light ">
-                                        <img class="mt-1 p-1 " src="tether.png" alt="btc" width="25" height="25">
+                                        <img class="mt-1 p-1 " src="tron-logo.png" alt="btc" width="25" height="25">
                                         <div>
-                                            <h6 class="mb-0 ">Tether US</h6>
-                                            <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">USDT</h6>
+                                            <h6 class="mb-0 ">Tron</h6>
+                                            <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">TRX</h6>
                                         </div>
                                     </div>
                                     <div>
-                                        <h6 class="mb-0 text-light">$<span id="USDT"></span>1.00</h6>
+                                        <h6 class="mb-0 text-light">$<span id="tron"></span></h6>
+                                        <h6 class="mb-0 text-end" style="font-size: 0.8rem;"><span id="change-tron"></span></h6>
                                     </div>
                                 </div><hr class="text-secondary ">
                                 <div class="d-flex justify-content-between align-items-center c3">
@@ -1066,7 +1067,11 @@
                                         </div>
                                     </div>
                                     <div>
+                                        <span id="tron-line"></span>
+                                    </div>
+                                    <div>
                                         <h6 class="mb-0 text-light">$<span id="dogecoin"></span></h6>
+                                        <h6 class="mb-0 text-end" style="font-size: 0.8rem;"><span id="change-dogecoin"></span></h6>
                                     </div>
                                 </div><hr class="text-secondary ">
                                 <div class="d-flex justify-content-between align-items-center c3">
@@ -1086,7 +1091,7 @@
                                         <img class="mt-1 p-1 " src="stellar.png" alt="btc" width="25" height="25">
                                         <div>
                                             <h6 class="mb-0 ">Stellar</h6>
-                                            <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">XRP</h6>
+                                            <h6 class="mb-0 opacity-50" style="font-size: 0.8rem;">XLM</h6>
                                         </div>
                                     </div>
                                     <div>
