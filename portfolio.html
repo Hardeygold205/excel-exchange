@@ -18,8 +18,27 @@
     <script src="https://kit.fontawesome.com/c309dedf53.js" crossorigin="anonymous"></script>
 
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            transform: transition 0.3s ease;
+        }
+        :root {
+            --font-size: 4rem;
+        }
         body {
             background-color: #021f4c;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+            bottom: 0;
+            top: 0;
         }
         .navbar {
             /*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(navbar.avif); */
@@ -226,15 +245,17 @@
         </div>
     </nav>
     <div class="mt-5" style="max-width: 1440px; margin: auto;">
-        <div class="row pt-2">
-            <div class="col-md-7">
-                <div class="cryptohopper-web-widget" data-id="9" data-theme="midnight" data-background_color="#936ab3" data-coins="bitcoin,ethereum,tether,cardano,bitcoin-cash-sv,litecoin,bitcoin-cash" data-multi_currencies="AUD,EUR,GBP,NGN,USD" data-round="0" data-realtime="on"></div>
-            </div>
-            <div class="col-md-5">
-                <div class="cr-heatmap-widget" data-top="100" data-site-url="https://cryptorank.io"
-                    data-api-url="https://api.cryptorank.io/v0" data-range="24H" data-order="cap" style="width: auto; height: 500px">
+        <div class="container-fluid mt-4 m-0">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="cryptohopper-web-widget" data-id="9" data-theme="midnight" data-background_color="#936ab3" data-coins="bitcoin,ethereum,tether,cardano,bitcoin-cash-sv,litecoin,bitcoin-cash" data-multi_currencies="AUD,EUR,GBP,NGN,USD" data-round="0" data-realtime="on"></div>
                 </div>
-                <script src="https://cryptorank.io/widget/market-state.js"></script>
+                <div class="col-md-5">
+                    <div class="cr-heatmap-widget" data-top="100" data-site-url="https://cryptorank.io"
+                        data-api-url="https://api.cryptorank.io/v0" data-range="24H" data-order="cap" style="width: auto; height: 500px">
+                    </div>
+                    <script src="https://cryptorank.io/widget/market-state.js"></script>
+                </div>
             </div>
         </div>
         <div class="cryptohopper-web-widget" data-id="2" data-realtime="on" data-round="0" data-ticker_design="2"></div>
@@ -245,7 +266,7 @@
     <section>
         <div class="container-fluid mt-3 " style="max-width: 1440px; margin: auto;">
             <div class="row">
-                <div class="col-md-4 d-none d-md-block d-flex flex-column px-3 py-5 py-md-0 ">
+                <div class="col-md-4 d-flex flex-column px-3 py-5 py-md-0 ">
                     <a class="navbar-brand text-light text-opacity-75 fs-3 fw-bold" href="index.html">
                         <img class="d-inline-block" src="excel-yellow-blue.png" alt="logo" width="34" height="30">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
                     </a>
