@@ -254,25 +254,27 @@ window.addEventListener('scroll', () => {
 });
 
 const NavToggler = document.getElementById("nav-toggler");
-const NavIcon = document.getElementById("nav-icon");
+const NavIcons = document.querySelectorAll(".navbar-toggler-icon");
 let isBar = true;
 
 const NavbarNav = document.getElementById("navbarNav");
 
 NavToggler.addEventListener('click', () => {
-  if (isBar) {
-    NavIcon.classList.remove("navbar-toggler-icon");
-    NavIcon.classList.add("fas", "fa-times");
-    NavIcon.style.fontSize = "24px";
-    //NavIcon.style.transform = "rotate(30deg)";
-    isBar = false;
-  } else {
-    NavIcon.classList.remove("fas", "fa-times");
-    NavIcon.classList.add("navbar-toggler-icon");
-    //NavIcon.style.transform = "none";
-    NavIcon.style.fontSize = "1.25rem";
-    isBar = true;
-  }
+  NavIcons.forEach(icon => {
+    if (isBar) {
+      icon.classList.remove("navbar-toggler-icon");
+      icon.classList.add("fas", "fa-times");
+      icon.style.fontSize = "24px";
+      // icon.style.transform = "rotate(30deg)";
+    } else {
+      icon.classList.remove("fas", "fa-times");
+      icon.classList.add("navbar-toggler-icon");
+      // icon.style.transform = "none";
+      icon.style.fontSize = "1.25rem";
+    }
+  });
+
+  isBar = !isBar;
 });
 
 NavbarNav.addEventListener('hidden.bs.collapse', () => {
