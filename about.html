@@ -16,22 +16,42 @@
     <script src="https://kit.fontawesome.com/c309dedf53.js" crossorigin="anonymous"></script>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            transform: transition 0.3s ease;
+        }
+        :root {
+            --font-size: 4rem;
+        }
+        body {
+            background-color: #021f4c;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+            bottom: 0;
+            top: 0;
+        }
+        .navbar {
+            /*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(navbar.avif); */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            left: 0;
+        }
+
         .nav-item {
-            margin-right: 30px;
+            margin-right: 20px;
             list-style: none;
             display: flex;
             align-items: center;
         }
-
-        .nav-item .nav-link:hover {
-            border-bottom: 3px solid #007bff;
-            
-        }
-
-        .nav-item .nav-link:active {
-            border-bottom: 3px solid #fff;
-        }
-
         .nav-link::after {
             content: "";
             position: absolute;
@@ -48,6 +68,66 @@
             transform: scaleX(1);
         }
 
+        ul .nav-item div a, 
+        ul .nav-item div i{
+            opacity: .8;
+        }
+        ul .nav-item a:hover,
+        ul .nav-item i:hover {
+            opacity: 1;
+    
+        }
+        .nav-item:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+        }
+        .nav-item .dropdown-menu {
+            background: #fff;
+        }
+
+        .nav-item .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -17px; 
+            left: 5%;
+            transform: translateX(-50%);
+            border-width: 10px; 
+            border-style: solid;
+            border-color: transparent transparent #fff transparent; 
+        }
+
+        .nav-item .dropdown-menu h6,
+        .nav-item .dropdown-menu a {
+            margin: 0;
+            padding: 0;
+        }
+        .btn {
+            white-space: nowrap;
+            margin: 10px;
+        }
+       
+
+        @media(max-width: 960px) {
+            .nav-item .nav-link:hover {
+                color: #fff;
+                border: none;
+            }
+            
+            .nav-item:hover .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: 10px;
+            }
+            .c-down {
+                display: none;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -56,30 +136,116 @@
             <a class="navbar-brand text-light fs-3 fw-bold" href="index.html">
                 <img class="d-inline-block" src="excel-yellow-blue.png" alt="logo" width="34" height="30">excelexchange<img class="d-inline-block" src="peace.png" alt="logo" width="30" height="34">
             </a>
-            <button id="nav-toggler" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
-                <span id="nav-icon" class="navbar-toggler-icon"></span>
+            <button id="nav-toggler" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-light">
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder"  href="index.html"  aria-expanded="false">Home</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero2">Services</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" id="about" href="about.html">About</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
-                    <li class="nav-item d-flex justify-content-between"><a class="nav-link text-light fw-bolder" href="#hero3">Portfolio</a><i class="fa-solid d-block d-lg-none fa-angle-down py-1"></i></li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="index.html">Home</a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="https://wa.me/+2348138553465" target="_blank">Contact</a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between dropdown">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="#hero2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                        <ul class="dropdown-menu ">
+                            <div class="row p-3 ">
+                                <div class="col text-center ">
+                                    <li>
+                                        <h2>Get started</h2 >
+                                    </li>
+                                </div>
+                                <div class="dropdown-divider ">
+
+                                </div>
+                                <div class="col d-flex px-3 py-2 ">
+                                    <div>
+                                        <h6 class="fw-bolder">Corporate</h6>
+                                        <a class="nav-link text-dark " href="">Excel Exchange blog</a>
+                                        <a class="nav-link text-dark" href="">Social responsibility</a>
+                                        <a class="nav-link text-dark" href="">Contact us</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Media center</h6>
+                                        <a class="nav-link text-dark" href="">Excelexchange in the media</a>
+                                        <a class="nav-link text-dark" href="">Team Pro</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Legal & reporting</h6>
+                                        <a class="nav-link text-dark" href="">Regulation</a>
+                                        <a class="nav-link text-dark" href="">Financial reports</a>
+                                        <a class="nav-link text-dark" href="">Legal documents</a>
+                                        <a class="nav-link text-dark" href="">Compesation fund</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Platforms</h6>
+                                        <a class="nav-link text-dark" href="">Excel Trade app</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 5</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 4</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader WebTerminal</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader mobile</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Media center</h6>
+                                        <a class="nav-link text-dark" href="">Excelexchange in the media</a>
+                                        <a class="nav-link text-dark" href="">Team Pro</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Legal & reporting</h6>
+                                        <a class="nav-link text-dark" href="">Regulation</a>
+                                        <a class="nav-link text-dark" href="">Financial reports</a>
+                                        <a class="nav-link text-dark" href="">Legal documents</a>
+                                        <a class="nav-link text-dark" href="">Compesation fund</a>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bolder">Platforms</h6>
+                                        <a class="nav-link text-dark" href="">Excel Trade app</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 5</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader 4</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader WebTerminal</a>
+                                        <a class="nav-link text-dark" href="">MetaTrader mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" id="about" href="about.html">Company <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
+                    <li class="nav-item position-relative d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between ">
+                            <a class="nav-link text-light fw-bolder" href="portfolio.html">Portfolio <i class="fa fa-chevron-down c-down" aria-hidden="true"></i></a>
+                            <i class="fa fa-chevron-down d-block d-lg-none py-1  position-absolute" aria-hidden="true" style="bottom: 0; right: 0;"></i>
+                        </div>
+                    </li><hr>
                 </ul>
-                <div class="d-grid d-lg-flex gap-3 text-center">
-                    <a class="btn btn-outline-warning btn-block d-md-block px-5" type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
-                    <a class="btn btn-warning btn-block d-md-block px-4" type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
-                    <i class="fa-solid fa-globe text-light py-2 fs-3 d-none d-lg-block"></i>
+                <div class="d-grid d-lg-flex text-center align-items-center ">
+                    <a class="btn btn-outline-warning btn-block d-md-block px-5 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Buy all available funds">Buy</a>
+                    <a class="btn btn-warning btn-block d-md-block px-4 " type="button" href="soon.html" data-bs-toggle="tooltip" title="Sell your funds to your local currency">Sell</a>
+                    <i class="fa-solid fa-globe text-light py-2 fs-5 d-none d-lg-block"></i>
                 </div>
-            </div> 
-        </div>      
+            </div>
+        </div>
     </nav>
     
-    <section class="soon-background mt-5 d-flex ">
-        <div class="container-fluid  text-light mt-2 p-sm-4 p-0 " style="max-width: 1440px; margin: auto;">
-            <h1>About The Devs.</h1>
-            <p class="p-sm-5 p-1  ">Hello there! I'm <strong>Hadi Ademola Surajudeen</strong>, a passionate software engineer and front-end developer with a keen eye for crafting captivating digital experiences. Technology has always fascinated me, and I'm dedicated to pushing the boundaries of what's possible on the web.
+    <section class=" container-fluid  mt-5 d-flex ">
+        <div class="container-sm text-light mt-2 p-sm-4 p-0 " style="max-width: 1440px; margin: auto;">
+            <h1 class="text-center ">About The Devs.</h1>
+            <p class="p-sm-5 p-1  text-center ">Hello there! I'm <strong>Hadi Ademola Surajudeen</strong>, a passionate software engineer and front-end developer with a keen eye for crafting captivating digital experiences. Technology has always fascinated me, and I'm dedicated to pushing the boundaries of what's possible on the web.
                 My journey into the world of programming began in my second year in Universisty of Ibadan, and it didn't take long for me to fall in love with the art of coding. Today, I have the privilege of turning creative ideas into functional and visually appealing websites and applications.
                 As a front-end developer, I thrive on bringing designs to life by writing clean, elegant, and efficient code. I specialize in HTML, CSS, JavaScript, React, Bootstrap, Figma and Git. And I'm always excited to learn about emerging web technologies that enhance user experiences. Whether it's creating responsive layouts, optimizing performance, or crafting seamless animations, I enjoy the process of turning concepts into reality.
                 Let's connect and explore the possibilities of collaborating on innovative projects. Whether you're looking for a seamless user interface, an interactive website, or a dynamic application, I'm here to turn your vision into a reality.
