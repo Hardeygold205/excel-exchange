@@ -247,7 +247,7 @@
         </div>
     </nav>
     <div class="mt-5" style="max-width: 1440px; margin: auto;">
-        <div class="container-fluid pt-4 m-0">
+        <div class="pt-4 m-0">
             <div class="row">
                 <div class="col-md-7">
                     <div class="cryptohopper-web-widget" data-id="9" data-theme="midnight" data-background_color="#936ab3" data-coins="bitcoin,ethereum,tether,cardano,bitcoin-cash-sv,litecoin,bitcoin-cash" data-multi_currencies="AUD,EUR,GBP,NGN,USD" data-round="0" data-realtime="on"></div>
@@ -266,7 +266,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid ">
+        <div class="">
             <div class="cryptohopper-web-widget" data-id="2" data-realtime="on" data-round="0" data-ticker_design="2"></div>
             <div class="">
                 <div class="cryptohopper-web-widget" data-id="1" data-chart_color="#020202" data-table_style="dark"></div>
@@ -274,9 +274,15 @@
         </div>
     </div>
     <section style="background-color: #021f4c;">
-        <div class="container-fluid mt-3 " style="max-width: 1440px; margin: auto;">
+        <div class="d-sm-none d-block">
             <a href="https://cryptopanic.com/" target="_blank" data-news_feed="trending" data-font_family="sans" data-posts_limit="7" data-bg_color="#021f4c" data-text_color="#F4F0F0" data-link_color="#0FBFFA" data-header_bg_color="#021a3f" data-header_text_color="#FFFFFF" class="CryptoPanicWidget">Latest News</a>
             <script src="https://static.cryptopanic.com/static/js/widgets.min.js"></script>
+        </div>
+        <div class="container-fluid mt-3 " style="max-width: 1440px; margin: auto;">
+            <div class="d-none d-sm-block">
+                <a href="https://cryptopanic.com/" target="_blank" data-news_feed="trending" data-font_family="sans" data-posts_limit="7" data-bg_color="#021f4c" data-text_color="#F4F0F0" data-link_color="#0FBFFA" data-header_bg_color="#021a3f" data-header_text_color="#FFFFFF" class="CryptoPanicWidget">Latest News</a>
+                <script src="https://static.cryptopanic.com/static/js/widgets.min.js"></script>
+            </div>
             <hr class="hr">
             <div class="row">
                 <div class="col-md-4 d-flex flex-column px-3 py-5 py-md-0 d-none d-md-block ">
@@ -430,13 +436,22 @@
             <hr class="hr d-none d-sm-block ">
         </div>
         <footer>
-            <div class="container-fluid " style="max-width: 1440px; margin: auto;" >
+            <div class="container-fluid d-none d-sm-block " style="max-width: 1440px; margin: auto;" >
                 <img src="pci.png" alt="PCI" height="100">
                 <div class="row m-1">
                     <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Risk Disclosure</a>
                     <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Preventing Money Laudering</a>
                     <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Privacy Agreement</a>
                     <a class="text-decoration-none mt-3 text-light opacity-75" href="#"><span>© 2023 excelexchange</span></a>
+                </div>
+            </div>
+            <div class="d-sm-none d-block " >
+                <img src="pci.png" alt="PCI" height="100">
+                <div class="row m-1">
+                    <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Risk Disclosure</a>
+                    <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Preventing Money Laudering</a>
+                    <a class="col-sm-4 text-decoration-none text-light opacity-75" href="#">Privacy Agreement</a>
+                    <a class="text-decoration-none mt-3 text-light opacity-75 text-center " href="#"><span>© 2023 excelexchange</span></a>
                 </div>
             </div>   
         </footer>
