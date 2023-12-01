@@ -246,7 +246,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid d-none d-sm-block mt-5">
+    <div class="container-fluid d-none d-md-block mt-5">
         <div class="container-fluid mx-auto pt-4 m-0" style="max-width: 1440px; margin: auto;">
             <div class="row">
                 <div class="col-md-7">
@@ -256,10 +256,33 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <div class="cr-heatmap-widget" data-top="100" data-site-url="https://cryptorank.io"
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+                        {
+                            "dataSource": "Crypto",
+                            "blockSize": "market_cap_calc",
+                            "blockColor": "change",
+                            "locale": "en",
+                            "symbolUrl": "",
+                            "colorTheme": "light",
+                            "hasTopBar": false,
+                            "isDataSetEnabled": false,
+                            "isZoomEnabled": true,
+                            "hasSymbolTooltip": true,
+                            "width": "100%",
+                            "height": "100%"
+                        }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!--<div class="cr-heatmap-widget" data-top="100" data-site-url="https://cryptorank.io"
                         data-api-url="https://api.cryptorank.io/v0" data-range="24H" data-order="cap" style="width: auto; height: 500px">
                     </div>
                     <script src="https://cryptorank.io/widget/market-state.js"></script>
+                    -->
                     <div class="" style="width: auto; background-color: #021f4c; height: 30px; margin-top: -35px; position: relative; z-index: 1;">
                         <h6 class="text-primary"><i>Power by: excelexchange</i></h6>
                     </div>
@@ -273,7 +296,7 @@
             </div>
         </div>
     </div>
-    <div class="mt-5 d-sm-none d-block">
+    <div class="mt-5 d-md-none d-block">
         <div class="container-fluid mx-auto pt-4 m-0" style="max-width: 1440px; margin: auto;">
             <div class="row">
                 <div class="col-md-7">
