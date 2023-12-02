@@ -253,35 +253,34 @@ window.addEventListener('scroll', () => {
 
 });
 
-const NavToggler = document.getElementById("nav-toggler");
+const NavTogglers = document.querySelectorAll(".navbar-toggler");
 const NavIcons = document.querySelectorAll(".navbar-toggler-icon");
 let isBar = true;
 
 const NavbarNav = document.getElementById("navbarNav");
 
-NavToggler.addEventListener('click', () => {
-  NavIcons.forEach(icon => {
-    if (isBar) {
-      icon.classList.remove("navbar-toggler-icon");
-      icon.classList.add("fas", "fa-times");
-      icon.style.fontSize = "24px";
-      // icon.style.transform = "rotate(30deg)";
-    } else {
-      icon.classList.remove("fas", "fa-times");
-      icon.classList.add("navbar-toggler-icon");
-      // icon.style.transform = "none";
-      icon.style.fontSize = "1.25rem";
-    }
-  });
+NavTogglers.forEach(toggler => {
+  toggler.addEventListener('click', () => {
+    NavIcons.forEach(icon => {
+      if (isBar) {
+        icon.classList.remove("navbar-toggler-icon");
+        icon.classList.add("fas", "fa-times");
+        icon.style.fontSize = "24px";
+      } else {
+        icon.classList.remove("fas", "fa-times");
+        icon.classList.add("navbar-toggler-icon");
+        icon.style.fontSize = "1.25rem";
+      }
+    });
 
-  isBar = !isBar;
+    isBar = !isBar;
+  });
 });
 
 NavbarNav.addEventListener('hidden.bs.collapse', () => {
-  
-  NavIcon.classList.remove("fas", "fa-times");
-  NavIcon.classList.add("navbar-toggler-icon");
-  NavIcon.style.fontSize = "1.25rem";
+  NavIcons.classList.remove("fas", "fa-times");
+  NavIcons.classList.add("navbar-toggler-icon");
+  NavIcons.style.fontSize = "1.25rem";
   isBar = true;
 });
 
