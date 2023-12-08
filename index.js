@@ -5,13 +5,17 @@ var eth = document.getElementById("ethereum");
 var btc2 = document.getElementById("bitcoin2");
 var eth2 = document.getElementById("ethereum2");
 var doge = document.getElementById("dogecoin");
+var doge2 = document.getElementById("dogecoin2");
 var sol = document.getElementById("solana");
 var sol2 = document.getElementById("solana2");
 var xrp = document.getElementById("stellar");
 var trx = document.getElementById("tron");
+var trx2 = document.getElementById("tron2");
 var mcBitcoin = document.getElementById("mc-bitcoin");
 var mcEthereum = document.getElementById("mc-ethereum");
 var mcSolana = document.getElementById("mc-solana");
+var mcTron = document.getElementById("mc-tron");
+var mcDoge = document.getElementById("mc-dogecoin");
 
 var settings = {
   "async": true,
@@ -33,9 +37,13 @@ $.ajax(settings).done(function (response){
   sol.innerHTML = response.solana.usd;
   sol2.innerHTML = response.solana.usd;
   xrp.innerHTML = response.stellar.usd;
+  doge2.innerHTML = response.dogecoin.usd;
+  trx2.innerHTML = response.tron.usd;
   mcBitcoin.innerHTML = numberWithCommas(Math.floor(response.bitcoin.usd_market_cap));
   mcEthereum.innerHTML = numberWithCommas(Math.floor(response.ethereum.usd_market_cap));
   mcSolana.innerHTML = numberWithCommas(Math.floor(response.solana.usd_market_cap));
+  mcDoge.innerHTML = numberWithCommas(Math.floor(response.dogecoin.usd_market_cap));
+  mcTron.innerHTML = numberWithCommas(Math.floor(response.tron.usd_market_cap));
 
   var changeBitcoinElements = document.querySelectorAll(".change-bitcoin");
 
@@ -73,29 +81,29 @@ $.ajax(settings).done(function (response){
     }
   });
 
-  var changeDogecoin = document.getElementById("change-dogecoin");
+  var changeDogecoin = document.querySelectorAll(".change-dogecoin");
 
-  changeDogecoin.innerHTML = response.dogecoin.usd_24h_change.toFixed(2) + "%";
+  changeDogecoin.forEach(function (element) {
+    element.innerHTML = response.dogecoin.usd_24h_change.toFixed(2) + "%";
+  
+    if (response.dogecoin.usd_24h_change < 0) {
+      element.style.color = "red";
+    } else {
+      element.style.color = "green";
+    }
+  });
 
-  changeDogecoin.style.color = "white";
+  var changeTron = document.querySelectorAll(".change-tron");
 
-  if (response.dogecoin.usd_24h_change < 0) {
-    changeDogecoin.style.color = "red";
-  } else {
-    changeDogecoin.style.color = "green";
-  }
-
-  var changeTron = document.getElementById("change-tron");
-
-  changeTron.innerHTML = response.tron.usd_24h_change.toFixed(2) + "%";
-
-  changeTron.style.color = "white";
-
-  if (response.tron.usd_24h_change < 0) {
-    changeTron.style.color = "red";
-  } else {
-    changeTron.style.color = "green";
-  }
+  changeTron.forEach(function (element) {
+    element.innerHTML = response.tron.usd_24h_change.toFixed(2) + "%";
+  
+    if (response.tron.usd_24h_change < 0) {
+      element.style.color = "red";
+    } else {
+      element.style.color = "green";
+    }
+  });
 
   var changeStellar = document.getElementById("change-stellar");
 
@@ -449,3 +457,25 @@ $(document).ready(function () {
   });
 });
 
+
+function changeTab(tab) {
+  document.querySelectorAll('.nav-tab').forEach(function (tabElement) {
+      tabElement.classList.remove('active');
+  });
+
+  var selectedTab = document.getElementById(tab + '-tab');
+  selectedTab.classList.add('active');
+
+  var newImageSrc = selectedTab.getAttribute('data-image');
+  var newImageWidth = selectedTab.getAttribute('data-width');
+
+  document.getElementById('change-image').src = newImageSrc;
+
+  if (tab === 'desktop') {
+      document.getElementById('change-image').style.width = newImageWidth + 'px';
+      document.getElementById('change-image').classList.add('my-5');
+  } else {
+      document.getElementById('change-image').style.width = '230px';
+      document.getElementById('change-image').classList.remove('my-5');
+  }
+};
