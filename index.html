@@ -20,7 +20,6 @@
 
     <style>
         .navbar {
-            /*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(navbar.avif); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -193,7 +192,6 @@
             left: 0;
             bottom: 0;
             top: 0;
-            /*background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('HD-wallpaper-technology-blockchain.jpg');*/
         }
         .header-text1 {
             font-size: 5rem;
@@ -260,18 +258,6 @@
             display: flex;
             animation: moveLeftToRight 100s linear infinite;
         }
-        /* .flex2 {
-            display: flex;
-            animation: moveLeftToRight 80s linear infinite;
-        }
-        .flex3 {
-            display: flex;
-            animation: moveLeftToRight 90s linear infinite;
-        } */
-        /* .flex4 {
-            display: flex;
-            animation: moveLeftToRight 70s linear infinite;
-        } */
         .btn {
             white-space: nowrap;
             margin: 10px;
@@ -301,7 +287,7 @@
                 left: 0;
             }
             100% {
-                left: 100%; /* Adjust the value based on your needs */
+                left: 100%;
             }
         }
 
@@ -930,103 +916,6 @@
                         </tr>
                     </tbody>
                 </table>
-                <!--
-                <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3" style="background-color: #021f4c transparent; cursor: pointer;">
-                    <div class="d-flex py-1 text-light">
-                        <img class="mt-1 p-1 " src="bitcoin-btc-logo.png" alt="btc" width="25" height="25">
-                        <div>
-                            <h4 class="mb-0 ">Bitcoin</h4>
-                            <h4 class="mb-0 opacity-50 text-start text-start " style="font-size: 0.8rem;">BTC</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light bitcoin">$<span id="bitcoin4"></span></h4>
-                        <h4 class="mb-0 " style="font-size: 0.8rem;"><span class="change-bitcoin" id="change-bitcoin"></span></h4>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light bitcoin">$<span id="mc-bitcoin"></span></h4>
-                    </div>
-                    <div>
-                        <a class="btn btn-light rounded-4 fw-bold" href="">Trade</a>
-                    </div>
-                </div><hr class="text-secondary p-0 m-0">
-                <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
-                    <div class="d-flex py-1 text-light ">
-                        <img class="mt-1 p-1 " src="Ethereum-Logo-PNG-Pic.png" alt="btc" width="25" height="25">
-                        <div>
-                            <h4 class="mb-0 ">Ethereum</h4>
-                            <h4 class="mb-0 opacity-50 text-start " style="font-size: 0.8rem;">ETH</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="ethereum3"></span></h4>
-                        <h4 class="mb-0" style="font-size: 0.8rem;"><span class="change-ethereum" id="change-ethereum"></span></h4>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="mc-ethereum"></span></h4>
-                    </div>
-                    <div>
-                        <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
-                    </div>
-                </div><hr class="text-secondary p-0 m-0">
-                <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
-                    <div class="d-flex py-1 text-light ">
-                        <img class="mt-1 p-1 " src="Solana_logo.png" alt="btc" width="25" height="25">
-                        <div>
-                            <h4 class="mb-0 ">Solana</h4>
-                            <h4 class="mb-0 opacity-50 text-start " style="font-size: 0.8rem;">SOL</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="solana2"></span></h4>
-                        <h4 class="mb-0" style="font-size: 0.8rem;"><span class="change-solana" id="change-solana"></span></h4>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="mc-solana"></span></h4>
-                    </div>
-                    <div>
-                        <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
-                    </div>
-                </div><hr class="text-secondary p-0 m-0">
-                <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
-                    <div class="d-flex py-1 text-light ">
-                        <img class="mt-1 p-1 " src="doge-coin-png.png" alt="btc" width="25" height="25">
-                        <div>
-                            <h4 class="mb-0 ">Dogecoin</h4>
-                            <h4 class="mb-0 opacity-50 text-start " style="font-size: 0.8rem;">DOGE</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="dogecoin2"></span></h4>
-                        <h4 class="mb-0" style="font-size: 0.8rem;"><span class="change-dogecoin" id="change-dogecoin"></span></h4>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="mc-dogecoin"></span></h4>
-                    </div>
-                    <div>
-                        <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
-                    </div>
-                </div><hr class="text-secondary p-0 m-0">
-                <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3"  style="background-color: #021f4c transparent; cursor: pointer; ">
-                    <div class="d-flex py-1 text-light ">
-                        <img class="mt-1 p-1 " src="tron-logo.png" alt="btc" width="25" height="25">
-                        <div>
-                            <h4 class="mb-0 ">Tron</h4>
-                            <h4 class="mb-0 opacity-50 text-start " style="font-size: 0.8rem;">TRX</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="tron2"></span></h4>
-                        <h4 class="mb-0" style="font-size: 0.8rem;"><span class="change-tron" id="change-tron"></span></h4>
-                    </div>
-                    <div>
-                        <h4 class="mb-0 text-light">$<span id="mc-tron"></span></h4>
-                    </div>
-                    <div>
-                        <a class="btn btn-light rounded-4 fw-bold " href="">Trade</a>
-                    </div>
-                </div><hr class="text-secondary p-0 m-0">
-                -->
             </div>
         </div>
         
@@ -1048,51 +937,12 @@
                 </div>
                 <div class="col-lg-6 col-xl-5 d-flex flex-column justify-content-center align-items-center ">
                     <div class="mb-auto ">
-                        <!--<div id="currency-converter-51282"><script type="text/javascript" src="https://www.cashbackforex.com/Content/remote/remote-widgets.js"></script><script type="text/javascript"> RemoteCalc({"Url":"https://www.cashbackforex.com", "TopPaneStyle":"YmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KCNmZmYgMjAlLCAjZjVmNWY1IDQ1JSk7IGNvbG9yOiBibGFjazsgYm9yZGVyOiBzb2xpZCAxcHggI2FhYTsgYm9yZGVyLWJvdHRvbTogbm9uZTsg","BottomPaneStyle":"YmFja2dyb3VuZDogI2YzZjNmMzsgYm9yZGVyOiBzb2xpZCAxcHggI2FhYTsgY29sb3I6IGJsYWNrOw==","ButtonStyle":"YmFja2dyb3VuZDogIzM0MzU0MDsgY29sb3I6IHdoaXRlOyBib3JkZXItcmFkaXVzOiAyMHB4Ow==","TitleStyle":"dGV4dC1hbGlnbjogbGVmdDsgZm9udC1zaXplOiA0MHB4OyBmb250LXdlaWdodDogNTAwOw==","TextboxStyle":"YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7IGNvbG9yOiBibGFjazsgYm9yZGVyOiBzb2xpZCAxcHggI2FhYWFhYQ==","ContainerWidth":"100%","HighlightColor":"#ffff","IsDisplayTitle":false,"IsShowEmbedButton":false,"CompactType":"large","DefaultCurrencyFrom":"NGN","DefaultCurrencyTo":"USD","Calculator":"currency-converter","ContainerId":"currency-converter-51282"});</script></div>-->
-                        <!--<crypto-converter-widget shadow symbol live background-color="#383a59" border-radius="0.72rem" fiat="united-states-dollar" crypto="bitcoin" amount="1" font-family="monospace" decimal-places="2"></crypto-converter-widget><script async src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget@1.5.2/dist/latest.min.js"></script>-->
                         <div class="cryptohopper-web-widget" data-id="6" data-currency="NGN"></div>
                         <div class="text-center d-flex flex-column justify-content-center  mx-auto" style="height: 100px; width: 150px; border: none; position: relative; z-index: 1; margin-top: -100px; background-color: #ffffff; ">
                             <h6><i>Powered by:</i></h6>
                             <h6>excelexchange.com</h6>
                             <img class="mx-auto " src="excel-yellow-blue.png" alt="logo" width="30" height="26">
                         </div>
-                        <!--
-                        <div class="container-fluid bg-light rounded rounded-3" style="opacity: .9;">
-                            <form>
-                                <fieldset>
-                                    <legend class="my-4 fs-2 fw-bold">Currency Converter</legend>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">BTC</span>
-                                        <input type="text" step="0.0001" class="form-control bg-light text-dark border" id="btcInput" placeholder="Enter BTC" aria-describedby="basic-addon1">
-                                    </div>
-                                    <div class="text-primary fs-3 text-center mb-3">
-                                        <i class="fas fa-arrow-up fa-lg fa-fw"></i>
-                                        <i class="fas fa-arrow-down fa-lg fa-fw"></i>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="row g-2">
-                                            <div class="col-md-2">
-                                                <select id="currencySelect" class="form-select">
-                                                    <option value="ngn">NGN</option>
-                                                    <option value="usd">USD</option>
-                                                    <option value="eur">EUR</option>
-                                                    <option value="gbp">GBP</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-10 d-flex ">
-                                                <input type="text" step="0.0001" class="form-control bg-light text-dark  border ms-auto "  id="currencyInput" placeholder="Converted Amount">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <h3>1 BTC = <span id="bitcoin3"></span></h3>
-                                        <p class="p-0" style="font-size: 1.1rem;">Rate is for reference only. Updated</p>
-                                    </div>
-                                    <a type="submit" class="btn btn-primary d-block">Buy BTC</a>
-                                </fieldset>
-                            </form>
-                        </div>
-                        -->
                     </div>
                     <div class="container-fluid d-none d-sm-block mt-auto">
                         <div class="d-flex justify-content-between align-items-center rounded-top-2 py-2 c3" style="background-color: #021f4c transparent; cursor: pointer; ">
@@ -1268,34 +1118,6 @@
                 </div>
             </div>
         </div>
-        <!--
-        <section class="container-fluid twins d-none">
-            <div class="row">
-                <div class="col-6 py-5 px-1 px-sm-5  text-bg-dark twin">
-                    <h4 class="mb-5 fw-bold ">
-                        Standard Rates & Fast Payout 
-                    </h4>
-                    <p class="mb-4">
-                        Say goodbye to long queues and waiting times
-                    </p>
-                    <a class="text-warning" href="#rates">
-                        See Rates here
-                    </a>
-                </div>
-                <div class="col-6 py-5 px-1 px-sm-5 text-bg-secondary twin">
-                    <h4 class="mb-5 fw-bold">
-                        Tranparent Price History & Record
-                    </h4>
-                    <p class="mb-4">
-                        Transparency is at the core of our trading and service
-                    </p>
-                    <a class="text-warning" href="#prices">
-                        See price history
-                    </a>
-                </div>
-            </div>
-        </section>
-        -->
         <section id="hero2" class="container-fluid mt-3 "  style="max-width: 1300px; margin: auto;">
             <h1 class="text-center text-light fw-bolder fs-2 hidden">
                 Account to suit your buying strategy
@@ -1330,7 +1152,6 @@
     <section id="hero3" class="py-5 hero4">
         <div class="container-fluid" style="max-width: 1300px; margin: auto;">
             <div class="d-flex flex-column mx-auto mt-2 mb-sm-5 mb-2 ">
-                <!--<h5 class="text-primary text-center card-body ">EXCELEXCHANGE.COM EXCHANGE</h5 >-->
                 <h1 class="text-center text-light display-5 fw-bolder ">
                     Your crypto journey starts here
                 </h1>    
@@ -1474,52 +1295,6 @@
                     <h2 class="text-dark fs-1">Get started today</h2>
                 </div>
             </div>
-            <!--
-            <div class="row d-flex align-items-center gap-3 gap-md-0 mt-3 ">
-                <div id="rates" class="col-md-5 text-center">
-                    <div class="">
-                        <h2 class="fw-bolder text-light text-opacity-85 ">The numbers that make up Excelexchange</h2>
-                        <p class="text-light text-opacity-60 ">From trading volume to number of active clients, we are happy to share with you<br class="d-none d-sm-block">
-                            the figures that make us one of the world leading merchant
-                        </p>
-                        <a class="text-warning" href="#">Learn more</a>
-                    </div>
-                    <div class="toast show mt-5 mx-auto text-bg-dark card-body">
-                        <div class="toast-header text-bg-secondary d-flex justify-content-between">
-                          <h6><strong>Rates</strong></h6>
-                          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-                        </div>
-                        <div class="toast-body d-flex gap-3 justify-content-center ">
-                          <p>USDT &rArr; 950/$</p>
-                          <p>BTC &rArr; 940/$</p>
-                          <p>ETH &rArr; 920/$</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="more" class="col-md-7 p-0">
-                    <div id="prices" class="toast text-bg-dark show mb-5 mx-auto card-body">
-                        <div class="toast-header text-bg-secondary d-flex justify-content-between">
-                          <h6><strong>Price and History</strong></h6>
-                          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-                        </div>
-                        <div class="toast-body">
-                          <p>Perform your first trade with Excelechange:</p>
-                            <div class="d-flex justify-content-between ">
-                                <button type="button" class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
-                                    Buy
-                                </button>
-                                <button type="button" class="btn btn-danger px-4" data-bs-toggle="modal" data-bs-target="#myWallet">
-                                    Sell
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid img-container">
-                        <img class="img-fluid " src="macbook-trade.png" alt="macbook-view" height="550" width="900">
-                    </div>
-                </div>
-            </div>
-            -->
             <div class="my-4">
                 <h1 class="text-light fw-bolder display-5  text-center my-3 hidden">Build your crypto portfolio</h1>
             </div> 
